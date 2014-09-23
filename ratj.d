@@ -128,45 +128,44 @@
    30 MGLY       PHOTON     Acet       CO                   0.00E+00  0.00      0.0  MeCOCHO
    31 MVK        PHOTON     PRPE       CO                   0.00E+00  0.00     60.0  MeCOVi 
    32 MVK        PHOTON     MeCO3      HCHO       CO  HO2   0.00E+00  0.00     20.0  MeCOVi 
-   33 MVK        PHOTON     MeOO       NMAO3                0.00E+00  0.00     20.0  MeCOVi 
-   34 MACR       PHOTON     IMAO3  OH HO2 MCO3 MRO2  CO ... 0.00E+00  0.00     50.0  MACR   
-   35 MACR       PHOTON     CO  HO2  MGLY  HO2  MeCO3  HCHO 0.00E+00  0.00     50.0  MACR   
-   36 HAC        PHOTON     MeCO3      HCHO       HO2       0.00E+00  0.00     60.0  AcetA  
-   37 ETP        PHOTON     OH         HO2        Acet      0.00E+00  0.00    100.0  ROOH   
-   38 RA3P       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
-   39 RB3P       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
-   40 R4P        PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
-   41 RP         PHOTON     OH         HO2        Acet      0.00E+00  0.00    100.0  ROOH   
-   42 R4N2       PHOTON     NO2 MeCOMe MEK MO2 HO2 ALD2 ... 0.00E+00  0.00    100.0  MeNO3  
-   43 MAP        PHOTON     OH         MO2                  0.00E+00  0.00    100.0  ROOH   
-   44 INPN       PHOTON     OH         HO2        RCHO NO2  0.00E+00  0.00    100.0  ROOH
-   45 PRPN       PHOTON     OH         HO2        RCHO NO2  0.00E+00  0.00    100.0  ROOH
-   46 PP         PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
-   47 RIP        PHOTON     OH HO2 CH2O MVK MACR RIO1 IALD  0.00E+00  0.00    100.0  ROOH
-   48 IAP        PHOTON     OH HO2  CO  H2  HAC  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
-   49 ISNP       PHOTON     OH HO2  CO  H2  HAC  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
-   50 VRP        PHOTON     OH  HO2  CH2O  MCO3  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
-   51 MRP        PHOTON     OH  HO2  MGLY  HAC  CO  CH2O    0.00E+00  0.00    100.0  ROOH 
-   52 MAOP       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
-   53 MACRN      PHOTON     NO2  HAC  MGLY  CH2O  HO2  CO   0.00E+00  0.00    100.0  MCRNit
-   54 MVKN       PHOTON     GLYC       NO2        MCO3      0.00E+00  0.00    100.0  MVKNit
-   55 ISOPNB     PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ONIT1
-   56 ISOPND     PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ONIT1   
-   57 PROPNN     PHOTON     CH2O  NO2  CO         MO2       0.00E+00  0.00    100.0  ProNit
-   58 ATOOH      PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
-   59 Br2        PHOTON     Br         Br                   0.00E+00  0.00    100.0  Br2
-   60 BrO        PHOTON     Br         O(3P)                0.00E+00  0.00    100.0  BrO
-   61 HOBr       PHOTON     Br         OH                   0.00E+00  0.00    100.0  HOBr
-   62 BrNO3      PHOTON     Br         NO3                  0.00E+00  0.00     85.0  BrNO3
-   63 BrNO3      PHOTON     BrO        NO2                  0.00E+00  0.00     15.0  BrNO3
-   64 BrNO2      PHOTON     Br         NO2                  0.00E+00  0.00    100.0  BrNO2
-   65 CHBr3      PHOTON     Br         Br         Br        0.00E+00  0.00    100.0  CHBr3
-   66 O3         PHOTON     O2         O(1D)                0.00E+00  0.00    100.0  O3_1d
-   67 MPN        PHOTON     HO2        NO3        HCHO      0.00E+00  0.00      5.0  MPN
-   68 MPN        PHOTON     MO2        NO2                  0.00E+00  0.00     95.0  MPN
-   69 IPMN       PHOTON     IMAO3  NO2 CO2 CH2O MCO3  NO3   0.00E+00  0.00    100.0  PAN
-   70 HPALD      PHOTON     HO2   CH2O GLYX MGLY            0.00E+00  0.00    100.0  HPALD
-   71 ETHLN      PHOTON     HO2    NO2 CH2O  CO             0.00E+00  0.00    100.0  EthNit
+   33 MVK        PHOTON     MeOO       MAO3                 0.00E+00  0.00     20.0  MeCOVi 
+   34 MACR       PHOTON     CO  HO2  MGLY  HO2  MeCO3  HCHO 0.00E+00  0.00    100.0  MACR   
+   35 HAC        PHOTON     MeCO3      HCHO       HO2       0.00E+00  0.00     60.0  AcetA  
+   36 ETP        PHOTON     OH         HO2        Acet      0.00E+00  0.00    100.0  ROOH   
+   37 RA3P       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
+   38 RB3P       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
+   39 R4P        PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH   
+   40 RP         PHOTON     OH         HO2        Acet      0.00E+00  0.00    100.0  ROOH   
+   41 R4N2       PHOTON     NO2 MeCOMe MEK MO2 HO2 ALD2 ... 0.00E+00  0.00    100.0  MeNO3  
+   42 MAP        PHOTON     OH         MO2                  0.00E+00  0.00    100.0  ROOH   
+   43 INPN       PHOTON     OH         HO2        RCHO NO2  0.00E+00  0.00    100.0  ROOH
+   44 PRPN       PHOTON     OH         HO2        RCHO NO2  0.00E+00  0.00    100.0  ROOH
+   45 PP         PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
+   46 RIP        PHOTON     OH HO2 CH2O MVK MACR RIO1 IALD  0.00E+00  0.00    100.0  ROOH
+   47 IAP        PHOTON     OH HO2  CO  H2  HAC  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
+   48 ISNP       PHOTON     OH HO2  CO  H2  HAC  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
+   49 VRP        PHOTON     OH  HO2  CH2O  MCO3  GLYC  MGLY 0.00E+00  0.00    100.0  ROOH
+   50 MRP        PHOTON     OH  HO2  MGLY  HAC  CO  CH2O    0.00E+00  0.00    100.0  ROOH 
+   51 MAOP       PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
+   52 MACRN      PHOTON     NO2  HAC  MGLY  CH2O  HO2  CO   0.00E+00  0.00    100.0  MCRNit
+   53 MVKN       PHOTON     GLYC       NO2        MCO3      0.00E+00  0.00    100.0  MVKNit
+   54 ISOPNB     PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ONIT1
+   55 ISOPND     PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ONIT1   
+   56 PROPNN     PHOTON     CH2O  NO2  CO         MO2       0.00E+00  0.00    100.0  ProNit
+   57 ATOOH      PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  ROOH
+   58 Br2        PHOTON     Br         Br                   0.00E+00  0.00    100.0  Br2
+   59 BrO        PHOTON     Br         O(3P)                0.00E+00  0.00    100.0  BrO
+   60 HOBr       PHOTON     Br         OH                   0.00E+00  0.00    100.0  HOBr
+   61 BrNO3      PHOTON     Br         NO3                  0.00E+00  0.00     85.0  BrNO3
+   62 BrNO3      PHOTON     BrO        NO2                  0.00E+00  0.00     15.0  BrNO3
+   63 BrNO2      PHOTON     Br         NO2                  0.00E+00  0.00    100.0  BrNO2
+   64 CHBr3      PHOTON     Br         Br         Br        0.00E+00  0.00    100.0  CHBr3
+   65 O3         PHOTON     O2         O(1D)                0.00E+00  0.00    100.0  O3_1d
+   66 MPN        PHOTON     HO2        NO3        HCHO      0.00E+00  0.00      5.0  MPN
+   67 MPN        PHOTON     MO2        NO2                  0.00E+00  0.00     95.0  MPN
+   68 PMN        PHOTON     MAO3   NO2 CO2 CH2O MCO3  NO3   0.00E+00  0.00    100.0  PAN
+   69 HPALD      PHOTON     HO2   CH2O GLYX MGLY            0.00E+00  0.00    100.0  HPALD
+   70 ETHLN      PHOTON     HO2    NO2 CH2O  CO             0.00E+00  0.00    100.0  EthNit
  9999                                                       0.00E-00  0.00      0.0         
 
 
