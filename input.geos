@@ -304,7 +304,7 @@ Flight track info file  : ./plane/Planeflight.dat.YYYYMMDD
 Output file name        : ./plane/plane.log.YYYYMMDD
 ------------------------+------------------------------------------------------
 %%% ND48 MENU %%%       :
-Turn on ND48 stations   : F
+Turn on ND48 stations   : T
 Station Timeseries file : ./stations/stations.YYYYMMDD
 Frequency [min]         :  60
 Number of stations      :  19
@@ -329,16 +329,16 @@ Station #18(I,J,Lmax,N) : 20 32 15 108
 Station #19(I,J,Lmax,N) : 20 32 15 109
 ------------------------+------------------------------------------------------
 %%% ND49 MENU %%%       :
-Turn on ND49 diagnostic : F
+Turn on ND49 diagnostic : T
 Inst 3-D timeser. file  : ./timeseries/tsYYYYMMDD.bpch
-Tracers to include      : 1 2 4 6 13 20 26 27 31 32 35 64 79 80 81 84 85 86 87 89
+Tracers to include      : 1 2 4 6 13 20 26 27 31 32 35 64 79 80 81 84 85 86 87 89 99
 Frequency [min]         : 120
 IMIN, IMAX of region    :   1  72
 JMIN, JMAX of region    :   1  46
 LMIN, LMAX of region    :   1  47
 -------------------------------------------------------------------------------
 %%% ND50 MENU %%%       :
-Turn on ND50 diagnostic : F
+Turn on ND50 diagnostic : T
 24-hr avg timeser. file : ./24hr_avg/ts_24h_avg.YYYYMMDD.bpch
 Output as HDF           : F
 Tracers to include      : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 84 85 86 87 88 89 100
@@ -406,9 +406,9 @@ File w/ initial Ox      : Ox.mass.initial
 File w/ final Ox        : Ox.mass.final
 ------------------------+------------------------------------------------------
 %%% NESTED GRID MENU %%%:  
-Save TPCORE BC's        : F
+Save TPCORE BC's        : T
 Input BCs at 2x2.5?     : F
-Over North America?     : F
+Over North America?     : T
 TPCORE NA BC directory  : ../BC.4x5/
 Over Europe?            : F
 TPCORE EU BC directory  : none
