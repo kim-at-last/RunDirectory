@@ -24,6 +24,15 @@
 #
 # !REVISION HISTORY:
 #
+#  24 Sep 2014 (jaf)
+#  ----------------------
+#     Add ISN1 photolysis. From Muller et al. 2014, products are
+#     ISN1 -> NO2 + HO2 + PACALD
+#     Use HPALD as proxy since Stavrakou et al. 2010 give products
+#     HPALD -> OH + HO2 + PACALD
+#     So assume same products as HPALD, with NO2 instead of OH
+#     Chris Miller recommends using same cross section as HPALD.
+#
 #  9 Jun 2014 (eam, 2014)
 #  ----------------------
 #     Updates from J. Mao and Seb Eastham (IUPAC and FAST-JX v7.0b):
@@ -166,6 +175,7 @@
    68 PMN        PHOTON     MAO3   NO2 CO2 CH2O MCO3  NO3   0.00E+00  0.00    100.0  PAN
    69 HPALD      PHOTON     HO2   CH2O GLYX MGLY            0.00E+00  0.00    100.0  HPALD
    70 ETHLN      PHOTON     HO2    NO2 CH2O  CO             0.00E+00  0.00    100.0  EthNit
+   71 ISN1       PHOTON     HO2 NO2 CH2O GLYX MGLY GLYX HAC 0.00E+00  0.00    100.0  HPALD
  9999                                                       0.00E-00  0.00      0.0         
 
 
