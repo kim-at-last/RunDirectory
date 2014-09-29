@@ -26,7 +26,7 @@ Number of Tracers       : 80
 Tracer Entries -------> : TR#   Name  g/mole   Tracer Members; () = emitted 
 Tracer #1               :   1   NO      30.0   (NO)
 Tracer #2               :   2   O3      48.0   (O3)
-Tracer #3               :   3   PAN    121.0
+Tracer #3               :   3   PAN    121.0   (PAN)
 Tracer #4               :   4   CO      28.0   (CO)
 Tracer #5               :   5   ALK4    12.0   (4C)
 Tracer #6               :   6   ISOP    12.0   (5C)
@@ -35,7 +35,7 @@ Tracer #8               :   8   H2O2    34.0
 Tracer #9               :   9   ACET    12.0   (3C)
 Tracer #10              :  10   MEK     12.0   (4C)
 Tracer #11              :  11   ALD2    12.0   (2C)
-Tracer #12              :  12   RCHO    58.0
+Tracer #12              :  12   RCHO    58.0   (RCHO)
 Tracer #13              :  13   MVK     70.0
 Tracer #14              :  14   MACR    70.0
 Tracer #15              :  15   PMN    147.0
@@ -49,18 +49,18 @@ Tracer #22              :  22   N2O5   105.0
 Tracer #23              :  23   HNO4    79.0
 Tracer #24              :  24   MP      48.0
 Tracer #25              :  25   DMS     62.0
-Tracer #26              :  26   SO2     64.0
-Tracer #27              :  27   SO4     96.0
+Tracer #26              :  26   SO2     64.0   (SO2)
+Tracer #27              :  27   SO4     96.0   (SO4)
 Tracer #28              :  28   SO4s    96.0
 Tracer #29              :  29   MSA     96.0
-Tracer #30              :  30   NH3     17.0
+Tracer #30              :  30   NH3     17.0   (NH3)
 Tracer #31              :  31   NH4     18.0
 Tracer #32              :  32   NIT     62.0
 Tracer #33              :  33   NITs    62.0
 Tracer #34              :  34   BCPI    12.0
 Tracer #35              :  35   OCPI    12.0
-Tracer #36              :  36   BCPO    12.0
-Tracer #37              :  37   OCPO    12.0
+Tracer #36              :  36   BCPO    12.0   (BCPO)
+Tracer #37              :  37   OCPO    12.0   (OCPO)
 Tracer #38              :  38   DST1    29.0
 Tracer #39              :  39   DST2    29.0
 Tracer #40              :  40   DST3    29.0
@@ -81,15 +81,15 @@ Tracer #54              :  54   MPN     93.0
 Tracer #55              :  55   ISOPN  147.0   ISOPND ISOPNB
 Tracer #56              :  56   MOBA   114.0
 Tracer #57              :  57   PROPNN 119.0   PROPNN
-Tracer #58              :  58   HAC     74.0 
-Tracer #59              :  59   GLYC    60.0 
+Tracer #58              :  58   HAC     74.0   (HAC)
+Tracer #59              :  59   GLYC    60.0   (GLYC)
 Tracer #60              :  60   MMN    149.0   MVKN MACRN
 Tracer #61              :  61   RIP    118.0
 Tracer #62              :  62   IEPOX  118.0
 Tracer #63              :  63   MAP     76.0
-Tracer #64              :  64   NO2     46.0
+Tracer #64              :  64   NO2     46.0   (NO2)
 Tracer #65              :  65   NO3     62.0
-Tracer #66              :  66   HNO2    47.0
+Tracer #66              :  66   HNO2    47.0   (HNO2)
 Tracer #67              :  67   ETHLN  105.0
 Tracer #68              :  68   AVOC    12.0
 Tracer #69              :  69   BBVOC   12.0
@@ -104,6 +104,8 @@ Tracer #77              :  77   BBOCPO        12.0
 Tracer #78              :  78   ISN1   147.0
 Tracer #79              :  79   MGLY    72.0   (MGLY)
 Tracer #80              :  80   GLYX    58.0   (GLYX)
+Tracer #81              :  81   HCOOH   46.0   (HCOOH) 
+Tracer #82              :  82   ACTA    60.0   (ACTA)
 ------------------------+------------------------------------------------------
 %%% TRANSPORT MENU %%%  :
 Turn on Transport       : T
