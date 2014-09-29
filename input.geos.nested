@@ -158,6 +158,8 @@ Include biomass emiss?  : T
     => daily GFED3?     : F 
     => 3-hr GFED3?      : F
  => Use FINN biomass?   : T
+ => Use QFED2 biomass?  : T
+ => Use QFED2+FINN?     : T
 Individual NOx sources  :---
  => Use RCP aircraft NOx: F
  => Use lightning NOx?  : T
@@ -269,7 +271,7 @@ ND35: Tracers at 500 mb :  0   all
 ND36: Anthro emissions  :  1   1 2 4 5 7 9 10 11 18 19 20 21
 ND37: Updraft scav frac :  0   all
 ND38: Cld Conv scav loss: 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
-ND39: Wetdep scav loss  : 47   27 32 32 34 35 36 37 70 71 72 73 74 75 76 77
+ND39: Wetdep scav loss  : 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
 ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
 ND43: Chem OH,NO,HO2,NO2: 47   all
@@ -377,7 +379,7 @@ IMIN, IMAX of region    :  70  30
 JMIN, JMAX of region    :  23  46
 -------------------------------------------------------------------------------
 %%% PROD & LOSS MENU %%%:
-Turn on P/L (ND65) diag?: T
+Turn on P/L (ND65) diag?: F
 # of levels for ND65    : 47
 Save O3 P/L (ND20)?     : T
 Number of P/L families  : 9

@@ -157,7 +157,9 @@ Include biomass emiss?  : T
     => monthly GFED3?   : F 
     => daily GFED3?     : F 
     => 3-hr GFED3?      : F
- => Use FINN biomass?   : T
+ => Use FINN biomass?   : F
+ => Use QFED2 biomass?  : T
+ => Use QFED2 + FINN?   : T
 Individual NOx sources  :---
  => Use RCP aircraft NOx: F
  => Use lightning NOx?  : T
@@ -251,7 +253,7 @@ ND16: LS/Conv prec frac :  0   all
 ND17: Rainout fraction  :  0   all
 ND18: Washout fraction  :  0   all
 ND19: CH4 loss          :  0   all
-ND21: Optical depths    : 47   all
+ND21: Optical depths    :  0   all
 ND22: J-Values          : 47   64 7 8 20 99
       => JV time range  :      11 13
 ND24: E/W transpt flx   :  0   all
@@ -268,15 +270,15 @@ ND34: Biofuel emissions :  1   1 4 5 9 10 11 18 19 20 21
 ND35: Tracers at 500 mb :  0   all
 ND36: Anthro emissions  :  1   1 2 4 5 7 9 10 11 18 19 20 21
 ND37: Updraft scav frac :  0   all
-ND38: Cld Conv scav loss: 47   all
-ND39: Wetdep scav loss  : 47   all
+ND38: Cld Conv scav loss: 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
+ND39: Wetdep scav loss  : 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
 ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
-ND43: Chem OH,NO,HO2,NO2: 47   all
+ND43: Chem OH,NO,HO2,NO2:  0   all
   ==> OH/HO2 time range :       0 24
   ==> NO/NO2 time range :      10 14
-ND44: Drydep flx/vel    : 47   all
-ND45: Tracer Conc's     : 47   all
+ND44: Drydep flx/vel    :  0   all
+ND45: Tracer Conc's     :  0   all
   ==> ND45 Time range   :       0 24
 ND46: Biogenic emissions:  1   all
 ND47: 24-h avg trc conc :  0   all
