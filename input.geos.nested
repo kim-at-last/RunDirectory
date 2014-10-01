@@ -282,7 +282,7 @@ ND43: Chem OH,NO,HO2,NO2: 47   all
 ND44: Drydep flx/vel    :  1   all
 ND45: Tracer Conc's     :  0   all
   ==> ND45 Time range   :       0 24
-ND46: Biogenic emissions:  1   all
+ND46: Biogenic emissions:  1   1 2 3 4 5 16 20 21 22
 ND47: 24-h avg trc conc :  0   all
 ND52: GAMMA HO2         :  0   all
 ND53: POPs Emissions    :  0   all
@@ -297,9 +297,9 @@ ND61: -                 :  0   all
 ND62: Inst column maps  :  0   all
 ND64: -                 :  0   all
 ND66: DAO 3-D fields    :  0   all
-ND67: DAO 2-D fields    :  0   all
+ND67: DAO 2-D fields    :  1   2 5 19 20 21 22
 ND68: Airmass/Boxheight : 47   all
-ND69: Surface area      :  0   all
+ND69: Surface area      :  1   all
 ND70: Debug output      :  0   all
 ------------------------+------------------------------------------------------
 %%% PLANEFLIGHT MENU %%%:

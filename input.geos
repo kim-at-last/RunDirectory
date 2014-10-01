@@ -276,18 +276,18 @@ ND38: Cld Conv scav loss: 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
 ND39: Wetdep scav loss  : 47   27 31 32 34 35 36 37 70 71 72 73 74 75 76 77
 ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
-ND43: Chem OH,NO,HO2,NO2:  0   all
+ND43: Chem OH,NO,HO2,NO2: 47   all
   ==> OH/HO2 time range :       0 24
   ==> NO/NO2 time range :      10 14
 ND44: Drydep flx/vel    :  0   all
 ND45: Tracer Conc's     :  0   all
   ==> ND45 Time range   :       0 24
-ND46: Biogenic emissions:  1   all
+ND46: Biogenic emissions:  1   1 2 3 4 5 16 20 21 22
 ND47: 24-h avg trc conc :  0   all
 ND52: GAMMA HO2         :  0   all
 ND53: POPs Emissions    :  0   all
 ND54: Time in t'sphere  : 47   all
-ND55: Tropopause height : 47   all
+ND55: Tropopause height :  1   all
 ND56: Lightning flashes :  0   all
 ND57: Potential T       :  0   all
 ND58: CH4 Emissions     :  0   all
@@ -297,7 +297,7 @@ ND61: -                 :  0   all
 ND62: Inst column maps  :  0   all
 ND64: -                 :  0   all
 ND66: DAO 3-D fields    : 47   all
-ND67: DAO 2-D fields    : 47   all
+ND67: DAO 2-D fields    :  1   all
 ND68: Airmass/Boxheight : 47   all
 ND69: Surface area      :  1   all
 ND70: Debug output      :  0   all
