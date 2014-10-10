@@ -283,7 +283,7 @@ ND42: SOA concentrations:  0   all
 ND43: Chem OH,NO,HO2,NO2: 47   all
   ==> OH/HO2 time range :       0 24
   ==> NO/NO2 time range :      10 14
-ND44: Drydep flx/vel    :  0   all
+ND44: Drydep flx/vel    :  1   all
 ND45: Tracer Conc's     : 47   all
   ==> ND45 Time range   :       0 24
 ND46: Biogenic emissions:  1   1 2 3 4 5 16 20 21 22
