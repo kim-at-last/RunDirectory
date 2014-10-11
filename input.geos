@@ -1,8 +1,8 @@
 GEOS-CHEM SIMULATION: SEAC4RS CAMPAIGN 2013
 ------------------------+------------------------------------------------------
 %%% SIMULATION MENU %%% :
-Start YYYYMMDD, HHMMSS  : 20130801 000000
-End   YYYYMMDD, HHMMSS  : 20131001 000000
+Start YYYYMMDD, HHMMSS  : 20130101 000000
+End   YYYYMMDD, HHMMSS  : 20140101 000000
 Run directory           : ./
 Input restart file      : ./restarts/restart.seac4rs.YYYYMMDDhh
 Make new restart file?  : T
@@ -227,7 +227,7 @@ Schedule output for APR : 300000000000000000000000000000
 Schedule output for MAY : 3000000000000000000000000000000
 Schedule output for JUN : 300000000000000000000000000000
 Schedule output for JUL : 3000000000000000000000000000000
-Schedule output for AUG : 3000000000000000000000000000000
+Schedule output for AUG : 3000000000000000000000000000330
 Schedule output for SEP : 300000000000000000000000000000
 Schedule output for OCT : 3000000000000000000000000000000
 Schedule output for NOV : 300000000000000000000000000000
@@ -349,7 +349,7 @@ LMIN, LMAX of region    :   1  47
 Turn on ND50 diagnostic : T
 24-hr avg timeser. file : ./24hr_avg/ts_24h_avg.YYYYMMDD.bpch
 Output as HDF           : F
-Tracers to include      : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 84 85 86 87 88 89 100
+Tracers to include      : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 157 161 162 167 168 169 170 171 172
 IMIN, IMAX of region    :   1  72
 JMIN, JMAX of region    :   1  46
 LMIN, LMAX of region    :   1  47
