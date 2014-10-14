@@ -339,7 +339,7 @@ Station #19(I,J,Lmax,N) : 20 32 15 109
 %%% ND49 MENU %%%       :
 Turn on ND49 diagnostic : T
 Inst 3-D timeser. file  : ./timeseries/tsYYYYMMDD.bpch
-Tracers to include      : 1 2 4 6 13 20 26 27 31 32 35 64 79 80 81 84 85 86 87 89 99
+Tracers to include      : 1 2 4 6 13 20 26 27 31 32 35 64 79 80 81 99 162
 Frequency [min]         : 60
 IMIN, IMAX of region    :   1  72
 JMIN, JMAX of region    :   1  46
