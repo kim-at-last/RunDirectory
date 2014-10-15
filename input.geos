@@ -385,22 +385,14 @@ IMIN, IMAX of region    :  70  30
 JMIN, JMAX of region    :  23  46
 -------------------------------------------------------------------------------
 %%% PROD & LOSS MENU %%%:
-Turn on P/L (ND65) diag?: F
+Turn on P/L (ND65) diag?: T
 # of levels for ND65    : 47
 Save O3 P/L (ND20)?     : F
-Number of P/L families  : 12
-1st  chemical family    : PS1: XS1
-2nd  chemical family    : PS2: XS2
-3rd  chemical family    : PS3: XS3
-4th  chemical family    : PS4: XS4
-5th  chemical family    : PS5: XS5
-6th  chemical family    : PS6: XS6
-7th  chemical family    : PS7: XS7
-8th  chemical family    : PS8: XS8
-9th  chemical family    : PS9: XS9
-10th  chemical family   : PS10: XS10
-11th  chemical family   : PS11: XS11
-12th  chemical family   : PS12: XS12
+Number of P/L families  : 4
+1st  chemical family    : PO3: O3
+2nd  chemical family    : LO3: O3
+3rd  chemical family    : PNOx: NO NO2
+4th  chemical family    : LNOx: NO NO2
 ------------------------+------------------------------------------------------
 %%% ARCHIVED OH MENU %%%: 
 Dir w/ archived OH files: /as/data/geos/GEOS_MEAN/OHmerge/v5-07-08/
