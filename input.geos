@@ -358,7 +358,7 @@ LMIN, LMAX of region    :   1  47
 Turn on ND51 diagnostic : T
 LT avg timeseries file  : ./satellite/ts_satellite_13_14.YYYYMMDD.bpch
 Output as HDF           : F
-Tracers to include      : 1 2 4 6 20 30 64 95 96 97 98 99 100 105 107 110 111 112
+Tracers to include      : 1 2 4 6 20 30 64 80 95 96 97 98 99 100 105 107 110 111 112
 GMT Hour for disk write :   0
 Avg Period [LT hours]   :  13  14
 IMIN, IMAX of region    :   1  72
@@ -369,7 +369,7 @@ LMIN, LMAX of region    :   1  47
 Turn on ND51b diagnstic : T
 LT avg timeseries file  : ./satellite/ts_satellite_9_10.YYYYMMDD.bpch
 Output as HDF5?         : F
-Tracers to include      : 1 2 4 6 20 30 64 95 96 97 98 99 100 105 107 110 111 112
+Tracers to include      : 1 2 4 6 20 30 64 80 95 96 97 98 99 100 105 107 110 111 112
 GMT Hour for disk write :   0
 Avg Period [LT hours]   :   9  10
 IMIN, IMAX of region    :   1  72
