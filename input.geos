@@ -136,9 +136,9 @@ Include anthro emiss?   : T
  => Use NEI2005 emiss?  : F 
  => Use NEI2008 emiss?  : F 
  =>   w/NEI2008 OC/BC?  : F 
- =>   w/MASAGE NH3 scale: F
  => Use NEI2011 emiss?  : T 
  =>   w/NEI2011 OC/BC?  : T 
+ => Use MASAGE NH3 scale: T
  => Use RETRO emiss?    : T 
  => Use AEIC emissions? : T
 Use RCP emiss (anth+bf)?: F
