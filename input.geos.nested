@@ -138,6 +138,7 @@ Include anthro emiss?   : T
  =>   w/NEI2008 OC/BC?  : F 
  => Use NEI2011 emiss?  : T 
  =>   w/NEI2011 OC/BC?  : T
+ =>   w/vehicle scaling?: T
  => Use MASAGE NH3 scale: T
  => Use RETRO emiss?    : T 
  => Use AEIC emissions? : T
