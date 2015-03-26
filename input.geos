@@ -22,7 +22,7 @@ Global offsets I0, J0   : 0 0
 ------------------------+------------------------------------------------------
 %%% TRACER MENU %%%     : 
 Type of simulation      : 3
-Number of Tracers       : 86
+Number of Tracers       : 90
 Tracer Entries -------> : TR#   Name  g/mole   Tracer Members; () = emitted 
 Tracer #1               :   1   NO      30.0   (NO)
 Tracer #2               :   2   O3      48.0   (O3)
@@ -110,6 +110,10 @@ Tracer #83              :  83   DHDN   226.0
 Tracer #84              :  84   ONITAam 14.0
 Tracer #85              :  85   ONITApm 14.0
 Tracer #86              :  86   HPALD   12.0   (5C)
+Tracer #87              :  87   API     12.0   (10C)
+Tracer #88              :  88   LIM     12.0   (10C)
+Tracer #89              :  89   MONIT  119.0  MONITS MONITU
+Tracer #90              :  90   HONIT  119.0
 ------------------------+------------------------------------------------------
 %%% TRANSPORT MENU %%%  :
 Turn on Transport       : T

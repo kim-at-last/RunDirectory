@@ -176,6 +176,10 @@
    69 HPALD      PHOTON     HO2   CH2O GLYX MGLY            0.00E+00  0.00    100.0  HPALD
    70 ETHLN      PHOTON     HO2    NO2 CH2O  CO             0.00E+00  0.00    100.0  EthNit
    71 ISN1       PHOTON     HO2 NO2 CH2O GLYX MGLY GLYX HAC 0.00E+00  0.00    100.0  HPALD
+   72 PIP        PHOTON     OH         HO2        RCHO      0.00E+00  0.00    100.0  H2O2
+   73 MONITS     PHOTON     NO2        MEK                  0.00E+00  0.00    100.0  ONIT1
+   74 MONITU     PHOTON     NO2        RCHO                 0.00E+00  0.00    100.0  ONIT1
+   75 HONIT      PHOTON     NO2        HKET                 0.00E+00  0.00    100.0  ONIT1
  9999                                                       0.00E-00  0.00      0.0         
 
 
