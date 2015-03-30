@@ -406,7 +406,7 @@ JMIN, JMAX of region    :  23  46
 Turn on P/L (ND65) diag?: T
 # of levels for ND65    : 38
 Save O3 P/L (ND20)?     : T
-Number of P/L families  : 14
+Number of P/L families  : 17
 1st  chemical family    : POX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
 2nd  chemical family    : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
 3rd  chemical family    : PNOx: NO NO2
@@ -421,6 +421,9 @@ Number of P/L families  : 14
 12th chemical family    : PMTN1: MONITU MONITS
 13th chemical family    : LMTN2: HONIT
 14th chemical family    : PMTN2: HONIT
+15th chemical family    : PXRIO2NO: XRIO2NO
+16th chemical family    : PXRIO2HO2: XRIO2HO2
+17th chemical family    : PXRIO2OTHER: XRIO2OTHER
 ------------------------+------------------------------------------------------
 %%% ARCHIVED OH MENU %%%:
 Dir w/ archived OH files: /as/data/geos/GEOS_MEAN/OHmerge/v5-07-08/
