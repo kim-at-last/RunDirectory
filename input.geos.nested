@@ -36,8 +36,8 @@ Tracer #9               :   9   ACET    12.0   (3C)
 Tracer #10              :  10   MEK     12.0   (4C)
 Tracer #11              :  11   ALD2    12.0   (2C)
 Tracer #12              :  12   RCHO    58.0   (RCHO)
-Tracer #13              :  13   MVK     70.0
-Tracer #14              :  14   MACR    70.0
+Tracer #13              :  13   MVK     70.0   (MVK)
+Tracer #14              :  14   MACR    70.0   (MACR)
 Tracer #15              :  15   PMN    147.0
 Tracer #16              :  16   PPN    135.0
 Tracer #17              :  17   R4N2   119.0
@@ -355,7 +355,7 @@ Station #28(I,J,Lmax,N) : 138 94 15 109
 %%% ND49 MENU %%%       :
 Turn on ND49 diagnostic : T
 Inst 3-D timeser. file  : ./timeseries/tsYYYYMMDD.bpch
-Tracers to include      : 1 2 4 6 13 20 26 27 31 32 35 64 79 80 81 99 162
+Tracers to include      : 1 2 4 6 13 20 26 27 64 66 79 80 81 162
 Frequency [min]         : 120
 IMIN, IMAX of region    :   1 225
 JMIN, JMAX of region    :   1 202
