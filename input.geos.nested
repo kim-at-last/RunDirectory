@@ -251,9 +251,9 @@ ND01: Rn/Pb/Be source   :  0   all
 ND02: Rn/Pb/Be decay    :  0   all
 ND03: Hg emissions, P/L :  0   all
 ND04: CO2 Sources       :  0   all
-ND05: Sulfate prod/loss : 47   6 7 8
+ND05: Sulfate prod/loss : 20   6 7 8
 ND06: Dust aer source   :  1   all
-ND07: Carbon aer source : 47   all
+ND07: Carbon aer source : 38   all
 ND08: Seasalt aer source:  1   all
 ND09: -                 :  0   all
 ND10: -                 :  0   all
@@ -287,7 +287,7 @@ ND38: Cld Conv scav loss: 47   17 27 31 32 34 35 36 37 55 57 60 67 70 71 72 73 7
 ND39: Wetdep scav loss  : 47   17 27 31 32 34 35 36 37 55 57 60 67 70 71 72 73 74 75 76 77 78 83 84 85 89 90
 ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
-ND43: Chem OH,NO,HO2,NO2: 47   all
+ND43: Chem OH,NO,HO2,NO2: 47   1 3
   ==> OH/HO2 time range :       0 24
   ==> NO/NO2 time range :      10 14
 ND44: Drydep flx/vel    :  1   all
@@ -322,7 +322,7 @@ Output file name        : ./plane/plane.log.YYYYMMDD
 Turn on ND48 stations   : T
 Station Timeseries file : ./stations/stations.YYYYMMDD
 Frequency [min]         :  60
-Number of stations      :  28
+Number of stations      :  30
 Station #1 (I,J,Lmax,N) : 138 94 15 1
 Station #2 (I,J,Lmax,N) : 138 94 15 6
 Station #3 (I,J,Lmax,N) : 138 94 15 7
@@ -351,6 +351,8 @@ Station #25(I,J,Lmax,N) : 138 94 15 100
 Station #26(I,J,Lmax,N) : 138 94 15 106
 Station #27(I,J,Lmax,N) : 138 94 15 108
 Station #28(I,J,Lmax,N) : 138 94 15 109
+Station #29(I,J,Lmax,N) : 138 94 15 20
+Station #30(I,J,Lmax,N) : 128 117 15 20
 ------------------------+------------------------------------------------------
 %%% ND49 MENU %%%       :
 Turn on ND49 diagnostic : T
