@@ -36,6 +36,7 @@
 #    (6) Explicitly include HPALD photolysis with products from Stavrakou et al, 2010
 #    (7) Add HNO2 chemistry from Li et al, 2014 
 #    (8) Updated product yields and rx rate for RIO2+RIO2 (Xie et al, 2013)
+#    (9) Revert to HO2 uptake producing 0.5 H2O2 (krt)
 #
 #  12 Jun 2013 (v9-02l)
 #  ----------------------
@@ -3107,7 +3108,7 @@ A    0 0.00E+00  0.0E+00      0 0     0.00     0.     0.
 +                   +                   +                   +             
 A    0 3.30E+01  2.0E-01      0 0 K   0.00     0.     0.         
       HO2           +                                                     
-=                   +                   +                   +             
+=0.500H2O2          +                   +                   +             
 +                   +                   +                   +             
 +                   +                   +                   +             
 +                   +                   +                   +
