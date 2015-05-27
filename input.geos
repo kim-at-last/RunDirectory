@@ -283,8 +283,8 @@ ND34: Biofuel emissions :  1   1 4 5 9 10 11 18 19 20 21
 ND35: Tracers at 500 mb :  0   all
 ND36: Anthro emissions  :  6   1 2 4 5 7 9 10 11 12 18 19 20 21 27 36 37 64 66
 ND37: Updraft scav frac :  0   all
-ND38: Cld Conv scav loss: 47   17 27 31 32 34 35 36 37 55 57 60 67 70 71 72 73 74 75 76 77 78 83 84 85 89 90
-ND39: Wetdep scav loss  : 47   17 27 31 32 34 35 36 37 55 57 60 67 70 71 72 73 74 75 76 77 78 83 84 85 89 90
+ND38: Cld Conv scav loss: 47   7 17 27 31 32 33 34 35 36 37 55 57 60 67 70 71 72 73 74 75 76 77 78 83 84 85 89 90
+ND39: Wetdep scav loss  : 47   7 17 27 31 32 33 34 35 36 37 55 57 60 67 70 71 72 73 74 75 76 77 78 83 84 85 89 90
 ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
 ND43: Chem OH,NO,HO2,NO2: 47   1 3
