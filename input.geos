@@ -112,8 +112,8 @@ Tracer #85              :  85   ONITApm 14.0
 Tracer #86              :  86   HPALD   12.0   (5C)
 Tracer #87              :  87   API     12.0   (10C)
 Tracer #88              :  88   LIM     12.0   (10C)
-Tracer #89              :  89   MONIT  119.0  MONITS MONITU
-Tracer #90              :  90   HONIT  119.0
+Tracer #89              :  89   MONIT  215.0  MONITS MONITU
+Tracer #90              :  90   HONIT  215.0
 ------------------------+------------------------------------------------------
 %%% TRANSPORT MENU %%%  :
 Turn on Transport       : T
