@@ -317,7 +317,7 @@ Output file name        : ./plane/plane.log.YYYYMMDD
 Turn on ND48 stations   : T
 Station Timeseries file : ./stations/stations.YYYYMMDD
 Frequency [min]         :  60
-Number of stations      :  30
+Number of stations      :  32
 Station #1 (I,J,Lmax,N) : 138 94 15 1
 Station #2 (I,J,Lmax,N) : 138 94 15 6
 Station #3 (I,J,Lmax,N) : 138 94 15 7
@@ -325,29 +325,31 @@ Station #4 (I,J,Lmax,N) : 138 94 15 13
 Station #5 (I,J,Lmax,N) : 138 94 15 14
 Station #6 (I,J,Lmax,N) : 138 94 15 17
 Station #7 (I,J,Lmax,N) : 138 94 15 20
-Station #8 (I,J,Lmax,N) : 138 94 15 55
-Station #9 (I,J,Lmax,N) : 138 94 15 57
-Station #10(I,J,Lmax,N) : 138 94 15 60
-Station #11(I,J,Lmax,N) : 138 94 15 61
-Station #12(I,J,Lmax,N) : 138 94 15 62
-Station #13(I,J,Lmax,N) : 138 94 15 64
-Station #14(I,J,Lmax,N) : 138 94 15 65
-Station #15(I,J,Lmax,N) : 138 94 15 67
-Station #16(I,J,Lmax,N) : 138 94 15 78
-Station #17(I,J,Lmax,N) : 138 94 15 83
-Station #18(I,J,Lmax,N) : 138 94 15 84
-Station #19(I,J,Lmax,N) : 138 94 15 85
-Station #20(I,J,Lmax,N) : 138 94 15 87
-Station #21(I,J,Lmax,N) : 138 94 15 88
-Station #22(I,J,Lmax,N) : 138 94 15 89
-Station #23(I,J,Lmax,N) : 138 94 15 90
-Station #24(I,J,Lmax,N) : 138 94 15 95
-Station #25(I,J,Lmax,N) : 138 94 15 100
-Station #26(I,J,Lmax,N) : 138 94 15 106
-Station #27(I,J,Lmax,N) : 138 94 15 108
-Station #28(I,J,Lmax,N) : 138 94 15 109
-Station #29(I,J,Lmax,N) : 138 94 15 20
-Station #30(I,J,Lmax,N) : 128 117 15 20
+Station #8 (I,J,Lmax,N) : 138 94 15 32
+Station #9 (I,J,Lmax,N) : 138 94 15 33
+Station #10(I,J,Lmax,N) : 138 94 15 55
+Station #11(I,J,Lmax,N) : 138 94 15 57
+Station #12(I,J,Lmax,N) : 138 94 15 60
+Station #13(I,J,Lmax,N) : 138 94 15 61
+Station #14(I,J,Lmax,N) : 138 94 15 62
+Station #15(I,J,Lmax,N) : 138 94 15 64
+Station #16(I,J,Lmax,N) : 138 94 15 65
+Station #17(I,J,Lmax,N) : 138 94 15 67
+Station #18(I,J,Lmax,N) : 138 94 15 73
+Station #19(I,J,Lmax,N) : 138 94 15 78
+Station #20(I,J,Lmax,N) : 138 94 15 79
+Station #21(I,J,Lmax,N) : 138 94 15 80
+Station #22(I,J,Lmax,N) : 138 94 15 81
+Station #23(I,J,Lmax,N) : 138 94 15 82
+Station #24(I,J,Lmax,N) : 138 94 15 83
+Station #25(I,J,Lmax,N) : 138 94 15 84
+Station #26(I,J,Lmax,N) : 138 94 15 85
+Station #27(I,J,Lmax,N) : 138 94 15 95
+Station #28(I,J,Lmax,N) : 138 94 15 100
+Station #29(I,J,Lmax,N) : 138 94 15 106
+Station #30(I,J,Lmax,N) : 138 94 15 108
+Station #31(I,J,Lmax,N) : 138 94 15 109
+Station #32(I,J,Lmax,N) : 128 117 15 20
 ------------------------+------------------------------------------------------
 %%% ND49 MENU %%%       :
 Turn on ND49 diagnostic : T
@@ -362,8 +364,7 @@ LMIN, LMAX of region    :   1  47
 Turn on ND50 diagnostic : T
 24-hr avg timeser. file : ./24hr_avg/ts_24h_avg.YYYYMMDD.bpch
 Output as HDF           : F
-Tracers to include      : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
-35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+Tracers to include      : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
 75 76 77 78 79 80 81 82 83 84 85 157 161 162 167 168 169 170 171 172
 IMIN, IMAX of region    :   1 225
 JMIN, JMAX of region    :   1 202
@@ -408,12 +409,12 @@ Number of P/L families  : 17
 2nd  chemical family    : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
 3rd  chemical family    : PNOx: NO NO2
 4th  chemical family    : LNOx: NO NO2
-5th  chemical family    : LANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-6th  chemical family    : PANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-7th  chemical family    : LIN1: ISOPNB ISOPND
-8th  chemical family    : PIN1: ISOPNB ISOPND
-9th  chemical family    : LIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-10th chemical family    : PIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
+5th  chemical family    : LANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1 MONITS MONITU HONIT
+6th  chemical family    : PANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1 MONITS MONITU HONIT
+7th  chemical family    : LIN1: ISOPNB ISOPND ISN1
+8th  chemical family    : PIN1: ISOPNB ISOPND ISN1
+9th  chemical family    : LIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2
+10th chemical family    : PIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2
 11th chemical family    : LMTN1: MONITU MONITS
 12th chemical family    : PMTN1: MONITU MONITS
 13th chemical family    : LMTN2: HONIT

@@ -317,7 +317,7 @@ Output file name        : ./plane/plane.log.YYYYMMDD
 Turn on ND48 stations   : T
 Station Timeseries file : ./stations/stations.YYYYMMDD
 Frequency [min]         :  60
-Number of stations      :  19
+Number of stations      :  31
 Station #1 (I,J,Lmax,N) : 20 32 15 1
 Station #2 (I,J,Lmax,N) : 20 32 15 6
 Station #3 (I,J,Lmax,N) : 20 32 15 7
@@ -325,18 +325,30 @@ Station #4 (I,J,Lmax,N) : 20 32 15 13
 Station #5 (I,J,Lmax,N) : 20 32 15 14
 Station #6 (I,J,Lmax,N) : 20 32 15 17
 Station #7 (I,J,Lmax,N) : 20 32 15 20
-Station #8 (I,J,Lmax,N) : 20 32 15 55
-Station #9 (I,J,Lmax,N) : 20 32 15 60
-Station #10(I,J,Lmax,N) : 20 32 15 61
-Station #11(I,J,Lmax,N) : 20 32 15 62
-Station #12(I,J,Lmax,N) : 20 32 15 64
-Station #13(I,J,Lmax,N) : 20 32 15 65
-Station #14(I,J,Lmax,N) : 20 32 15 67
-Station #15(I,J,Lmax,N) : 20 32 15 95
-Station #16(I,J,Lmax,N) : 20 32 15 100
-Station #17(I,J,Lmax,N) : 20 32 15 106
-Station #18(I,J,Lmax,N) : 20 32 15 108
-Station #19(I,J,Lmax,N) : 20 32 15 109
+Station #8 (I,J,Lmax,N) : 20 32 15 32
+Station #9 (I,J,Lmax,N) : 20 32 15 33
+Station #10(I,J,Lmax,N) : 20 32 15 55
+Station #11(I,J,Lmax,N) : 20 32 15 57
+Station #12(I,J,Lmax,N) : 20 32 15 60
+Station #13(I,J,Lmax,N) : 20 32 15 61
+Station #14(I,J,Lmax,N) : 20 32 15 62
+Station #15(I,J,Lmax,N) : 20 32 15 64
+Station #16(I,J,Lmax,N) : 20 32 15 65
+Station #17(I,J,Lmax,N) : 20 32 15 67
+Station #18(I,J,Lmax,N) : 20 32 15 73
+Station #19(I,J,Lmax,N) : 20 32 15 78
+Station #20(I,J,Lmax,N) : 20 32 15 79
+Station #21(I,J,Lmax,N) : 20 32 15 80
+Station #22(I,J,Lmax,N) : 20 32 15 81
+Station #23(I,J,Lmax,N) : 20 32 15 82
+Station #24(I,J,Lmax,N) : 20 32 15 83
+Station #25(I,J,Lmax,N) : 20 32 15 84
+Station #26(I,J,Lmax,N) : 20 32 15 85
+Station #27(I,J,Lmax,N) : 20 32 15 95
+Station #28(I,J,Lmax,N) : 20 32 15 100
+Station #29(I,J,Lmax,N) : 20 32 15 106
+Station #30(I,J,Lmax,N) : 20 32 15 108
+Station #31(I,J,Lmax,N) : 20 32 15 109
 ------------------------+------------------------------------------------------
 %%% ND49 MENU %%%       :
 Turn on ND49 diagnostic : T
@@ -395,12 +407,12 @@ Number of P/L families  : 17
 2nd  chemical family    : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
 3rd  chemical family    : PNOx: NO NO2
 4th  chemical family    : LNOx: NO NO2
-5th  chemical family    : LANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-6th  chemical family    : PANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-7th  chemical family    : LIN1: ISOPNB ISOPND
-8th  chemical family    : PIN1: ISOPNB ISOPND
-9th  chemical family    : LIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
-10th chemical family    : PIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1
+5th  chemical family    : LANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1 MONITU MONITS HONIT
+6th  chemical family    : PANs: ISOPNB ISOPND MVKN MACRN PROPNN ETHLN DHDN R4N2 ISN1 MONITU MONITS HONIT
+7th  chemical family    : LIN1: ISOPNB ISOPND ISN1
+8th  chemical family    : PIN1: ISOPNB ISOPND ISN1
+9th  chemical family    : LIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2
+10th chemical family    : PIN2: MVKN MACRN PROPNN ETHLN DHDN R4N2
 11th chemical family    : LMTN1: MONITU MONITS
 12th chemical family    : PMTN1: MONITU MONITS
 13th chemical family    : LMTN2: HONIT
