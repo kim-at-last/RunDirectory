@@ -2,7 +2,7 @@ Planeflight.dat -- Input file for ND40 diagnostic (GEOS-FP/NRT-SEAC4RS runs)
 Lei Zhu
 30 Mar 2015
 -------------------------------------------------------------------------------
- 216       <-- # of variables to be output (list them below, one per line)
+ 211       <-- # of variables to be output (list them below, one per line)
 -------------------------------------------------------------------------------
 TRA_001
 TRA_002
@@ -89,11 +89,6 @@ TRA_082
 TRA_083
 TRA_084
 TRA_085
-TRA_086
-TRA_087
-TRA_088
-TRA_089
-TRA_090
 AODC_SULF
 AODC_BLKC
 AODC_ORGC
