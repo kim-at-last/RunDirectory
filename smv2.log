@@ -49,7 +49,8 @@ Using U.C.I. Fast-J photolysis
 Families for prod or loss output:
 ===============================================================================
 
-    PO3     LO3    PNOx    LNOx    LANs    PANs    LAN1    PAN1    LAN2    PAN2
+    POX     LOX    PNOx    LNOx    LANs    PANs    LIN1    PIN1    LIN2    PIN2
+  LMTN1   PMTN1   LMTN2   PMTN2 PXRIO2N PXRIO2H PXRIO2O
 
 ===============================================================================
 SPECIES FOR THIS RUN.  PHYSICAL CONSTS AND BOUNDARY CONDITIONS ALSO GIVEN.
@@ -272,16 +273,23 @@ NBR NAME            MW BKGAS(VMRAT)
 214 DRYMONITS        1.00 0.00E+00
 215 DRYMONITU        1.00 0.00E+00
 216 DRYHONIT         1.00 0.00E+00
-217 PO3              0.00 0.00E+00
-218 LO3              0.00 0.00E+00
+217 POX              0.00 0.00E+00
+218 LOX              0.00 0.00E+00
 219 PNOx             0.00 0.00E+00
 220 LNOx             0.00 0.00E+00
 221 LANs             0.00 0.00E+00
 222 PANs             0.00 0.00E+00
-223 LAN1             0.00 0.00E+00
-224 PAN1             0.00 0.00E+00
-225 LAN2             0.00 0.00E+00
-226 PAN2             0.00 0.00E+00
+223 LIN1             0.00 0.00E+00
+224 PIN1             0.00 0.00E+00
+225 LIN2             0.00 0.00E+00
+226 PIN2             0.00 0.00E+00
+227 LMTN1            0.00 0.00E+00
+228 PMTN1            0.00 0.00E+00
+229 LMTN2            0.00 0.00E+00
+230 PMTN2            0.00 0.00E+00
+231 PXRIO2NO         0.00 0.00E+00
+232 PXRIO2HO2        0.00 0.00E+00
+233 PXRIO2OTHER      0.00 0.00E+00
 
 INACTIVE SPECIES FOR THIS RUN ARE:
 
@@ -632,14 +640,14 @@ NMBR   A       B     C     Fv       REACTION
 324 8.3E-13    0.00    490 .00 API   +NO3   +      =0.1OLNN    +0.9OLND    
 325 4.2E-11    0.00    401 .00 LIM   +OH    +      =1.0LIMO2   
 326 2.9E-15    0.00   -783 .00 LIM   +O3    +      =0.8OH      +0.1HO2     +0.4KO2     +0.0H2O2    +0.1CO      +0.5PRPE    +0.0CH2O    +0.8MACR    +0.0HCOOH   +0.1RCOOH   +0.2ETO2    
-327 1.2E-11    0.00      0 .00 LIM   +NO3   +      =0.7OLNN    +0.3OLND    
+327 1.2E-11    0.00      0 .00 LIM   +NO3   +      =0.5OLNN    +0.5OLND    
 328 4.0E-12    0.00      0 .00 LIMO2 +NO    +      =0.7HO2     +0.8NO2     +0.2MONITU  +0.3PRPE    +0.2CH2O    +0.5RCHO    +0.1HAC     +0.3MEK     
 329 1.5E-11    0.00      0 .00 LIMO2 +HO2   +      =1.0PIP     
 330 3.6E-14    0.00    708 .00 LIMO2 +MO2   +      =1.0HO2     +0.2PRPE    +1.0CH2O    +0.3MACR    +0.2MOH     +0.2ROH     
 331 7.4E-13    0.00    765 .00 LIMO2 +MCO3  +      =0.5HO2     +0.5MO2     +0.2PRPE    +0.4CH2O    +0.3MACR    +0.5RCOOH   
 332 1.2E-12    0.00      0 .00 LIMO2 +NO3   +      =1.0HO2     +1.0NO2     +0.4PRPE    +0.4CH2O    +0.6MACR    
 333 3.4E-12    0.00    190 .00 PIP   +OH    +      =0.5OH      +0.4R4O2    +0.1RCHO    +0.4MEK     
-334 4.0E-12    0.00      0 .00 OLNN  +NO    +      =1.0HO2     +1.0NO2     +1.0HONIT   
+334 4.0E-12    0.00      0 .00 OLNN  +NO    +      =1.0HO2     +1.0NO2     +1.0MONITS  
 335 4.0E-12    0.00      0 .00 OLND  +NO    +      =2.0NO2     +0.3CH2O    +1.2RCHO    +0.5MEK     
 336 1.7E-13    0.00   1300 .00 OLNN  +HO2   +      =0.7MONITS  +0.3MONITU  
 337 1.7E-13    0.00   1300 .00 OLND  +HO2   +      =0.7MONITS  +0.3MONITU  
@@ -647,7 +655,7 @@ NMBR   A       B     C     Fv       REACTION
 339 9.7E-14    0.00    708 .00 OLND  +MO2   +      =0.5HO2     +0.5NO2     +1.0CH2O    +0.9RCHO    +0.3MEK     +0.2MOH     +0.2ROH     +0.3MONITS  +0.1MONITU  
 340 8.8E-13    0.00    765 .00 OLNN  +MCO3  +      =1.0HO2     +1.0MO2     +0.7MONITS  +0.3MONITU  
 341 5.4E-13    0.00    765 .00 OLND  +MCO3  +      =0.5MO2     +1.0NO2     +0.3CH2O    +1.2RCHO    +0.5MEK     +0.5RCOOH   
-342 1.2E-12    0.00      0 .00 OLNN  +NO3   +      =1.0HO2     +1.0NO2     +1.0HONIT   
+342 1.2E-12    0.00      0 .00 OLNN  +NO3   +      =1.0HO2     +1.0NO2     +0.7MONITS  +0.3MONITU  
 343 1.2E-12    0.00      0 .00 OLND  +NO3   +      =2.0NO2     +0.3CH2O    +1.2RCHO    +0.5MEK     
 344 7.0E-14    0.00   1000 .00 OLNN  +OLNN  +      =1.0HO2     +1.4MONITS  +0.6MONITU  
 345 4.3E-14    0.00   1000 .00 OLNN  +OLND  +      =0.5HO2     +0.5NO2     +0.2CH2O    +0.6RCHO    +0.1MEK     +1.1MONITS  +0.5MONITU  
@@ -754,303 +762,328 @@ NMBR   A       B     C     Fv       REACTION
 446 1.5E+02    0.01      0 .00 ISOPND+      +      =1.0ONITAam 
 447 1.5E+02    0.01      0 .00 MACRN +      +      =1.0ONITAam 
 448 1.5E+02    0.01      0 .00 MVKN  +      +      =1.0ONITAam 
-449 1.0E+02    0.01      0 .00 ETHLN +      +      =1.0ONITAam 
-450 1.2E+02    0.01      0 .00 R4N2  +      +      =1.0ONITAam 
-451 1.5E+02    0.01      0 .00 ISN1  +      +      =1.0ONITAam 
-452 2.3E+02    0.01      0 .00 DHDN  +      +      =1.0ONITAam 
-453 2.2E+02    0.01      0 .00 MONITS+      +      =1.0ONITApm 
-454 2.2E+02    0.01      0 .00 MONITU+      +      =1.0ONITApm 
-455 2.2E+02    0.01      0 .00 HONIT +      +      =1.0ONITApm 
-456 2.8E-04    0.00      0 .00 ONITAa+      +      =0.0        +1.0HNO3    
-457 2.8E-04    0.00      0 .00 ONITAp+      +      =0.0        +1.0HNO3    
-458 1.2E-11    0.00   -280 .00 DMS   +OH    +      =1.0SO2     +1.0MO2     +1.0CH2O    
-459 8.2E-39    0.00   5376 .00 DMS   +OH    +O2    =0.8SO2     +0.2MSA     +1.0MO2     
-460 1.0E-05    0.00   3644 .00       +      +      
-461 1.9E-13    0.00    530 .00 DMS   +NO3   +      =1.0SO2     +1.0HNO3    +1.0MO2     +1.0CH2O    
-462 3.3E-31    4.30      0 .60 SO2   +OH    +M     =1.0SO4     +1.0HO2     
-463 1.6E-12    0.00      0 .00       +      +      
-464 1.7E-11    0.00   -800 .00 Br    +O3    +      =1.0BrO     +1.0O2      
-465 4.5E-12    0.00    460 .00 BrO   +HO2   +      =1.0HOBr    +1.0O2      
-466 4.5E-12    0.00    460 .00 BrO   +HO2H2O+      =1.0HOBr    +1.0O2      
-467 4.8E-12    0.00   -310 .00 Br    +HO2   +      =1.0HBr     +1.0O2      
-468 4.8E-12    0.00   -310 .00 Br    +HO2H2O+      =1.0HBr     +1.0O2      
-469 5.5E-12    0.00    200 .00 HBr   +OH    +      =1.0Br      +1.0H2O     
-470 2.4E-12    0.00     40 .00 BrO   +BrO   +      =2.0Br      +1.0O2      
-471 2.8E-14    0.00    860 .00 BrO   +BrO   +      =1.0Br2     +1.0O2      
-472 8.8E-12    0.00    260 .00 BrO   +NO    +      =1.0Br      +1.0NO2     
-473 4.9E-11    0.00      0 .00 Br    +BrNO3 +      =1.0Br2     +1.0NO3     
-474 2.1E-11    0.00    240 .00 Br2   +OH    +      =1.0HOBr    +1.0Br      
-475 1.7E-11    0.00    250 .00 BrO   +OH    +      =1.0Br      +1.0HO2     
-476 1.6E-11    0.00      0 .00 Br    +NO3   +      =1.0BrO     +1.0NO2     
-477 1.7E-11    0.00   -800 .00 Br    +CH2O  +      =1.0HBr     +1.0HO2     +1.0CO      
-478 1.3E-11    0.00   -360 .00 Br    +ALD2  +      =1.0HBr     +1.0MCO3    +1.0CO      
-479 1.7E-10    0.00  -7000 .00 Br    +ACET  +      =1.0HBr     +1.0ATO2    +1.0CO      
-480 2.4E-10    0.00  -6411 .00 Br    +C2H6  +      =1.0HBr     +1.0ETO2    +1.0CO      
-481 8.8E-11    0.00  -4330 .00 Br    +C3H8  +      =1.0HBr     +1.0A3O2    +1.0CO      
-482 4.2E-31    2.40      0 .60 Br    +NO2   +M     =1.0BrNO2   
-483 2.7E-11    0.00      0 .00       +      +      
-484 5.2E-31    3.20      0 .60 BrO   +NO2   +M     =1.0BrNO3   
-485 6.9E-12    2.90      0 .00       +      +      
-486 1.3E-12    0.00   -600 .00 CHBr3 +OH    +      =3.0Br      
-487 2.0E-12    0.00   -840 .00 CH2Br2+OH    +      =2.0Br      
-488 2.3E-12    0.00  -1300 .00 CH3Br +OH    +      =1.0Br      
-489 1.4E+02    0.30      0 .00 BrNO3 +      +      =1.0HOBr    +1.0HNO3    
-490 9.7E+01    0.20      0 .00 HOBr  +      +      =0.5Br2     +1.0H2O     
-491 8.1E+01    0.20      0 .00 HBr   +      +      =0.5Br2     
-492 9.7E+01    0.10      0 .00 HOBr  +      +      =0.5Br2     +1.0H2O     
-493 8.1E+01    0.10      0 .00 HBr   +      +      =0.5Br2     
-494 0.0E+00    0.00      0 .00 HOBr  +      +      =0.0        +1.0DRYHOBr 
-495 0.0E+00    0.00      0 .00 HBr   +      +      =0.0        +1.0DRYHBr  
-496 0.0E+00    0.00      0 .00 BrNO3 +      +      =0.0        +1.0DRYBrNO3
-497 0.0E+00    0.00      0 .00 Br2   +      +      =0.0        +1.0DRYBr2  
-498 0.0E+00    0.00      0 .00 API   +      +      =0.0        +1.0DRYAPI  
-499 0.0E+00    0.00      0 .00 LIM   +      +      =0.0        +1.0DRYLIM  
-500 0.0E+00    0.00      0 .00 MONITS+      +      =0.0        +1.0DRYMONIT
-501 0.0E+00    0.00      0 .00 MONITU+      +      =0.0        +1.0DRYMONIT
-502 0.0E+00    0.00      0 .00 HONIT +      +      =0.0        +1.0DRYHONIT
-503 3.4E-11    0.00    380 .00 HC5   +OH    +      =1.0HC5OO   
-504 2.7E-12    0.00    350 .00 HC5OO +NO    +      =1.0NO2     +0.2GLYX    +0.2MGLY    +0.2GLYC    +0.2HAC     +0.3DHMOB   +0.2MOBA    +0.1RCHO    +1.0HO2     +0.1CO      
-505 5.0E+00    0.00      0 .00       +      +      
-506 2.7E-12    0.00    350 .00 HC5OO +NO    +      =1.0HNO3    
-507 5.0E+00    0.00      0 .00       +      +      
-508 2.9E-13    0.00   1300 .00 HC5OO +HO2   +      =0.1IAP     +0.9OH      +0.9MGLY    +0.9GLYC    +0.9HO2     
-509 5.0E+00    0.00      0 .00       +      +      
-510 2.9E-13    0.00   1300 .00 HC5OO +HO2H2O+      =0.1IAP     +0.9OH      +0.9MGLY    +0.9GLYC    +0.9HO2     
-511 5.0E+00    0.00      0 .00       +      +      
-512 1.2E-11    0.00    652 .00 ISOPND+OH    +      =0.9ISOPNDO2+0.1IEPOX   +0.1NO2     
-513 2.4E-12    0.00    745 .00 ISOPNB+OH    +      =0.9ISOPNBO2+0.1IEPOX   +0.1NO2     
-514 2.4E-12    0.00    360 .00 ISOPND+NO    +      =0.0MACRN   +0.1HCOOH   +0.3HAC     +0.2ETHLN   +0.1CH2O    +0.8NO2     +0.3GLYC    +0.3PROPNN  +0.6HO2     +0.3DHDN    +0.1MVKN    +0.1ISOPNDO2
-515 8.7E-14    0.00   1650 .00 ISOPND+HO2   +      =0.0MACRN   +0.2HAC     +0.2ETHLN   +0.1CH2O    +0.2GLYC    +0.2PROPNN  +0.5HO2     +0.5OH      +0.1MVKN    +0.5ISNP    
-516 8.7E-14    0.00   1650 .00 ISOPND+HO2H2O+      =0.0MACRN   +0.2HAC     +0.2ETHLN   +0.1CH2O    +0.2GLYC    +0.2PROPNN  +0.5HO2     +0.5OH      +0.1MVKN    +0.5ISNP    
-517 2.4E-12    0.00    360 .00 ISOPNB+NO    +      =0.1GLYC    +0.1HAC     +0.7CH2O    +0.4MACRN   +0.7HO2     +0.3MVKN    +0.9NO2     +0.2DHDN    
-518 8.7E-14    0.00   1650 .00 ISOPNB+HO2   +      =0.1GLYC    +0.1HAC     +0.4CH2O    +0.3MACRN   +0.2MVKN    +0.1NO2     +0.4HO2     +0.5OH      +0.5ISNP    
-519 8.7E-14    0.00   1650 .00 ISOPNB+HO2H2O+      =0.1GLYC    +0.1HAC     +0.4CH2O    +0.3MACRN   +0.2MVKN    +0.1NO2     +0.4HO2     +0.5OH      +0.5ISNP    
-520 4.7E-12    0.00    200 .00 ISNP  +OH    +      =0.6OH      +0.6R4N1    +0.2ISOPNBO2+0.2ISOPNDO2
-521 4.4E-13    0.00    380 .00 MVKN  +OH    +      =0.7HCOOH   +1.0NO3     +0.7MGLY    +0.3CH2O    +0.3PYAC    
-522 8.8E-13    0.00    380 .00 MACRN +OH    +      =1.0MACRNO2 
-523 2.7E-12    0.00    350 .00 MACRNO+NO    +      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0NO2     
-524 2.9E-13    0.00   1300 .00 MACRNO+HO2   +      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0OH      
-525 4.0E+00    0.00      0 .00       +      +      
-526 2.9E-13    0.00   1300 .00 MACRNO+HO2H2O+      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0OH      
-527 4.0E+00    0.00      0 .00       +      +      
-528 9.0E-28    8.90      0 .60 MACRNO+NO2   +M     =1.0PMNN    
-529 7.7E-12    0.20      0 .00       +      +      
-530 9.0E-29    0.00  14000 .00 PMNN  +      +      =1.0MACRNO2 +1.0NO2     
-531 2.5E-12    0.00    410 .00 DHMOB +OH    +      =1.5CO      +1.0HO2     +0.5HAC     +0.5MEK     
-532 2.7E-12    0.00    350 .00 DIBOO +NO    +      =1.0HO2     +1.0NO2     +0.5GLYC    +0.5MGLY    +0.5HAC     +0.5GLYX    
-533 5.0E+00    0.00      0 .00       +      +      
-534 2.7E-12    0.00    350 .00 DIBOO +NO    +      =1.0HNO3    
-535 5.0E+00    0.00      0 .00       +      +      
-536 2.9E-13    0.00   1300 .00 DIBOO +HO2   +      =0.1HO2     +0.1OH      +0.1GLYC    +0.1MGLY    +0.1HAC     +0.1GLYX    +0.8R4P     
-537 5.0E+00    0.00      0 .00       +      +      
-538 2.9E-13    0.00   1300 .00 DIBOO +HO2H2O+      =0.1HO2     +0.1OH      +0.1GLYC    +0.1MGLY    +0.1HAC     +0.1GLYX    +0.8R4P     
-539 5.0E+00    0.00      0 .00       +      +      
-540 7.9E-12    0.00    380 .00 MOBA  +OH    +      =1.0MOBAOO  
-541 2.7E-12    0.00    350 .00 MOBAOO+NO    +      =1.0RCHO    +0.0        +1.0HO2     +1.0NO2     
-542 5.0E+00    0.00      0 .00       +      +      
-543 2.7E-12    0.00    350 .00 MOBAOO+NO    +      =1.0HNO3    
-544 5.0E+00    0.00      0 .00       +      +      
-545 2.9E-13    0.00   1300 .00 MOBAOO+HO2   +      =0.5OH      +0.5HO2     +0.5RCHO    +0.0        +0.5R4P     
-546 4.0E+00    0.00      0 .00       +      +      
-547 2.9E-13    0.00   1300 .00 MOBAOO+HO2H2O+      =0.5OH      +0.5HO2     +0.5RCHO    +0.0        +0.5R4P     
-548 4.0E+00    0.00      0 .00       +      +      
-549 2.0E-17    0.00      0 .00 MOBA  +O3    +      =1.0OH      +1.0HO2     +0.0        +1.0MEK     
-550 2.4E-12    0.00      0 .00 ETHLN +OH    +      =1.0CH2O    +0.0        +1.0NO2     
-551 6.7E-13    0.00      0 .00 PROPNN+OH    +      =1.0NO2     +1.0MGLY    
-552 1.1E+05    0.00      0 .00 ACLOOA+      +      =1.0ACLOO   
-553 8.9E+05    0.00      0 .00 ACLOOA+      +      =1.0OH      +1.0HO2     +1.0MGLY    
-554 3.7E+05    0.00      0 .00 CH2OOA+      +      =1.0CH2OO   
-555 5.0E+05    0.00      0 .00 CH2OOA+      +      =1.0CO      
-556 1.3E+05    0.00      0 .00 CH2OOA+      +      =1.0HO2     +1.0CO      +1.0OH      
-557 2.4E+05    0.00      0 .00 CH2OOB+      +      =1.0CH2OO   
-558 4.0E+05    0.00      0 .00 CH2OOB+      +      =1.0CO      
-559 3.6E+05    0.00      0 .00 CH2OOB+      +      =1.0HO2     +1.0CO      +1.0OH      
-560 1.8E+05    0.00      0 .00 CH2OOC+      +      =1.0CH2OO   
-561 8.2E+05    0.00      0 .00 CH2OOC+      +      =1.0HO2     +1.0CO      +1.0OH      
-562 2.4E+05    0.00      0 .00 CH3CHO+      +      =1.0CH3CHOO 
-563 3.6E+05    0.00      0 .00 CH3CHO+      +      =1.0MO2     +1.0CO      +1.0OH      
-564 2.0E+05    0.00      0 .00 CH3CHO+      +      =1.0MO2     +1.0HO2     
-565 2.0E+05    0.00      0 .00 CH3CHO+      +      =1.0CH4     
-566 1.1E+05    0.00      0 .00 GAOOB +      +      =1.0GAOO    
-567 8.9E+05    0.00      0 .00 GAOOB +      +      =1.0OH      +1.0HO2     +1.0CO      +1.0CH2O    
-568 2.6E+05    0.00      0 .00 MACROO+      +      =1.0PRPE    
-569 2.6E+05    0.00      0 .00 MACROO+      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
-570 2.2E+05    0.00      0 .00 MACROO+      +      =1.0MACROO  
-571 2.7E+05    0.00      0 .00 MACROO+      +      =1.0OH      +1.0CO      +1.0MCO3    +1.0CH2O    
-572 3.6E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     +1.0CO      +1.0OH      
-573 2.0E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     +1.0HO2     
-574 2.4E+05    0.00      0 .00 MACRNO+      +      =1.0MACRNOO 
-575 2.0E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     
-576 2.6E+05    0.00      0 .00 MVKOOA+      +      =1.0PRPE    
-577 2.6E+05    0.00      0 .00 MVKOOA+      +      =1.0MO2     +1.0CH2O    +1.0CO      +1.0HO2     
-578 2.2E+05    0.00      0 .00 MVKOOA+      +      =1.0MVKOO   
-579 2.7E+05    0.00      0 .00 MVKOOA+      +      =1.0OH      +1.0VRO2    
-580 1.1E+05    0.00      0 .00 MGLYOO+      +      =1.0MGLYOO  
-581 8.9E+05    0.00      0 .00 MGLYOO+      +      =1.0OH      +1.0CO      +1.0MCO3    
-582 1.8E+05    0.00      0 .00 MGLYOO+      +      =1.0MGLYOO  
-583 8.2E+05    0.00      0 .00 MGLYOO+      +      =1.0OH      +1.0CO      +1.0MCO3    
-584 2.0E+05    0.00      0 .00 MGLOOA+      +      =1.0ALD2    
-585 2.0E+05    0.00      0 .00 MGLOOA+      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
-586 2.4E+05    0.00      0 .00 MGLOOA+      +      =1.0MGLOO   
-587 3.6E+05    0.00      0 .00 MGLOOA+      +      =1.0OH      +1.0CO      +1.0MCO3    
-588 1.1E+05    0.00      0 .00 NC2OOA+      +      =1.0NC2OO   
-589 8.9E+05    0.00      0 .00 NC2OOA+      +      =1.0OH      +1.0NO2     +1.0GLYX    
-590 1.1E+05    0.00      0 .00 NC3OOA+      +      =1.0NC3OO   
-591 8.9E+05    0.00      0 .00 NC3OOA+      +      =1.0OH      +1.0NO2     +1.0MGLY    
-592 1.8E+05    0.00      0 .00 NC4OOA+      +      =1.0NC4OO   
-593 8.2E+05    0.00      0 .00 NC4OOA+      +      =1.0OH      +1.0NO2     +1.0GLYC    +1.0ALD2    
-594 1.2E-15    0.00      0 .00 ACLOO +CO    +      =1.0HAC     
-595 1.0E-14    0.00      0 .00 ACLOO +NO    +      =1.0HAC     +1.0NO2     
-596 1.0E-15    0.00      0 .00 ACLOO +NO2   +      =1.0HAC     +1.0NO3     
-597 3.9E-11    0.00      0 .00 ACLOO +SO2   +      =1.0HAC     +1.0SO4     
-598 1.0E-18    0.00      0 .00 ACLOO +      +      =1.0HAC     +1.0H2O2    
-599 1.2E-15    0.00      0 .00 CH2OO +CO    +      =1.0CH2O    
-600 1.0E-14    0.00      0 .00 CH2OO +NO    +      =1.0CH2O    +1.0NO2     
-601 1.0E-15    0.00      0 .00 CH2OO +NO2   +      =1.0CH2O    +1.0NO3     
-602 3.9E-11    0.00      0 .00 CH2OO +SO2   +      =1.0CH2O    +1.0SO4     
-603 1.0E-18    0.00      0 .00 CH2OO +      +      =1.0HCOOH   
-604 1.2E-15    0.00      0 .00 CH3CHO+CO    +      =1.0ALD2    
-605 1.0E-14    0.00      0 .00 CH3CHO+NO    +      =1.0ALD2    +1.0NO2     
-606 1.0E-15    0.00      0 .00 CH3CHO+NO2   +      =1.0ALD2    +1.0NO3     
-607 3.9E-11    0.00      0 .00 CH3CHO+SO2   +      =1.0ALD2    +1.0SO4     
-608 1.0E-18    0.00      0 .00 CH3CHO+      +      =1.0ALD2    +1.0H2O2    
-609 1.0E-18    0.00      0 .00 CH3CHO+      +      =1.0ACTA    
-610 1.2E-15    0.00      0 .00 GAOO  +CO    +      =1.0GLYC    
-611 1.0E-14    0.00      0 .00 GAOO  +NO    +      =1.0GLYC    +1.0NO2     
-612 1.0E-15    0.00      0 .00 GAOO  +NO2   +      =1.0GLYC    +1.0NO3     
-613 3.9E-11    0.00      0 .00 GAOO  +SO2   +      =1.0GLYC    +1.0SO4     
-614 1.0E-18    0.00      0 .00 GAOO  +      +      =1.0GLYC    +1.0H2O2    
-615 1.0E-18    0.00      0 .00 GAOO  +      +      =1.0HAC     
-616 1.2E-15    0.00      0 .00 MACROO+CO    +      =1.0MACR    
-617 1.0E-14    0.00      0 .00 MACROO+NO    +      =1.0MACR    +1.0NO2     
-618 1.0E-15    0.00      0 .00 MACROO+NO2   +      =1.0MACR    +1.0NO3     
-619 3.9E-11    0.00      0 .00 MACROO+SO2   +      =1.0MACR    +1.0SO4     
-620 1.0E-18    0.00      0 .00 MACROO+      +      =1.0MRP     
-621 1.0E-18    0.00      0 .00 MACROO+      +      =1.0MACR    +1.0H2O2    
-622 1.2E-15    0.00      0 .00 MACRNO+CO    +      =1.0MACRN   
-623 1.0E-14    0.00      0 .00 MACRNO+NO    +      =1.0MACRN   +1.0NO2     
-624 1.0E-15    0.00      0 .00 MACRNO+NO2   +      =1.0MACRN   +1.0NO3     
-625 3.9E-11    0.00      0 .00 MACRNO+SO2   +      =1.0MACRN   +1.0SO4     
-626 1.0E-18    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     
-627 1.0E-18    0.00      0 .00 MACRNO+      +      =1.0MACRN   +1.0H2O2    
-628 1.2E-15    0.00      0 .00 MVKOO +CO    +      =1.0MVK     
-629 1.0E-14    0.00      0 .00 MVKOO +NO    +      =1.0MVK     +1.0NO2     
-630 1.0E-15    0.00      0 .00 MVKOO +NO2   +      =1.0MVK     +1.0NO3     
-631 3.9E-11    0.00      0 .00 MVKOO +SO2   +      =1.0MVK     +1.0SO4     
-632 1.0E-18    0.00      0 .00 MVKOO +      +      =1.0MVK     +1.0H2O2    
-633 1.2E-15    0.00      0 .00 MGLOO +CO    +      =1.0MGLY    
-634 1.0E-14    0.00      0 .00 MGLOO +NO    +      =1.0MGLY    +1.0NO2     
-635 1.0E-15    0.00      0 .00 MGLOO +NO2   +      =1.0MGLY    +1.0NO3     
-636 3.9E-11    0.00      0 .00 MGLOO +SO2   +      =1.0MGLY    +1.0SO4     
-637 1.0E-18    0.00      0 .00 MGLOO +      +      =1.0MCO3    +1.0MO2     
-638 1.0E-18    0.00      0 .00 MGLOO +      +      =1.0MGLY    +1.0H2O2    
-639 1.2E-15    0.00      0 .00 MGLYOO+CO    +      =1.0MGLY    
-640 1.0E-14    0.00      0 .00 MGLYOO+NO    +      =1.0MGLY    +1.0NO2     
-641 1.0E-15    0.00      0 .00 MGLYOO+NO2   +      =1.0MGLY    +1.0NO3     
-642 3.9E-11    0.00      0 .00 MGLYOO+SO2   +      =1.0MGLY    +1.0SO4     
-643 1.0E-18    0.00      0 .00 MGLYOO+      +      =1.0MGLY    +1.0H2O2    
-644 1.2E-15    0.00      0 .00 NC2OO +CO    +      =1.0ETHLN   
-645 1.0E-14    0.00      0 .00 NC2OO +NO    +      =1.0ETHLN   +1.0NO2     
-646 1.0E-15    0.00      0 .00 NC2OO +NO2   +      =1.0ETHLN   +1.0NO3     
-647 3.9E-11    0.00      0 .00 NC2OO +SO2   +      =1.0ETHLN   +1.0SO4     
-648 1.0E-18    0.00      0 .00 NC2OO +      +      =1.0ETHLN   +1.0H2O2    
-649 1.0E-18    0.00      0 .00 NC2OO +      +      =1.0CH2O    +1.0NO2     
-650 1.2E-15    0.00      0 .00 NC3OO +CO    +      =1.0PROPNN  
-651 1.0E-14    0.00      0 .00 NC3OO +NO    +      =1.0PROPNN  +1.0NO2     
-652 1.0E-15    0.00      0 .00 NC3OO +NO2   +      =1.0PROPNN  +1.0NO3     
-653 3.9E-11    0.00      0 .00 NC3OO +SO2   +      =1.0PROPNN  +1.0SO4     
-654 1.0E-18    0.00      0 .00 NC3OO +      +      =1.0PROPNN  +1.0H2O2    
-655 1.2E-15    0.00      0 .00 NC4OO +CO    +      =1.0MVKN    
-656 1.0E-14    0.00      0 .00 NC4OO +NO    +      =1.0MVKN    +1.0NO2     
-657 1.0E-15    0.00      0 .00 NC4OO +NO2   +      =1.0MVKN    +1.0NO3     
-658 3.9E-11    0.00      0 .00 NC4OO +SO2   +      =1.0MVKN    +1.0SO4     
-659 1.0E-18    0.00      0 .00 NC4OO +      +      =1.0MVKN    +1.0H2O2    
-660 5.1E-11    0.00      0 .00 HPALD +OH    +      =1.0MGLY    +1.0CO      +1.0CH2O    +1.0OH      
+449 1.2E+02    0.01      0 .00 R4N2  +      +      =1.0ONITAam 
+450 1.5E+02    0.01      0 .00 ISN1  +      +      =1.0ONITAam 
+451 2.3E+02    0.01      0 .00 DHDN  +      +      =1.0ONITAam 
+452 2.2E+02    0.01      0 .00 MONITS+      +      =1.0ONITApm 
+453 2.2E+02    0.01      0 .00 MONITU+      +      =1.0ONITApm 
+454 2.2E+02    0.01      0 .00 HONIT +      +      =1.0ONITApm 
+455 2.8E-04    0.00      0 .00 ONITAa+      +      =0.0        +1.0HNO3    
+456 2.8E-04    0.00      0 .00 ONITAp+      +      =0.0        +1.0HNO3    
+457 1.2E-11    0.00   -280 .00 DMS   +OH    +      =1.0SO2     +1.0MO2     +1.0CH2O    
+458 8.2E-39    0.00   5376 .00 DMS   +OH    +O2    =0.8SO2     +0.2MSA     +1.0MO2     
+459 1.0E-05    0.00   3644 .00       +      +      
+460 1.9E-13    0.00    530 .00 DMS   +NO3   +      =1.0SO2     +1.0HNO3    +1.0MO2     +1.0CH2O    
+461 3.3E-31    4.30      0 .60 SO2   +OH    +M     =1.0SO4     +1.0HO2     
+462 1.6E-12    0.00      0 .00       +      +      
+463 1.7E-11    0.00   -800 .00 Br    +O3    +      =1.0BrO     +1.0O2      
+464 4.5E-12    0.00    460 .00 BrO   +HO2   +      =1.0HOBr    +1.0O2      
+465 4.5E-12    0.00    460 .00 BrO   +HO2H2O+      =1.0HOBr    +1.0O2      
+466 4.8E-12    0.00   -310 .00 Br    +HO2   +      =1.0HBr     +1.0O2      
+467 4.8E-12    0.00   -310 .00 Br    +HO2H2O+      =1.0HBr     +1.0O2      
+468 5.5E-12    0.00    200 .00 HBr   +OH    +      =1.0Br      +1.0H2O     
+469 2.4E-12    0.00     40 .00 BrO   +BrO   +      =2.0Br      +1.0O2      
+470 2.8E-14    0.00    860 .00 BrO   +BrO   +      =1.0Br2     +1.0O2      
+471 8.8E-12    0.00    260 .00 BrO   +NO    +      =1.0Br      +1.0NO2     
+472 4.9E-11    0.00      0 .00 Br    +BrNO3 +      =1.0Br2     +1.0NO3     
+473 2.1E-11    0.00    240 .00 Br2   +OH    +      =1.0HOBr    +1.0Br      
+474 1.7E-11    0.00    250 .00 BrO   +OH    +      =1.0Br      +1.0HO2     
+475 1.6E-11    0.00      0 .00 Br    +NO3   +      =1.0BrO     +1.0NO2     
+476 1.7E-11    0.00   -800 .00 Br    +CH2O  +      =1.0HBr     +1.0HO2     +1.0CO      
+477 1.3E-11    0.00   -360 .00 Br    +ALD2  +      =1.0HBr     +1.0MCO3    +1.0CO      
+478 1.7E-10    0.00  -7000 .00 Br    +ACET  +      =1.0HBr     +1.0ATO2    +1.0CO      
+479 2.4E-10    0.00  -6411 .00 Br    +C2H6  +      =1.0HBr     +1.0ETO2    +1.0CO      
+480 8.8E-11    0.00  -4330 .00 Br    +C3H8  +      =1.0HBr     +1.0A3O2    +1.0CO      
+481 4.2E-31    2.40      0 .60 Br    +NO2   +M     =1.0BrNO2   
+482 2.7E-11    0.00      0 .00       +      +      
+483 5.2E-31    3.20      0 .60 BrO   +NO2   +M     =1.0BrNO3   
+484 6.9E-12    2.90      0 .00       +      +      
+485 1.3E-12    0.00   -600 .00 CHBr3 +OH    +      =3.0Br      
+486 2.0E-12    0.00   -840 .00 CH2Br2+OH    +      =2.0Br      
+487 2.3E-12    0.00  -1300 .00 CH3Br +OH    +      =1.0Br      
+488 1.4E+02    0.30      0 .00 BrNO3 +      +      =1.0HOBr    +1.0HNO3    
+489 9.7E+01    0.20      0 .00 HOBr  +      +      =0.5Br2     +1.0H2O     
+490 8.1E+01    0.20      0 .00 HBr   +      +      =0.5Br2     
+491 9.7E+01    0.10      0 .00 HOBr  +      +      =0.5Br2     +1.0H2O     
+492 8.1E+01    0.10      0 .00 HBr   +      +      =0.5Br2     
+493 0.0E+00    0.00      0 .00 HOBr  +      +      =0.0        +1.0DRYHOBr 
+494 0.0E+00    0.00      0 .00 HBr   +      +      =0.0        +1.0DRYHBr  
+495 0.0E+00    0.00      0 .00 BrNO3 +      +      =0.0        +1.0DRYBrNO3
+496 0.0E+00    0.00      0 .00 Br2   +      +      =0.0        +1.0DRYBr2  
+497 0.0E+00    0.00      0 .00 API   +      +      =0.0        +1.0DRYAPI  
+498 0.0E+00    0.00      0 .00 LIM   +      +      =0.0        +1.0DRYLIM  
+499 0.0E+00    0.00      0 .00 MONITS+      +      =0.0        +1.0DRYMONIT
+500 0.0E+00    0.00      0 .00 MONITU+      +      =0.0        +1.0DRYMONIT
+501 0.0E+00    0.00      0 .00 HONIT +      +      =0.0        +1.0DRYHONIT
+502 3.4E-11    0.00    380 .00 HC5   +OH    +      =1.0HC5OO   
+503 2.7E-12    0.00    350 .00 HC5OO +NO    +      =1.0NO2     +0.2GLYX    +0.2MGLY    +0.2GLYC    +0.2HAC     +0.3DHMOB   +0.2MOBA    +0.1RCHO    +1.0HO2     +0.1CO      
+504 5.0E+00    0.00      0 .00       +      +      
+505 2.7E-12    0.00    350 .00 HC5OO +NO    +      =1.0HNO3    
+506 5.0E+00    0.00      0 .00       +      +      
+507 2.9E-13    0.00   1300 .00 HC5OO +HO2   +      =0.1IAP     +0.9OH      +0.9MGLY    +0.9GLYC    +0.9HO2     
+508 5.0E+00    0.00      0 .00       +      +      
+509 2.9E-13    0.00   1300 .00 HC5OO +HO2H2O+      =0.1IAP     +0.9OH      +0.9MGLY    +0.9GLYC    +0.9HO2     
+510 5.0E+00    0.00      0 .00       +      +      
+511 1.2E-11    0.00    652 .00 ISOPND+OH    +      =0.9ISOPNDO2+0.1IEPOX   +0.1NO2     
+512 2.4E-12    0.00    745 .00 ISOPNB+OH    +      =0.9ISOPNBO2+0.1IEPOX   +0.1NO2     
+513 2.4E-12    0.00    360 .00 ISOPND+NO    +      =0.0MACRN   +0.1HCOOH   +0.3HAC     +0.2ETHLN   +0.1CH2O    +0.8NO2     +0.3GLYC    +0.3PROPNN  +0.6HO2     +0.3DHDN    +0.1MVKN    +0.1ISOPNDO2
+514 8.7E-14    0.00   1650 .00 ISOPND+HO2   +      =0.0MACRN   +0.2HAC     +0.2ETHLN   +0.1CH2O    +0.2GLYC    +0.2PROPNN  +0.5HO2     +0.5OH      +0.1MVKN    +0.5ISNP    
+515 8.7E-14    0.00   1650 .00 ISOPND+HO2H2O+      =0.0MACRN   +0.2HAC     +0.2ETHLN   +0.1CH2O    +0.2GLYC    +0.2PROPNN  +0.5HO2     +0.5OH      +0.1MVKN    +0.5ISNP    
+516 2.4E-12    0.00    360 .00 ISOPNB+NO    +      =0.1GLYC    +0.1HAC     +0.7CH2O    +0.4MACRN   +0.7HO2     +0.3MVKN    +0.9NO2     +0.2DHDN    
+517 8.7E-14    0.00   1650 .00 ISOPNB+HO2   +      =0.1GLYC    +0.1HAC     +0.4CH2O    +0.3MACRN   +0.2MVKN    +0.1NO2     +0.4HO2     +0.5OH      +0.5ISNP    
+518 8.7E-14    0.00   1650 .00 ISOPNB+HO2H2O+      =0.1GLYC    +0.1HAC     +0.4CH2O    +0.3MACRN   +0.2MVKN    +0.1NO2     +0.4HO2     +0.5OH      +0.5ISNP    
+519 4.7E-12    0.00    200 .00 ISNP  +OH    +      =0.6OH      +0.6R4N1    +0.2ISOPNBO2+0.2ISOPNDO2
+520 4.4E-13    0.00    380 .00 MVKN  +OH    +      =0.7HCOOH   +1.0NO3     +0.7MGLY    +0.3CH2O    +0.3PYAC    
+521 8.8E-13    0.00    380 .00 MACRN +OH    +      =1.0MACRNO2 
+522 2.7E-12    0.00    350 .00 MACRNO+NO    +      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0NO2     
+523 2.9E-13    0.00   1300 .00 MACRNO+HO2   +      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0OH      
+524 4.0E+00    0.00      0 .00       +      +      
+525 2.9E-13    0.00   1300 .00 MACRNO+HO2H2O+      =0.1ACTA    +0.1CH2O    +0.1NO3     +0.1HCOOH   +0.1MGLY    +0.8HAC     +0.8NO2     +0.0        +1.0OH      
+526 4.0E+00    0.00      0 .00       +      +      
+527 9.0E-28    8.90      0 .60 MACRNO+NO2   +M     =1.0PMNN    
+528 7.7E-12    0.20      0 .00       +      +      
+529 9.0E-29    0.00  14000 .00 PMNN  +      +      =1.0MACRNO2 +1.0NO2     
+530 2.5E-12    0.00    410 .00 DHMOB +OH    +      =1.5CO      +1.0HO2     +0.5HAC     +0.5MEK     
+531 2.7E-12    0.00    350 .00 DIBOO +NO    +      =1.0HO2     +1.0NO2     +0.5GLYC    +0.5MGLY    +0.5HAC     +0.5GLYX    
+532 5.0E+00    0.00      0 .00       +      +      
+533 2.7E-12    0.00    350 .00 DIBOO +NO    +      =1.0HNO3    
+534 5.0E+00    0.00      0 .00       +      +      
+535 2.9E-13    0.00   1300 .00 DIBOO +HO2   +      =0.1HO2     +0.1OH      +0.1GLYC    +0.1MGLY    +0.1HAC     +0.1GLYX    +0.8R4P     
+536 5.0E+00    0.00      0 .00       +      +      
+537 2.9E-13    0.00   1300 .00 DIBOO +HO2H2O+      =0.1HO2     +0.1OH      +0.1GLYC    +0.1MGLY    +0.1HAC     +0.1GLYX    +0.8R4P     
+538 5.0E+00    0.00      0 .00       +      +      
+539 7.9E-12    0.00    380 .00 MOBA  +OH    +      =1.0MOBAOO  
+540 2.7E-12    0.00    350 .00 MOBAOO+NO    +      =1.0RCHO    +0.0        +1.0HO2     +1.0NO2     
+541 5.0E+00    0.00      0 .00       +      +      
+542 2.7E-12    0.00    350 .00 MOBAOO+NO    +      =1.0HNO3    
+543 5.0E+00    0.00      0 .00       +      +      
+544 2.9E-13    0.00   1300 .00 MOBAOO+HO2   +      =0.5OH      +0.5HO2     +0.5RCHO    +0.0        +0.5R4P     
+545 4.0E+00    0.00      0 .00       +      +      
+546 2.9E-13    0.00   1300 .00 MOBAOO+HO2H2O+      =0.5OH      +0.5HO2     +0.5RCHO    +0.0        +0.5R4P     
+547 4.0E+00    0.00      0 .00       +      +      
+548 2.0E-17    0.00      0 .00 MOBA  +O3    +      =1.0OH      +1.0HO2     +0.0        +1.0MEK     
+549 2.4E-12    0.00      0 .00 ETHLN +OH    +      =1.0CH2O    +0.0        +1.0NO2     
+550 6.7E-13    0.00      0 .00 PROPNN+OH    +      =1.0NO2     +1.0MGLY    
+551 1.1E+05    0.00      0 .00 ACLOOA+      +      =1.0ACLOO   
+552 8.9E+05    0.00      0 .00 ACLOOA+      +      =1.0OH      +1.0HO2     +1.0MGLY    
+553 3.7E+05    0.00      0 .00 CH2OOA+      +      =1.0CH2OO   
+554 5.0E+05    0.00      0 .00 CH2OOA+      +      =1.0CO      
+555 1.3E+05    0.00      0 .00 CH2OOA+      +      =1.0HO2     +1.0CO      +1.0OH      
+556 2.4E+05    0.00      0 .00 CH2OOB+      +      =1.0CH2OO   
+557 4.0E+05    0.00      0 .00 CH2OOB+      +      =1.0CO      
+558 3.6E+05    0.00      0 .00 CH2OOB+      +      =1.0HO2     +1.0CO      +1.0OH      
+559 1.8E+05    0.00      0 .00 CH2OOC+      +      =1.0CH2OO   
+560 8.2E+05    0.00      0 .00 CH2OOC+      +      =1.0HO2     +1.0CO      +1.0OH      
+561 2.4E+05    0.00      0 .00 CH3CHO+      +      =1.0CH3CHOO 
+562 3.6E+05    0.00      0 .00 CH3CHO+      +      =1.0MO2     +1.0CO      +1.0OH      
+563 2.0E+05    0.00      0 .00 CH3CHO+      +      =1.0MO2     +1.0HO2     
+564 2.0E+05    0.00      0 .00 CH3CHO+      +      =1.0CH4     
+565 1.1E+05    0.00      0 .00 GAOOB +      +      =1.0GAOO    
+566 8.9E+05    0.00      0 .00 GAOOB +      +      =1.0OH      +1.0HO2     +1.0CO      +1.0CH2O    
+567 2.6E+05    0.00      0 .00 MACROO+      +      =1.0PRPE    
+568 2.6E+05    0.00      0 .00 MACROO+      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
+569 2.2E+05    0.00      0 .00 MACROO+      +      =1.0MACROO  
+570 2.7E+05    0.00      0 .00 MACROO+      +      =1.0OH      +1.0CO      +1.0MCO3    +1.0CH2O    
+571 3.6E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     +1.0CO      +1.0OH      
+572 2.0E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     +1.0HO2     
+573 2.4E+05    0.00      0 .00 MACRNO+      +      =1.0MACRNOO 
+574 2.0E+05    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     
+575 2.6E+05    0.00      0 .00 MVKOOA+      +      =1.0PRPE    
+576 2.6E+05    0.00      0 .00 MVKOOA+      +      =1.0MO2     +1.0CH2O    +1.0CO      +1.0HO2     
+577 2.2E+05    0.00      0 .00 MVKOOA+      +      =1.0MVKOO   
+578 2.7E+05    0.00      0 .00 MVKOOA+      +      =1.0OH      +1.0VRO2    
+579 1.1E+05    0.00      0 .00 MGLYOO+      +      =1.0MGLYOO  
+580 8.9E+05    0.00      0 .00 MGLYOO+      +      =1.0OH      +1.0CO      +1.0MCO3    
+581 1.8E+05    0.00      0 .00 MGLYOO+      +      =1.0MGLYOO  
+582 8.2E+05    0.00      0 .00 MGLYOO+      +      =1.0OH      +1.0CO      +1.0MCO3    
+583 2.0E+05    0.00      0 .00 MGLOOA+      +      =1.0ALD2    
+584 2.0E+05    0.00      0 .00 MGLOOA+      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
+585 2.4E+05    0.00      0 .00 MGLOOA+      +      =1.0MGLOO   
+586 3.6E+05    0.00      0 .00 MGLOOA+      +      =1.0OH      +1.0CO      +1.0MCO3    
+587 1.1E+05    0.00      0 .00 NC2OOA+      +      =1.0NC2OO   
+588 8.9E+05    0.00      0 .00 NC2OOA+      +      =1.0OH      +1.0NO2     +1.0GLYX    
+589 1.1E+05    0.00      0 .00 NC3OOA+      +      =1.0NC3OO   
+590 8.9E+05    0.00      0 .00 NC3OOA+      +      =1.0OH      +1.0NO2     +1.0MGLY    
+591 1.8E+05    0.00      0 .00 NC4OOA+      +      =1.0NC4OO   
+592 8.2E+05    0.00      0 .00 NC4OOA+      +      =1.0OH      +1.0NO2     +1.0GLYC    +1.0ALD2    
+593 1.2E-15    0.00      0 .00 ACLOO +CO    +      =1.0HAC     
+594 1.0E-14    0.00      0 .00 ACLOO +NO    +      =1.0HAC     +1.0NO2     
+595 1.0E-15    0.00      0 .00 ACLOO +NO2   +      =1.0HAC     +1.0NO3     
+596 3.9E-11    0.00      0 .00 ACLOO +SO2   +      =1.0HAC     +1.0SO4     
+597 1.0E-18    0.00      0 .00 ACLOO +      +      =1.0HAC     +1.0H2O2    
+598 1.2E-15    0.00      0 .00 CH2OO +CO    +      =1.0CH2O    
+599 1.0E-14    0.00      0 .00 CH2OO +NO    +      =1.0CH2O    +1.0NO2     
+600 1.0E-15    0.00      0 .00 CH2OO +NO2   +      =1.0CH2O    +1.0NO3     
+601 3.9E-11    0.00      0 .00 CH2OO +SO2   +      =1.0CH2O    +1.0SO4     
+602 1.0E-18    0.00      0 .00 CH2OO +      +      =1.0HCOOH   
+603 1.2E-15    0.00      0 .00 CH3CHO+CO    +      =1.0ALD2    
+604 1.0E-14    0.00      0 .00 CH3CHO+NO    +      =1.0ALD2    +1.0NO2     
+605 1.0E-15    0.00      0 .00 CH3CHO+NO2   +      =1.0ALD2    +1.0NO3     
+606 3.9E-11    0.00      0 .00 CH3CHO+SO2   +      =1.0ALD2    +1.0SO4     
+607 1.0E-18    0.00      0 .00 CH3CHO+      +      =1.0ALD2    +1.0H2O2    
+608 1.0E-18    0.00      0 .00 CH3CHO+      +      =1.0ACTA    
+609 1.2E-15    0.00      0 .00 GAOO  +CO    +      =1.0GLYC    
+610 1.0E-14    0.00      0 .00 GAOO  +NO    +      =1.0GLYC    +1.0NO2     
+611 1.0E-15    0.00      0 .00 GAOO  +NO2   +      =1.0GLYC    +1.0NO3     
+612 3.9E-11    0.00      0 .00 GAOO  +SO2   +      =1.0GLYC    +1.0SO4     
+613 1.0E-18    0.00      0 .00 GAOO  +      +      =1.0GLYC    +1.0H2O2    
+614 1.0E-18    0.00      0 .00 GAOO  +      +      =1.0HAC     
+615 1.2E-15    0.00      0 .00 MACROO+CO    +      =1.0MACR    
+616 1.0E-14    0.00      0 .00 MACROO+NO    +      =1.0MACR    +1.0NO2     
+617 1.0E-15    0.00      0 .00 MACROO+NO2   +      =1.0MACR    +1.0NO3     
+618 3.9E-11    0.00      0 .00 MACROO+SO2   +      =1.0MACR    +1.0SO4     
+619 1.0E-18    0.00      0 .00 MACROO+      +      =1.0MRP     
+620 1.0E-18    0.00      0 .00 MACROO+      +      =1.0MACR    +1.0H2O2    
+621 1.2E-15    0.00      0 .00 MACRNO+CO    +      =1.0MACRN   
+622 1.0E-14    0.00      0 .00 MACRNO+NO    +      =1.0MACRN   +1.0NO2     
+623 1.0E-15    0.00      0 .00 MACRNO+NO2   +      =1.0MACRN   +1.0NO3     
+624 3.9E-11    0.00      0 .00 MACRNO+SO2   +      =1.0MACRN   +1.0SO4     
+625 1.0E-18    0.00      0 .00 MACRNO+      +      =1.0HAC     +1.0NO2     
+626 1.0E-18    0.00      0 .00 MACRNO+      +      =1.0MACRN   +1.0H2O2    
+627 1.2E-15    0.00      0 .00 MVKOO +CO    +      =1.0MVK     
+628 1.0E-14    0.00      0 .00 MVKOO +NO    +      =1.0MVK     +1.0NO2     
+629 1.0E-15    0.00      0 .00 MVKOO +NO2   +      =1.0MVK     +1.0NO3     
+630 3.9E-11    0.00      0 .00 MVKOO +SO2   +      =1.0MVK     +1.0SO4     
+631 1.0E-18    0.00      0 .00 MVKOO +      +      =1.0MVK     +1.0H2O2    
+632 1.2E-15    0.00      0 .00 MGLOO +CO    +      =1.0MGLY    
+633 1.0E-14    0.00      0 .00 MGLOO +NO    +      =1.0MGLY    +1.0NO2     
+634 1.0E-15    0.00      0 .00 MGLOO +NO2   +      =1.0MGLY    +1.0NO3     
+635 3.9E-11    0.00      0 .00 MGLOO +SO2   +      =1.0MGLY    +1.0SO4     
+636 1.0E-18    0.00      0 .00 MGLOO +      +      =1.0MCO3    +1.0MO2     
+637 1.0E-18    0.00      0 .00 MGLOO +      +      =1.0MGLY    +1.0H2O2    
+638 1.2E-15    0.00      0 .00 MGLYOO+CO    +      =1.0MGLY    
+639 1.0E-14    0.00      0 .00 MGLYOO+NO    +      =1.0MGLY    +1.0NO2     
+640 1.0E-15    0.00      0 .00 MGLYOO+NO2   +      =1.0MGLY    +1.0NO3     
+641 3.9E-11    0.00      0 .00 MGLYOO+SO2   +      =1.0MGLY    +1.0SO4     
+642 1.0E-18    0.00      0 .00 MGLYOO+      +      =1.0MGLY    +1.0H2O2    
+643 1.2E-15    0.00      0 .00 NC2OO +CO    +      =1.0ETHLN   
+644 1.0E-14    0.00      0 .00 NC2OO +NO    +      =1.0ETHLN   +1.0NO2     
+645 1.0E-15    0.00      0 .00 NC2OO +NO2   +      =1.0ETHLN   +1.0NO3     
+646 3.9E-11    0.00      0 .00 NC2OO +SO2   +      =1.0ETHLN   +1.0SO4     
+647 1.0E-18    0.00      0 .00 NC2OO +      +      =1.0ETHLN   +1.0H2O2    
+648 1.0E-18    0.00      0 .00 NC2OO +      +      =1.0CH2O    +1.0NO2     
+649 1.2E-15    0.00      0 .00 NC3OO +CO    +      =1.0PROPNN  
+650 1.0E-14    0.00      0 .00 NC3OO +NO    +      =1.0PROPNN  +1.0NO2     
+651 1.0E-15    0.00      0 .00 NC3OO +NO2   +      =1.0PROPNN  +1.0NO3     
+652 3.9E-11    0.00      0 .00 NC3OO +SO2   +      =1.0PROPNN  +1.0SO4     
+653 1.0E-18    0.00      0 .00 NC3OO +      +      =1.0PROPNN  +1.0H2O2    
+654 1.2E-15    0.00      0 .00 NC4OO +CO    +      =1.0MVKN    
+655 1.0E-14    0.00      0 .00 NC4OO +NO    +      =1.0MVKN    +1.0NO2     
+656 1.0E-15    0.00      0 .00 NC4OO +NO2   +      =1.0MVKN    +1.0NO3     
+657 3.9E-11    0.00      0 .00 NC4OO +SO2   +      =1.0MVKN    +1.0SO4     
+658 1.0E-18    0.00      0 .00 NC4OO +      +      =1.0MVKN    +1.0H2O2    
+659 5.1E-11    0.00      0 .00 HPALD +OH    +      =1.0MGLY    +1.0CO      +1.0CH2O    +1.0OH      
 
 ===============================================================================
 PHOTOPROCESS REACTIONS FOR URBAN CHEMISTRY
 ===============================================================================
 
 NMBR   DEFP (S-1)                        REACTION
-661 3.6E+01    0.00      0 .00 O3    +      +      =1.0OH      +1.0OH      
-662 3.6E+01    0.00      0 .00 O3    +      +      =1.0HO2     +1.0OH      
-663 3.5E+01    0.00      0 .00 NO2   +      +      =1.0NO      +1.0O3      
-664 3.8E+01    0.00      0 .00 H2O2  +      +      =1.0OH      +1.0OH      
-665 3.0E+01    0.00      0 .00 MP    +      +      =1.0CH2O    +1.0HO2     +1.0OH      
-666 4.0E+01    0.00      0 .00 CH2O  +      +      =1.0HO2     +1.0HO2     +1.0CO      
-667 4.0E+01    0.00      0 .00 CH2O  +      +      =1.0H2      +1.0CO      
-668 4.3E+01    0.00      0 .00 HNO3  +      +      =1.0OH      +1.0NO2     
-669 3.0E+01    0.00      0 .00 HNO2  +      +      =1.0OH      +1.0NO      
-670 3.0E+01    0.00      0 .00 HNO4  +      +      =1.0OH      +1.0NO3     
-671 3.7E+01    0.00      0 .00 NO3   +      +      =1.0NO2     +1.0O3      
-672 3.7E+01    0.00      0 .00 NO3   +      +      =1.0NO      +1.0O2      
-673 3.4E+01    0.00      0 .00 N2O5  +      +      =1.0NO3     +1.0NO2     
-674 3.4E+01    0.00      0 .00 N2O5  +      +      =1.0NO3     +1.0NO      +1.0O3      
-675 3.0E+01    0.00      0 .00 HNO4  +      +      =1.0HO2     +1.0NO2     
-676 3.0E+01    0.00      0 .00 ALD2  +      +      =0.9MO2     +1.0HO2     +0.9CO      +0.1MCO3    
-677 3.0E+01    0.00      0 .00 ALD2  +      +      =1.0CH4     +1.0CO      
-678 4.1E+01    0.00      0 .00 PAN   +      +      =0.7MCO3    +0.7NO2     +0.3MO2     +0.3NO3     
-679 3.0E+01    0.00      0 .00 RCHO  +      +      =1.0ETO2    +1.0HO2     +1.0CO      
-680 3.0E+01    0.00      0 .00 ACET  +      +      =1.0MCO3    +1.0MO2     
-681 3.0E+01    0.00      0 .00 ACET  +      +      =2.0MO2     +1.0CO      
-682 3.0E+01    0.00      0 .00 MEK   +      +      =0.8MCO3    +0.8ETO2    +0.1MO2     +0.1RCO3    
-683 3.0E+01    0.00      0 .00 GLYC  +      +      =0.9CH2O    +1.7HO2     +1.0CO      +0.1OH      +0.1MOH     
-684 3.0E+01    0.00      0 .00 GLYX  +      +      =0.5H2      +1.0CO      +0.5CH2O    +0.5CO      
-685 3.0E+01    0.00      0 .00 GLYX  +      +      =2.0CO      +2.0HO2     
-686 3.0E+01    0.00      0 .00 MGLY  +      +      =1.0MCO3    +1.0CO      +1.0HO2     
-687 3.0E+01    0.00      0 .00 MGLY  +      +      =1.0ALD2    +1.0CO      
-688 3.0E+01    0.00      0 .00 MVK   +      +      =1.0PRPE    +1.0CO      
-689 3.0E+01    0.00      0 .00 MVK   +      +      =1.0MCO3    +1.0CH2O    +1.0CO      +1.0HO2     
-690 3.0E+01    0.00      0 .00 MVK   +      +      =1.0MO2     +1.0RCO3    
-691 3.0E+01    0.00      0 .00 MACR  +      +      =1.0CO      +1.0HO2     +1.0CH2O    +1.0MCO3    
-692 2.6E+01    0.00      0 .00 HAC   +      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
-693 2.4E+01    0.00      0 .00 INPN  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
-694 2.4E+01    0.00      0 .00 PRPN  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
-695 2.4E+01    0.00      0 .00 ETP   +      +      =1.0OH      +1.0HO2     +1.0ALD2    
-696 2.4E+01    0.00      0 .00 RA3P  +      +      =1.0OH      +1.0HO2     +1.0RCHO    
-697 2.4E+01    0.00      0 .00 RB3P  +      +      =1.0OH      +1.0HO2     +1.0ACET    
-698 2.4E+01    0.00      0 .00 R4P   +      +      =1.0OH      +1.0HO2     +1.0RCHO    
-699 2.4E+01    0.00      0 .00 PP    +      +      =1.0OH      +1.0HO2     +1.0ALD2    +1.0CH2O    
-700 2.4E+01    0.00      0 .00 RP    +      +      =1.0OH      +1.0HO2     +1.0ALD2    
-701 2.4E+01    0.00      0 .00 RIP   +      +      =1.0OH      +1.0HO2     +0.7CH2O    +0.4MVK     +0.3MACR    +0.3HC5     
-702 2.4E+01    0.00      0 .00 IAP   +      +      =1.0OH      +1.0HO2     +0.7CO      +0.2H2      +0.4HAC     +0.3GLYC    +0.6MGLY    
-703 2.4E+01    0.00      0 .00 ISNP  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
-704 2.4E+01    0.00      0 .00 VRP   +      +      =1.0OH      +0.3HO2     +0.3CH2O    +0.7MCO3    +0.7GLYC    +0.3MGLY    
-705 2.4E+01    0.00      0 .00 MRP   +      +      =1.0OH      +1.0HO2     +1.0HAC     +0.5CO      +0.5CH2O    
-706 2.4E+01    0.00      0 .00 MAOP  +      +      =1.0OH      +1.0CH2O    +1.0MCO3    
-707 2.5E+01    0.00      0 .00 R4N2  +      +      =1.0NO2     +0.3ACET    +0.2MEK     +0.2MO2     +0.3HO2     +0.3ALD2    +0.1RCHO    +0.1A3O2    +0.2B3O2    +0.3ETO2    
-708 2.4E+01    0.00      0 .00 MAP   +      +      =1.0OH      +1.0MO2     
-709 2.4E+01    0.00      0 .00 MACRN +      +      =1.0NO2     +1.0HAC     +1.0MGLY    +0.5CH2O    +1.0HO2     +0.5CO      
-710 2.4E+01    0.00      0 .00 MVKN  +      +      =1.0GLYC    +1.0NO2     +1.0MCO3    
-711 2.4E+01    0.00      0 .00 ISOPNB+      +      =1.0HC5     +1.0NO2     +1.0HO2     
-712 4.1E+01    0.00      0 .00 PMN   +      +      =0.6MAO3    +0.6NO2     +0.0        +0.4CH2O    +0.4MCO3    +0.4NO3     
-713 8.4E+01    0.00      0 .00 Br2   +      +      =2.0Br      
-714 8.5E+01    0.00      0 .00 BrO   +      +      =1.0Br      +1.0O3      
-715 8.3E+01    0.00      0 .00 HOBr  +      +      =1.0Br      +1.0OH      
-716 8.2E+01    0.00      0 .00 BrNO3 +      +      =1.0Br      +1.0NO3     
-717 8.2E+01    0.00      0 .00 BrNO3 +      +      =1.0BrO     +1.0NO2     
-718 8.1E+01    0.00      0 .00 BrNO2 +      +      =1.0Br      +1.0NO2     
-719 2.4E+01    0.00      0 .00 CHBr3 +      +      =3.0Br      
-720 3.0E+01    0.00      0 .00 MPN   +      +      =1.0CH2O    +1.0NO3     +1.0HO2     
-721 3.0E+01    0.00      0 .00 MPN   +      +      =1.0MO2     +1.0NO2     
-722 2.4E+01    0.00      0 .00 ISOPND+      +      =1.0HC5     +1.0NO2     +1.0HO2     
-723 2.4E+01    0.00      0 .00 PROPNN+      +      =1.0CH2O    +1.0NO2     +1.0CO      +1.0MO2     
-724 2.4E+01    0.00      0 .00 ATOOH +      +      =1.0OH      +1.0CH2O    +1.0MCO3    
-725 2.4E+01    0.00      0 .00 ETHLN +      +      =1.0CH2O    +1.0NO2     +1.0CO      +1.0HO2     
-726 2.4E+01    0.00      0 .00 HPALD +      +      =1.0OH      +1.0HO2     +0.5GLYC    +0.2GLYX    +0.2MGLY    +1.0CH2O    +0.5HAC     
-727 2.4E+01    0.00      0 .00 ISN1  +      +      =1.0NO2     +1.0HO2     +0.5GLYC    +0.2GLYX    +0.2MGLY    +1.0CH2O    +0.5HAC     
-728 2.4E+01    0.00      0 .00 PIP   +      +      =1.0OH      +1.0HO2     +1.0RCHO    
-729 2.4E+01    0.00      0 .00 MONITS+      +      =1.0NO2     +1.0MEK     
-730 2.4E+01    0.00      0 .00 MONITU+      +      =1.0NO2     +1.0RCHO    
-731 2.4E+01    0.00      0 .00 HONIT +      +      =1.0NO2     +1.0HAC     
+660 3.6E+01    0.00      0 .00 O3    +      +      =1.0OH      +1.0OH      
+661 3.6E+01    0.00      0 .00 O3    +      +      =1.0HO2     +1.0OH      
+662 3.5E+01    0.00      0 .00 NO2   +      +      =1.0NO      +1.0O3      
+663 3.8E+01    0.00      0 .00 H2O2  +      +      =1.0OH      +1.0OH      
+664 3.0E+01    0.00      0 .00 MP    +      +      =1.0CH2O    +1.0HO2     +1.0OH      
+665 4.0E+01    0.00      0 .00 CH2O  +      +      =1.0HO2     +1.0HO2     +1.0CO      
+666 4.0E+01    0.00      0 .00 CH2O  +      +      =1.0H2      +1.0CO      
+667 4.3E+01    0.00      0 .00 HNO3  +      +      =1.0OH      +1.0NO2     
+668 3.0E+01    0.00      0 .00 HNO2  +      +      =1.0OH      +1.0NO      
+669 3.0E+01    0.00      0 .00 HNO4  +      +      =1.0OH      +1.0NO3     
+670 3.7E+01    0.00      0 .00 NO3   +      +      =1.0NO2     +1.0O3      
+671 3.7E+01    0.00      0 .00 NO3   +      +      =1.0NO      +1.0O2      
+672 3.4E+01    0.00      0 .00 N2O5  +      +      =1.0NO3     +1.0NO2     
+673 3.4E+01    0.00      0 .00 N2O5  +      +      =1.0NO3     +1.0NO      +1.0O3      
+674 3.0E+01    0.00      0 .00 HNO4  +      +      =1.0HO2     +1.0NO2     
+675 3.0E+01    0.00      0 .00 ALD2  +      +      =0.9MO2     +1.0HO2     +0.9CO      +0.1MCO3    
+676 3.0E+01    0.00      0 .00 ALD2  +      +      =1.0CH4     +1.0CO      
+677 4.1E+01    0.00      0 .00 PAN   +      +      =0.7MCO3    +0.7NO2     +0.3MO2     +0.3NO3     
+678 3.0E+01    0.00      0 .00 RCHO  +      +      =1.0ETO2    +1.0HO2     +1.0CO      
+679 3.0E+01    0.00      0 .00 ACET  +      +      =1.0MCO3    +1.0MO2     
+680 3.0E+01    0.00      0 .00 ACET  +      +      =2.0MO2     +1.0CO      
+681 3.0E+01    0.00      0 .00 MEK   +      +      =0.8MCO3    +0.8ETO2    +0.1MO2     +0.1RCO3    
+682 3.0E+01    0.00      0 .00 GLYC  +      +      =0.9CH2O    +1.7HO2     +1.0CO      +0.1OH      +0.1MOH     
+683 3.0E+01    0.00      0 .00 GLYX  +      +      =0.5H2      +1.0CO      +0.5CH2O    +0.5CO      
+684 3.0E+01    0.00      0 .00 GLYX  +      +      =2.0CO      +2.0HO2     
+685 3.0E+01    0.00      0 .00 MGLY  +      +      =1.0MCO3    +1.0CO      +1.0HO2     
+686 3.0E+01    0.00      0 .00 MGLY  +      +      =1.0ALD2    +1.0CO      
+687 3.0E+01    0.00      0 .00 MVK   +      +      =1.0PRPE    +1.0CO      
+688 3.0E+01    0.00      0 .00 MVK   +      +      =1.0MCO3    +1.0CH2O    +1.0CO      +1.0HO2     
+689 3.0E+01    0.00      0 .00 MVK   +      +      =1.0MO2     +1.0RCO3    
+690 3.0E+01    0.00      0 .00 MACR  +      +      =1.0CO      +1.0HO2     +1.0CH2O    +1.0MCO3    
+691 2.6E+01    0.00      0 .00 HAC   +      +      =1.0MCO3    +1.0CH2O    +1.0HO2     
+692 2.4E+01    0.00      0 .00 INPN  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
+693 2.4E+01    0.00      0 .00 PRPN  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
+694 2.4E+01    0.00      0 .00 ETP   +      +      =1.0OH      +1.0HO2     +1.0ALD2    
+695 2.4E+01    0.00      0 .00 RA3P  +      +      =1.0OH      +1.0HO2     +1.0RCHO    
+696 2.4E+01    0.00      0 .00 RB3P  +      +      =1.0OH      +1.0HO2     +1.0ACET    
+697 2.4E+01    0.00      0 .00 R4P   +      +      =1.0OH      +1.0HO2     +1.0RCHO    
+698 2.4E+01    0.00      0 .00 PP    +      +      =1.0OH      +1.0HO2     +1.0ALD2    +1.0CH2O    
+699 2.4E+01    0.00      0 .00 RP    +      +      =1.0OH      +1.0HO2     +1.0ALD2    
+700 2.4E+01    0.00      0 .00 RIP   +      +      =1.0OH      +1.0HO2     +0.7CH2O    +0.4MVK     +0.3MACR    +0.3HC5     
+701 2.4E+01    0.00      0 .00 IAP   +      +      =1.0OH      +1.0HO2     +0.7CO      +0.2H2      +0.4HAC     +0.3GLYC    +0.6MGLY    
+702 2.4E+01    0.00      0 .00 ISNP  +      +      =1.0OH      +1.0HO2     +1.0RCHO    +1.0NO2     
+703 2.4E+01    0.00      0 .00 VRP   +      +      =1.0OH      +0.3HO2     +0.3CH2O    +0.7MCO3    +0.7GLYC    +0.3MGLY    
+704 2.4E+01    0.00      0 .00 MRP   +      +      =1.0OH      +1.0HO2     +1.0HAC     +0.5CO      +0.5CH2O    
+705 2.4E+01    0.00      0 .00 MAOP  +      +      =1.0OH      +1.0CH2O    +1.0MCO3    
+706 2.5E+01    0.00      0 .00 R4N2  +      +      =1.0NO2     +0.3ACET    +0.2MEK     +0.2MO2     +0.3HO2     +0.3ALD2    +0.1RCHO    +0.1A3O2    +0.2B3O2    +0.3ETO2    
+707 2.4E+01    0.00      0 .00 MAP   +      +      =1.0OH      +1.0MO2     
+708 2.4E+01    0.00      0 .00 MACRN +      +      =1.0NO2     +1.0HAC     +1.0MGLY    +0.5CH2O    +1.0HO2     +0.5CO      
+709 2.4E+01    0.00      0 .00 MVKN  +      +      =1.0GLYC    +1.0NO2     +1.0MCO3    
+710 2.4E+01    0.00      0 .00 ISOPNB+      +      =1.0HC5     +1.0NO2     +1.0HO2     
+711 4.1E+01    0.00      0 .00 PMN   +      +      =0.6MAO3    +0.6NO2     +0.0        +0.4CH2O    +0.4MCO3    +0.4NO3     
+712 8.4E+01    0.00      0 .00 Br2   +      +      =2.0Br      
+713 8.5E+01    0.00      0 .00 BrO   +      +      =1.0Br      +1.0O3      
+714 8.3E+01    0.00      0 .00 HOBr  +      +      =1.0Br      +1.0OH      
+715 8.2E+01    0.00      0 .00 BrNO3 +      +      =1.0Br      +1.0NO3     
+716 8.2E+01    0.00      0 .00 BrNO3 +      +      =1.0BrO     +1.0NO2     
+717 8.1E+01    0.00      0 .00 BrNO2 +      +      =1.0Br      +1.0NO2     
+718 2.4E+01    0.00      0 .00 CHBr3 +      +      =3.0Br      
+719 3.0E+01    0.00      0 .00 MPN   +      +      =1.0CH2O    +1.0NO3     +1.0HO2     
+720 3.0E+01    0.00      0 .00 MPN   +      +      =1.0MO2     +1.0NO2     
+721 2.4E+01    0.00      0 .00 ISOPND+      +      =1.0HC5     +1.0NO2     +1.0HO2     
+722 2.4E+01    0.00      0 .00 PROPNN+      +      =1.0CH2O    +1.0NO2     +1.0CO      +1.0MO2     
+723 2.4E+01    0.00      0 .00 ATOOH +      +      =1.0OH      +1.0CH2O    +1.0MCO3    
+724 2.4E+01    0.00      0 .00 ETHLN +      +      =1.0CH2O    +1.0NO2     +1.0CO      +1.0HO2     
+725 2.4E+01    0.00      0 .00 HPALD +      +      =1.0OH      +1.0HO2     +0.5GLYC    +0.2GLYX    +0.2MGLY    +1.0CH2O    +0.5HAC     
+726 2.4E+01    0.00      0 .00 ISN1  +      +      =1.0NO2     +1.0HO2     +0.5GLYC    +0.2GLYX    +0.2MGLY    +1.0CH2O    +0.5HAC     
+727 2.4E+01    0.00      0 .00 PIP   +      +      =1.0OH      +1.0HO2     +1.0RCHO    
+728 2.4E+01    0.00      0 .00 MONITS+      +      =1.0NO2     +1.0MEK     
+729 2.4E+01    0.00      0 .00 MONITU+      +      =1.0NO2     +1.0RCHO    
+730 2.4E+01    0.00      0 .00 HONIT +      +      =1.0NO2     +1.0HAC     
 
-Family  1 is PO3   prod with  1 members
+Family  1 is POX   prod with 14 members
 ind  species jnum  coef
  1   O3      76    1.0
+ 1   NO2     74    1.0
+ 1   NO3     75    2.0
+ 1   PAN     78    1.0
+ 1   PMN     79    1.0
+ 1   PPN     82    1.0
+ 1   HNO4    40    1.0
+ 1   N2O5    72    3.0
+ 1   HNO3    39    1.0
+ 1   BrO    109    1.0
+ 1   HOBr   110    1.0
+ 1   BrNO2  112    1.0
+ 1   BrNO3  113    2.0
+ 1   MPN    121    1.0
 
-Family  2 is LO3   loss with  1 members
+Family  2 is LOX   loss with 14 members
 ind  species jnum  coef
  2   O3      76    1.0
+ 2   NO2     74    1.0
+ 2   NO3     75    2.0
+ 2   PAN     78    1.0
+ 2   PMN     79    1.0
+ 2   PPN     82    1.0
+ 2   HNO4    40    1.0
+ 2   N2O5    72    3.0
+ 2   HNO3    39    1.0
+ 2   BrO    109    1.0
+ 2   HOBr   110    1.0
+ 2   BrNO2  112    1.0
+ 2   BrNO3  113    2.0
+ 2   MPN    121    1.0
 
 Family  3 is PNOx  prod with  2 members
 ind  species jnum  coef
@@ -1062,7 +1095,7 @@ ind  species jnum  coef
  4   NO      73    1.0
  4   NO2     74    1.0
 
-Family  5 is LANs  loss with  9 members
+Family  5 is LANs  loss with 12 members
 ind  species jnum  coef
  5   ISOPN  123    1.0
  5   ISOPN  122    1.0
@@ -1073,8 +1106,11 @@ ind  species jnum  coef
  5   DHDN    94    1.0
  5   R4N2    87    1.0
  5   ISN1    46    1.0
+ 5   MONIT  210    1.0
+ 5   MONIT  209    1.0
+ 5   HONIT  211    1.0
 
-Family  6 is PANs  prod with  9 members
+Family  6 is PANs  prod with 12 members
 ind  species jnum  coef
  6   ISOPN  123    1.0
  6   ISOPN  122    1.0
@@ -1085,18 +1121,23 @@ ind  species jnum  coef
  6   DHDN    94    1.0
  6   R4N2    87    1.0
  6   ISN1    46    1.0
+ 6   MONIT  210    1.0
+ 6   MONIT  209    1.0
+ 6   HONIT  211    1.0
 
-Family  7 is LAN1  loss with  2 members
+Family  7 is LIN1  loss with  3 members
 ind  species jnum  coef
  7   ISOPN  123    1.0
  7   ISOPN  122    1.0
+ 7   ISN1    46    1.0
 
-Family  8 is PAN1  prod with  2 members
+Family  8 is PIN1  prod with  3 members
 ind  species jnum  coef
  8   ISOPN  123    1.0
  8   ISOPN  122    1.0
+ 8   ISN1    46    1.0
 
-Family  9 is LAN2  loss with  7 members
+Family  9 is LIN2  loss with  6 members
 ind  species jnum  coef
  9   MVKN   138    1.0
  9   MACRN  137    1.0
@@ -1104,9 +1145,8 @@ ind  species jnum  coef
  9   ETHLN  134    1.0
  9   DHDN    94    1.0
  9   R4N2    87    1.0
- 9   ISN1    46    1.0
 
-Family 10 is PAN2  prod with  7 members
+Family 10 is PIN2  prod with  6 members
 ind  species jnum  coef
 10   MVKN   138    1.0
 10   MACRN  137    1.0
@@ -1114,66 +1154,254 @@ ind  species jnum  coef
 10   ETHLN  134    1.0
 10   DHDN    94    1.0
 10   R4N2    87    1.0
-10   ISN1    46    1.0
+
+Family 11 is LMTN1 loss with  2 members
+ind  species jnum  coef
+11   MONIT  210    1.0
+11   MONIT  209    1.0
+
+Family 12 is PMTN1 prod with  2 members
+ind  species jnum  coef
+12   MONIT  210    1.0
+12   MONIT  209    1.0
+
+Family 13 is LMTN2 loss with  1 members
+ind  species jnum  coef
+13   HONIT  211    1.0
+
+Family 14 is PMTN2 prod with  1 members
+ind  species jnum  coef
+14   HONIT  211    1.0
+
+Family 15 is PXRIO prod with  1 members
+ind  species jnum  coef
+15   XRIO2  197    1.0
+
+Family 16 is PXRIO prod with  1 members
+ind  species jnum  coef
+16   XRIO2  198    1.0
+
+Family 17 is PXRIO prod with  1 members
+ind  species jnum  coef
+17   XRIO2  199    1.0
 
 ===============================================================================
 Here are the prod and loss reactions
 ===============================================================================
 
-Family PO3   prod -- no of rxns is   14     coefficient
+Family POX   prod -- no of rxns is  136     coefficient
   1   6 OH    + OH    = H2O   + O3          1.000000E+00
-  2  17 HO2H2 + HO2   = O3    + H2O         1.000000E+00
-  3 100 ISNOO + HO2   = RP    + RCOOH+ ...  2.500000E-01
-  4 101 ISNOO + HO2H2 = RP    + RCOOH+ ...  2.500000E-01
-  5 199 HO2   + MCO3  = MAP   + ACTA + ...  1.500000E-01
-  6 200 HO2H2 + MCO3  = MAP   + ACTA + ...  1.500000E-01
-  7 201 RCO3  + HO2   = RP    + RCOOH+ ...  1.500000E-01
-  8 202 RCO3  + HO2H2 = RP    + RCOOH+ ...  1.500000E-01
-  9 203 MAO3  + HO2   = OH    + O3   + ...  1.500000E-01
- 10 204 MAO3  + HO2H2 = OH    + O3   + ...  1.500000E-01
- 11 663 NO2   +  hv   = NO    + O3          1.000000E+00
- 12 671 NO3   +  hv   = NO2   + O3          1.000000E+00
- 13 674 N2O5  +  hv   = NO3   + NO   + ...  1.000000E+00
- 14 714 BrO   +  hv   = Br    + O3          1.000000E+00
+  2  11 HO2   + NO    = OH    + NO2         1.000000E+00
+  3  15 HO2H2 + NO    = NO2   + OH   + ...  1.000000E+00
+  4  17 HO2H2 + HO2   = O3    + H2O         1.000000E+00
+  5  27 MO2   + NO    = CH2O  + HO2  + ...  1.000000E+00
+  6  42 HNO3  + OH    = H2O   + NO3         1.000000E+00
+  7  47 HNO2  + OH    = H2O   + NO2         1.000000E+00
+  8  69 MCO3  + NO    = MO2   + NO2         1.000000E+00
+  9  71 ETO2  + NO    = ALD2  + NO2  + ...  1.000000E+00
+ 10  76 A3O2  + NO    = NO2   + HO2  + ...  1.000000E+00
+ 11  77 PO2   + NO    = NO2   + HO2  + ...  1.000000E+00
+ 12  79 R4O2  + NO    = NO2   + ACET + ...  1.000000E+00
+ 13  83 R4N1  + NO    = NO2   + CH2O + ...  2.000000E+00
+ 14  84 ATO2  + NO    = NO2   + CH2O + ...  9.600000E-01
+ 15  85 KO2   + NO    = NO2   + ALD2 + ...  9.300000E-01
+ 16  86 RIO2  + NO    = NO2   + HO2  + ...  9.100000E-01
+ 17  88 VRO2  + NO    = NO2   + HO2  + ...  8.800000E-01
+ 18  89 MRO2  + NO    = NO2   + HO2  + ...  8.500000E-01
+ 19  91 MAN2  + NO    = NO2   + CH2O + ...  1.500000E+00
+ 20  92 B3O2  + NO    = NO2   + HO2  + ...  1.000000E+00
+ 21  93 INO2  + NO    = NO2   + HO2  + ...  1.300000E+00
+ 22  97 ISNOO + NO    = NO2   + PROPN+ ...  1.000000E+00
+ 23 100 ISNOO + HO2   = RP    + RCOOH+ ...  2.500000E-01
+ 24 101 ISNOO + HO2H2 = RP    + RCOOH+ ...  2.500000E-01
+ 25 103 ISNOO + NO    = PROPN + GLYX + ...  1.880000E+00
+ 26 106 ISNOO + MO2   = PROPN + GLYX + ...  7.000000E-01
+ 27 112 INO2  + INO2  = NO2   + HO2  + ...  3.000000E-01
+ 28 113 PRN1  + NO    = NO2   + CH2O + ...  2.000000E+00
+ 29 124 RCO3  + NO    = NO2   + ETO2        1.000000E+00
+ 30 125 MAO3  + NO    = NO2   + CH2O + ...  1.000000E+00
+ 31 153 MAN2  + HO2   = PROPN + CO   + ...  7.500000E-02
+ 32 155 MAN2  + HO2H2 = PROPN + CO   + ...  7.500000E-02
+ 33 173 R4N1  + MO2   = NO2   + CH2O + ...  1.000000E+00
+ 34 181 MAN2  + MO2   = PROPN + CO   + ...  3.750000E-01
+ 35 183 INO2  + MO2   = NO2   + HO2  + ...  1.500000E-01
+ 36 184 PRN1  + MO2   = NO2   + CH2O + ...  1.000000E+00
+ 37 199 HO2   + MCO3  = MAP   + ACTA + ...  1.500000E-01
+ 38 200 HO2H2 + MCO3  = MAP   + ACTA + ...  1.500000E-01
+ 39 201 RCO3  + HO2   = RP    + RCOOH+ ...  1.500000E-01
+ 40 202 RCO3  + HO2H2 = RP    + RCOOH+ ...  1.500000E-01
+ 41 203 MAO3  + HO2   = OH    + O3   + ...  1.500000E-01
+ 42 204 MAO3  + HO2H2 = OH    + O3   + ...  1.500000E-01
+ 43 208 PMN   + OH    = HAC   + CO   + ...  8.100000E-01
+ 44 241 INPN  + OH    = OH    + NO2  + ...  1.000000E+00
+ 45 257 IEPOX + NO    = HAC   + GLYC + ...  1.000000E+00
+ 46 273 MAOPO + NO    = HAC   +      + ...  1.000000E+00
+ 47 275 MAOPO + NO    = HNO3  +             1.000000E+00
+ 48 292 R4N1  + MCO3  = MO2   + NO2  + ...  1.000000E+00
+ 49 293 MAN2  + MCO3  = PROPN + CO   + ...  5.000000E-01
+ 50 294 INO2  + MCO3  = MO2   + ISN1 + ...  3.000000E-01
+ 51 295 PRN1  + MCO3  = MO2   + NO2  + ...  1.000000E+00
+ 52 303 R4N1  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
+ 53 304 MAN2  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
+ 54 305 INO2  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
+ 55 306 PRN1  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
+ 56 318 APIO2 + NO    = HCOOH + MEK  + ...  8.200000E-01
+ 57 328 LIMO2 + NO    = HO2   + NO2  + ...  7.800000E-01
+ 58 334 OLNN  + NO    = HO2   + NO2  + ...  1.000000E+00
+ 59 335 OLND  + NO    = NO2   + CH2O + ...  2.000000E+00
+ 60 339 OLND  + MO2   = HO2   + NO2  + ...  5.000000E-01
+ 61 341 OLND  + MCO3  = MO2   + NO2  + ...  1.000000E+00
+ 62 345 OLNN  + OLND  = HO2   + NO2  + ...  5.000000E-01
+ 63 346 OLND  + OLND  = NO2   + CH2O + ...  1.000000E+00
+ 64 352 HONIT + OH    = NO3   + HAC         2.000000E+00
+ 65 455 ONITA +       =       + HNO3        1.000000E+00
+ 66 456 ONITA +       =       + HNO3        1.000000E+00
+ 67 473 Br2   + OH    = HOBr  + Br          1.000000E+00
+ 68 503 HC5OO + NO    = NO2   + GLYX + ...  1.000000E+00
+ 69 505 HC5OO + NO    = HNO3  +             1.000000E+00
+ 70 511 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
+ 71 512 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
+ 72 513 ISOPN + NO    = MACRN + HCOOH+ ...  7.900000E-01
+ 73 516 ISOPN + NO    = GLYC  + HAC  + ...  8.800000E-01
+ 74 517 ISOPN + HO2   = GLYC  + HAC  + ...  6.000000E-02
+ 75 518 ISOPN + HO2H2 = GLYC  + HAC  + ...  6.000000E-02
+ 76 520 MVKN  + OH    = HCOOH + NO3  + ...  2.000000E+00
+ 77 522 MACRN + NO    = ACTA  + CH2O + ...  2.150000E+00
+ 78 523 MACRN + HO2   = ACTA  + CH2O + ...  1.150000E+00
+ 79 525 MACRN + HO2H2 = ACTA  + CH2O + ...  1.150000E+00
+ 80 529 PMNN  +       = MACRN + NO2         1.000000E+00
+ 81 531 DIBOO + NO    = HO2   + NO2  + ...  1.000000E+00
+ 82 533 DIBOO + NO    = HNO3  +             1.000000E+00
+ 83 540 MOBAO + NO    = RCHO  +      + ...  1.000000E+00
+ 84 542 MOBAO + NO    = HNO3  +             1.000000E+00
+ 85 549 ETHLN + OH    = CH2O  +      + ...  1.000000E+00
+ 86 550 PROPN + OH    = NO2   + MGLY        1.000000E+00
+ 87 571 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 88 572 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 89 574 MACRN +       = HAC   + NO2         1.000000E+00
+ 90 588 NC2OO +       = OH    + NO2  + ...  1.000000E+00
+ 91 590 NC3OO +       = OH    + NO2  + ...  1.000000E+00
+ 92 592 NC4OO +       = OH    + NO2  + ...  1.000000E+00
+ 93 594 ACLOO + NO    = HAC   + NO2         1.000000E+00
+ 94 595 ACLOO + NO2   = HAC   + NO3         1.000000E+00
+ 95 599 CH2OO + NO    = CH2O  + NO2         1.000000E+00
+ 96 600 CH2OO + NO2   = CH2O  + NO3         1.000000E+00
+ 97 604 CH3CH + NO    = ALD2  + NO2         1.000000E+00
+ 98 605 CH3CH + NO2   = ALD2  + NO3         1.000000E+00
+ 99 610 GAOO  + NO    = GLYC  + NO2         1.000000E+00
+100 611 GAOO  + NO2   = GLYC  + NO3         1.000000E+00
+101 616 MACRO + NO    = MACR  + NO2         1.000000E+00
+102 617 MACRO + NO2   = MACR  + NO3         1.000000E+00
+103 622 MACRN + NO    = MACRN + NO2         1.000000E+00
+104 623 MACRN + NO2   = MACRN + NO3         1.000000E+00
+105 625 MACRN +       = HAC   + NO2         1.000000E+00
+106 628 MVKOO + NO    = MVK   + NO2         1.000000E+00
+107 629 MVKOO + NO2   = MVK   + NO3         1.000000E+00
+108 633 MGLOO + NO    = MGLY  + NO2         1.000000E+00
+109 634 MGLOO + NO2   = MGLY  + NO3         1.000000E+00
+110 639 MGLYO + NO    = MGLY  + NO2         1.000000E+00
+111 640 MGLYO + NO2   = MGLY  + NO3         1.000000E+00
+112 644 NC2OO + NO    = ETHLN + NO2         1.000000E+00
+113 645 NC2OO + NO2   = ETHLN + NO3         1.000000E+00
+114 648 NC2OO +       = CH2O  + NO2         1.000000E+00
+115 650 NC3OO + NO    = PROPN + NO2         1.000000E+00
+116 651 NC3OO + NO2   = PROPN + NO3         1.000000E+00
+117 655 NC4OO + NO    = MVKN  + NO2         1.000000E+00
+118 656 NC4OO + NO2   = MVKN  + NO3         1.000000E+00
+119 669 HNO4  +  hv   = OH    + NO3         1.000000E+00
+120 677 PAN   +  hv   = MCO3  + NO2  + ...  3.000000E-01
+121 692 INPN  +  hv   = OH    + HO2  + ...  1.000000E+00
+122 693 PRPN  +  hv   = OH    + HO2  + ...  1.000000E+00
+123 702 ISNP  +  hv   = OH    + HO2  + ...  1.000000E+00
+124 706 R4N2  +  hv   = NO2   + ACET + ...  1.000000E+00
+125 708 MACRN +  hv   = NO2   + HAC  + ...  1.000000E+00
+126 709 MVKN  +  hv   = GLYC  + NO2  + ...  1.000000E+00
+127 710 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
+128 711 PMN   +  hv   = MAO3  + NO2         4.000000E-01
+129 719 MPN   +  hv   = CH2O  + NO3  + ...  1.000000E+00
+130 721 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
+131 722 PROPN +  hv   = CH2O  + NO2  + ...  1.000000E+00
+132 724 ETHLN +  hv   = CH2O  + NO2  + ...  1.000000E+00
+133 726 ISN1  +  hv   = NO2   + HO2  + ...  1.000000E+00
+134 728 MONIT +  hv   = NO2   + MEK         1.000000E+00
+135 729 MONIT +  hv   = NO2   + RCHO        1.000000E+00
+136 730 HONIT +  hv   = NO2   + HAC         1.000000E+00
 
-Family LO3   loss -- no of rxns is   28     coefficient
-  1   1 O3    + NO    = NO2   + O2         -1.000000E+00
-  2   2 O3    + OH    = HO2   + O2         -1.000000E+00
-  3   3 O3    + HO2   = OH    + O2   + ... -1.000000E+00
-  4   4 O3    + NO2   = O2    + NO3        -1.000000E+00
-  5   5 O3    + MO2   = CH2O  + HO2  + ... -1.000000E+00
-  6  19 HO2H2 + O3    = H2O   + O2   + ... -1.000000E+00
-  7 107 ISN1  + O3    = PROPN + GLYX + ... -1.000000E+00
-  8 207 PRPE  + O3    = ALD2  + OH   + ... -1.000000E+00
-  9 209 PMN   + O3    = NO2   + CH2O + ... -1.000000E+00
- 10 226 O3    + ISOP  = CH2OO + MACR       -1.000000E+00
- 11 227 O3    + ISOP  = CH2OO + MVK        -1.000000E+00
- 12 228 O3    + ISOP  = CH2O  + MACRO      -1.000000E+00
- 13 229 O3    + ISOP  = CH2O  + MVKOO      -1.000000E+00
- 14 230 O3    + MVK   = MGLOO + CH2O       -1.000000E+00
- 15 231 O3    + MVK   = MGLY  + CH2OO      -1.000000E+00
- 16 232 O3    + MACR  = CH2O  + MGLYO      -1.000000E+00
- 17 233 O3    + MACR  = MGLY  + CH2OO      -1.000000E+00
- 18 279 HC5   + O3    = MGLYO + GLYC       -1.000000E+00
- 19 280 HC5   + O3    = MGLY  + GAOOB      -1.000000E+00
- 20 323 API   + O3    = OH    + HO2  + ... -1.000000E+00
- 21 326 LIM   + O3    = OH    + HO2  + ... -1.000000E+00
- 22 349 MONIT + O3    = HONIT +            -1.000000E+00
- 23 411 ISOPN + O3    = MVKN  + CH2OO+ ... -1.000000E+00
- 24 412 ISOPN + O3    = HAC   + NC2OO+ ... -1.000000E+00
- 25 464 Br    + O3    = BrO   + O2         -1.000000E+00
- 26 549 MOBA  + O3    = OH    + HO2        -1.000000E+00
- 27 661 O3    +  hv   = OH    + OH         -1.000000E+00
- 28 662 O3    +  hv   = HO2   + OH         -1.000000E+00
+Family LOX   loss -- no of rxns is   65     coefficient
+  1   2 O3    + OH    = HO2   + O2         -1.000000E+00
+  2   3 O3    + HO2   = OH    + O2   + ... -1.000000E+00
+  3   5 O3    + MO2   = CH2O  + HO2  + ... -1.000000E+00
+  4  14 HO2H2 + NO2   = HNO2  + H2O  + ... -1.000000E+00
+  5  19 HO2H2 + O3    = H2O   + O2   + ... -1.000000E+00
+  6  21 HO2H2 + NO3   = HNO3  + NO2  + ... -1.000000E+00
+  7  53 HO2   + NO3   = OH    + NO2  + ... -1.000000E+00
+  8  55 OH    + NO3   = HO2   + NO2        -1.000000E+00
+  9  62 NO2   + NO3   = NO    + NO2  + ... -2.000000E+00
+ 10  63 NO3   + CH2O  = HNO3  + HO2  + ... -1.000000E+00
+ 11  65 ALD2  + NO3   = HNO3  + MCO3       -1.000000E+00
+ 12  94 INO2  + NO3   = NO2   + HO2  + ... -7.000000E-01
+ 13  95 ISN1  + NO3   = ISNOO + ISNOO+ ... -1.400000E+00
+ 14  96 ISNOO + NO3   = NO2   + PROPN+ ... -1.000000E+00
+ 15 107 ISN1  + O3    = PROPN + GLYX + ... -3.000000E-01
+ 16 114 ALK4  + NO3   = HNO3  + R4O2       -1.000000E+00
+ 17 126 RCHO  + NO3   = HNO3  + RCO3       -1.000000E+00
+ 18 171 MEK   + NO3   = HNO3  + KO2        -1.000000E+00
+ 19 207 PRPE  + O3    = ALD2  + OH   + ... -1.000000E+00
+ 20 209 PMN   + O3    = NO2   + CH2O + ... -1.000000E+00
+ 21 212 PRPE  + NO3   = PRN1  +            -2.000000E+00
+ 22 215 GLYX  + NO3   = HNO3  + HO2  + ... -1.000000E+00
+ 23 216 MGLY  + NO3   = HNO3  + CO   + ... -1.000000E+00
+ 24 226 O3    + ISOP  = CH2OO + MACR       -1.000000E+00
+ 25 227 O3    + ISOP  = CH2OO + MVK        -1.000000E+00
+ 26 228 O3    + ISOP  = CH2O  + MACRO      -1.000000E+00
+ 27 229 O3    + ISOP  = CH2O  + MVKOO      -1.000000E+00
+ 28 230 O3    + MVK   = MGLOO + CH2O       -1.000000E+00
+ 29 231 O3    + MVK   = MGLY  + CH2OO      -1.000000E+00
+ 30 232 O3    + MACR  = CH2O  + MGLYO      -1.000000E+00
+ 31 233 O3    + MACR  = MGLY  + CH2OO      -1.000000E+00
+ 32 234 ISOP  + NO3   = INO2  +            -2.000000E+00
+ 33 235 MACR  + NO3   = MAN2  +            -2.000000E+00
+ 34 236 MACR  + NO3   = MAO3  + HNO3 + ... -1.500000E+00
+ 35 278 C2H6  + NO3   = ETO2  + HNO3       -1.000000E+00
+ 36 279 HC5   + O3    = MGLYO + GLYC       -1.000000E+00
+ 37 280 HC5   + O3    = MGLY  + GAOOB      -1.000000E+00
+ 38 312 NO3   + NO3   = NO2   + O2         -2.000000E+00
+ 39 322 APIO2 + NO3   = HO2   + NO2  + ... -1.000000E+00
+ 40 323 API   + O3    = OH    + HO2  + ... -1.000000E+00
+ 41 324 API   + NO3   = OLNN  + OLND       -2.000000E+00
+ 42 326 LIM   + O3    = OH    + HO2  + ... -1.000000E+00
+ 43 327 LIM   + NO3   = OLNN  + OLND       -2.000000E+00
+ 44 332 LIMO2 + NO3   = HO2   + NO2  + ... -1.000000E+00
+ 45 342 OLNN  + NO3   = HO2   + NO2  + ... -1.000000E+00
+ 46 349 MONIT + O3    = HONIT +            -1.000000E+00
+ 47 350 MONIT + NO3   = HONIT +            -2.000000E+00
+ 48 351 MONIT + NO3   = HONIT +            -2.000000E+00
+ 49 411 ISOPN + O3    = MVKN  + CH2OO+ ... -1.000000E+00
+ 50 412 ISOPN + O3    = HAC   + NC2OO+ ... -1.000000E+00
+ 51 438 NO2   +       = HNO3  + HNO2       -5.000000E-01
+ 52 439 NO3   +       = HNO3  +            -1.000000E+00
+ 53 440 N2O5  +       = HNO3  +            -1.000000E+00
+ 54 460 DMS   + NO3   = SO2   + HNO3 + ... -1.000000E+00
+ 55 469 BrO   + BrO   = Br    + O2         -2.000000E+00
+ 56 470 BrO   + BrO   = Br2   + O2         -2.000000E+00
+ 57 474 BrO   + OH    = Br    + HO2        -1.000000E+00
+ 58 489 HOBr  +       = Br2   + H2O        -1.000000E+00
+ 59 491 HOBr  +       = Br2   + H2O        -1.000000E+00
+ 60 527 MACRN + NO2   = PMNN  +            -1.000000E+00
+ 61 548 MOBA  + O3    = OH    + HO2        -1.000000E+00
+ 62 660 O3    +  hv   = OH    + OH         -1.000000E+00
+ 63 661 O3    +  hv   = HO2   + OH         -1.000000E+00
+ 64 671 NO3   +  hv   = NO    + O2         -2.000000E+00
+ 65 714 HOBr  +  hv   = Br    + OH         -1.000000E+00
 
 Family PNOx  prod -- no of rxns is   95     coefficient
   1  21 HO2H2 + NO3   = HNO3  + NO2  + ...  7.000000E-01
-  2  47 HNO2  + OH    = H2O   + NO2         1.000000E+00
+  2  47 HNO2  + OH    = H2O   + NO2  + ...  1.000000E+00
   3  50 HNO4  +       = HO2   + NO2         1.000000E+00
   4  52 HNO4  + OH    = H2O   + NO2  + ...  1.000000E+00
   5  53 HO2   + NO3   = OH    + NO2  + ...  1.000000E+00
   6  54 NO    + NO3   = NO2   +             1.000000E+00
-  7  55 OH    + NO3   = HO2   + NO2         1.000000E+00
+  7  55 OH    + NO3   = HO2   + NO2  + ...  1.000000E+00
   8  58 N2O5  +       = NO2   + NO3         1.000000E+00
   9  62 NO2   + NO3   = NO    + NO2  + ...  1.000000E+00
  10  68 PAN   +       = MCO3  + NO2         1.000000E+00
@@ -1206,7 +1434,7 @@ Family PNOx  prod -- no of rxns is   95     coefficient
  37 304 MAN2  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
  38 305 INO2  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
  39 306 PRN1  + MCO3  = RCHO  + ACTA + ...  1.000000E+00
- 40 312 NO3   + NO3   = NO2   + O2          2.000000E+00
+ 40 312 NO3   + NO3   = NO2   + O2   + ...  2.000000E+00
  41 315 MPN   +       = MO2   + NO2         1.000000E+00
  42 322 APIO2 + NO3   = HO2   + NO2  + ...  1.000000E+00
  43 332 LIMO2 + NO3   = HO2   + NO2  + ...  1.000000E+00
@@ -1217,54 +1445,54 @@ Family PNOx  prod -- no of rxns is   95     coefficient
  48 343 OLND  + NO3   = NO2   + CH2O + ...  2.000000E+00
  49 345 OLNN  + OLND  = HO2   + NO2  + ...  5.000000E-01
  50 346 OLND  + OLND  = NO2   + CH2O + ...  1.000000E+00
- 51 476 Br    + NO3   = BrO   + NO2         1.000000E+00
- 52 512 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
- 53 513 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
- 54 518 ISOPN + HO2   = GLYC  + HAC  + ...  6.000000E-02
- 55 519 ISOPN + HO2H2 = GLYC  + HAC  + ...  6.000000E-02
- 56 523 MACRN + NO    = ACTA  + CH2O + ...  8.500000E-01
- 57 524 MACRN + HO2   = ACTA  + CH2O + ...  8.500000E-01
- 58 526 MACRN + HO2H2 = ACTA  + CH2O + ...  8.500000E-01
- 59 530 PMNN  +       = MACRN + NO2         1.000000E+00
- 60 550 ETHLN + OH    = CH2O  +      + ...  1.000000E+00
- 61 551 PROPN + OH    = NO2   + MGLY        1.000000E+00
- 62 572 MACRN +       = HAC   + NO2  + ...  1.000000E+00
- 63 573 MACRN +       = HAC   + NO2  + ...  1.000000E+00
- 64 575 MACRN +       = HAC   + NO2         1.000000E+00
- 65 589 NC2OO +       = OH    + NO2  + ...  1.000000E+00
- 66 591 NC3OO +       = OH    + NO2  + ...  1.000000E+00
- 67 593 NC4OO +       = OH    + NO2  + ...  1.000000E+00
- 68 626 MACRN +       = HAC   + NO2         1.000000E+00
- 69 649 NC2OO +       = CH2O  + NO2         1.000000E+00
- 70 668 HNO3  +  hv   = OH    + NO2         1.000000E+00
- 71 669 HNO2  +  hv   = OH    + NO          1.000000E+00
- 72 671 NO3   +  hv   = NO2   + O3   + ...  1.000000E+00
- 73 672 NO3   +  hv   = NO    + O2          1.000000E+00
- 74 673 N2O5  +  hv   = NO3   + NO2         1.000000E+00
- 75 674 N2O5  +  hv   = NO3   + NO   + ...  1.000000E+00
- 76 675 HNO4  +  hv   = HO2   + NO2         1.000000E+00
- 77 678 PAN   +  hv   = MCO3  + NO2  + ...  7.000000E-01
- 78 693 INPN  +  hv   = OH    + HO2  + ...  1.000000E+00
- 79 694 PRPN  +  hv   = OH    + HO2  + ...  1.000000E+00
- 80 703 ISNP  +  hv   = OH    + HO2  + ...  1.000000E+00
- 81 707 R4N2  +  hv   = NO2   + ACET + ...  1.000000E+00
- 82 709 MACRN +  hv   = NO2   + HAC  + ...  1.000000E+00
- 83 710 MVKN  +  hv   = GLYC  + NO2  + ...  1.000000E+00
- 84 711 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
- 85 712 PMN   +  hv   = MAO3  + NO2         6.000000E-01
- 86 717 BrNO3 +  hv   = BrO   + NO2         1.000000E+00
- 87 718 BrNO2 +  hv   = Br    + NO2         1.000000E+00
- 88 721 MPN   +  hv   = MO2   + NO2         1.000000E+00
- 89 722 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
- 90 723 PROPN +  hv   = CH2O  + NO2  + ...  1.000000E+00
- 91 725 ETHLN +  hv   = CH2O  + NO2  + ...  1.000000E+00
- 92 727 ISN1  +  hv   = NO2   + HO2  + ...  1.000000E+00
- 93 729 MONIT +  hv   = NO2   + MEK         1.000000E+00
- 94 730 MONIT +  hv   = NO2   + RCHO        1.000000E+00
- 95 731 HONIT +  hv   = NO2   + HAC         1.000000E+00
+ 51 475 Br    + NO3   = BrO   + NO2         1.000000E+00
+ 52 511 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
+ 53 512 ISOPN + OH    = ISOPN + IEPOX+ ...  1.000000E-01
+ 54 517 ISOPN + HO2   = GLYC  + HAC  + ...  6.000000E-02
+ 55 518 ISOPN + HO2H2 = GLYC  + HAC  + ...  6.000000E-02
+ 56 522 MACRN + NO    = ACTA  + CH2O + ...  8.500000E-01
+ 57 523 MACRN + HO2   = ACTA  + CH2O + ...  8.500000E-01
+ 58 525 MACRN + HO2H2 = ACTA  + CH2O + ...  8.500000E-01
+ 59 529 PMNN  +       = MACRN + NO2  + ...  1.000000E+00
+ 60 549 ETHLN + OH    = CH2O  +      + ...  1.000000E+00
+ 61 550 PROPN + OH    = NO2   + MGLY + ...  1.000000E+00
+ 62 571 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 63 572 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 64 574 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 65 588 NC2OO +       = OH    + NO2  + ...  1.000000E+00
+ 66 590 NC3OO +       = OH    + NO2  + ...  1.000000E+00
+ 67 592 NC4OO +       = OH    + NO2  + ...  1.000000E+00
+ 68 625 MACRN +       = HAC   + NO2  + ...  1.000000E+00
+ 69 648 NC2OO +       = CH2O  + NO2  + ...  1.000000E+00
+ 70 667 HNO3  +  hv   = OH    + NO2         1.000000E+00
+ 71 668 HNO2  +  hv   = OH    + NO          1.000000E+00
+ 72 670 NO3   +  hv   = NO2   + O3          1.000000E+00
+ 73 671 NO3   +  hv   = NO    + O2   + ...  1.000000E+00
+ 74 672 N2O5  +  hv   = NO3   + NO2         1.000000E+00
+ 75 673 N2O5  +  hv   = NO3   + NO   + ...  1.000000E+00
+ 76 674 HNO4  +  hv   = HO2   + NO2         1.000000E+00
+ 77 677 PAN   +  hv   = MCO3  + NO2  + ...  7.000000E-01
+ 78 692 INPN  +  hv   = OH    + HO2  + ...  1.000000E+00
+ 79 693 PRPN  +  hv   = OH    + HO2  + ...  1.000000E+00
+ 80 702 ISNP  +  hv   = OH    + HO2  + ...  1.000000E+00
+ 81 706 R4N2  +  hv   = NO2   + ACET + ...  1.000000E+00
+ 82 708 MACRN +  hv   = NO2   + HAC  + ...  1.000000E+00
+ 83 709 MVKN  +  hv   = GLYC  + NO2  + ...  1.000000E+00
+ 84 710 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
+ 85 711 PMN   +  hv   = MAO3  + NO2         6.000000E-01
+ 86 716 BrNO3 +  hv   = BrO   + NO2         1.000000E+00
+ 87 717 BrNO2 +  hv   = Br    + NO2         1.000000E+00
+ 88 720 MPN   +  hv   = MO2   + NO2         1.000000E+00
+ 89 721 ISOPN +  hv   = HC5   + NO2  + ...  1.000000E+00
+ 90 722 PROPN +  hv   = CH2O  + NO2  + ...  1.000000E+00
+ 91 724 ETHLN +  hv   = CH2O  + NO2  + ...  1.000000E+00
+ 92 726 ISN1  +  hv   = NO2   + HO2  + ...  1.000000E+00
+ 93 728 MONIT +  hv   = NO2   + MEK  + ...  1.000000E+00
+ 94 729 MONIT +  hv   = NO2   + RCHO + ...  1.000000E+00
+ 95 730 HONIT +  hv   = NO2   + HAC  + ...  1.000000E+00
 
 Family LNOx  loss -- no of rxns is   42     coefficient
-  1   4 O3    + NO2   = O2    + NO3  + ... -1.000000E+00
+  1   4 O3    + NO2   = O2    + NO3        -1.000000E+00
   2  14 HO2H2 + NO2   = HNO2  + H2O  + ... -1.000000E+00
   3  40 NO2   + OH    = HNO3  + M          -1.000000E+00
   4  45 NO    + OH    = HNO2  + M          -1.000000E+00
@@ -1281,63 +1509,69 @@ Family LNOx  loss -- no of rxns is   42     coefficient
  15 109 ISNOH + NO    = PROPN + HO2  + ... -1.000000E+00
  16 118 RCO3  + NO2   = PPN   +            -1.000000E+00
  17 121 MAO3  + NO2   = PMN   +            -1.000000E+00
- 18 275 MAOPO + NO    = HNO3  +            -1.000000E+00
+ 18 275 MAOPO + NO    = HNO3  + POX        -1.000000E+00
  19 313 MO2   + NO2   = MPN   + M          -1.000000E+00
  20 318 APIO2 + NO    = HCOOH + MEK  + ... -1.800000E-01
  21 328 LIMO2 + NO    = HO2   + NO2  + ... -2.200000E-01
- 22 438 NO2   +       = HNO3  + HNO2       -1.000000E+00
- 23 482 Br    + NO2   = BrNO2 +            -1.000000E+00
- 24 484 BrO   + NO2   = BrNO3 +            -1.000000E+00
- 25 506 HC5OO + NO    = HNO3  +            -1.000000E+00
- 26 514 ISOPN + NO    = MACRN + HCOOH+ ... -2.100000E-01
- 27 517 ISOPN + NO    = GLYC  + HAC  + ... -1.200000E-01
- 28 528 MACRN + NO2   = PMNN  +            -1.000000E+00
- 29 534 DIBOO + NO    = HNO3  +            -1.000000E+00
- 30 543 MOBAO + NO    = HNO3  +            -1.000000E+00
- 31 596 ACLOO + NO2   = HAC   + NO3        -1.000000E+00
- 32 601 CH2OO + NO2   = CH2O  + NO3        -1.000000E+00
- 33 606 CH3CH + NO2   = ALD2  + NO3        -1.000000E+00
- 34 612 GAOO  + NO2   = GLYC  + NO3        -1.000000E+00
- 35 618 MACRO + NO2   = MACR  + NO3        -1.000000E+00
- 36 624 MACRN + NO2   = MACRN + NO3        -1.000000E+00
- 37 630 MVKOO + NO2   = MVK   + NO3        -1.000000E+00
- 38 635 MGLOO + NO2   = MGLY  + NO3        -1.000000E+00
- 39 641 MGLYO + NO2   = MGLY  + NO3        -1.000000E+00
- 40 646 NC2OO + NO2   = ETHLN + NO3        -1.000000E+00
- 41 652 NC3OO + NO2   = PROPN + NO3        -1.000000E+00
- 42 657 NC4OO + NO2   = MVKN  + NO3        -1.000000E+00
+ 22 438 NO2   +       = HNO3  + HNO2 + ... -1.000000E+00
+ 23 481 Br    + NO2   = BrNO2 +            -1.000000E+00
+ 24 483 BrO   + NO2   = BrNO3 +            -1.000000E+00
+ 25 505 HC5OO + NO    = HNO3  + POX        -1.000000E+00
+ 26 513 ISOPN + NO    = MACRN + HCOOH+ ... -2.100000E-01
+ 27 516 ISOPN + NO    = GLYC  + HAC  + ... -1.200000E-01
+ 28 527 MACRN + NO2   = PMNN  + LOX        -1.000000E+00
+ 29 533 DIBOO + NO    = HNO3  + POX        -1.000000E+00
+ 30 542 MOBAO + NO    = HNO3  + POX        -1.000000E+00
+ 31 595 ACLOO + NO2   = HAC   + NO3  + ... -1.000000E+00
+ 32 600 CH2OO + NO2   = CH2O  + NO3  + ... -1.000000E+00
+ 33 605 CH3CH + NO2   = ALD2  + NO3  + ... -1.000000E+00
+ 34 611 GAOO  + NO2   = GLYC  + NO3  + ... -1.000000E+00
+ 35 617 MACRO + NO2   = MACR  + NO3  + ... -1.000000E+00
+ 36 623 MACRN + NO2   = MACRN + NO3  + ... -1.000000E+00
+ 37 629 MVKOO + NO2   = MVK   + NO3  + ... -1.000000E+00
+ 38 634 MGLOO + NO2   = MGLY  + NO3  + ... -1.000000E+00
+ 39 640 MGLYO + NO2   = MGLY  + NO3  + ... -1.000000E+00
+ 40 645 NC2OO + NO2   = ETHLN + NO3  + ... -1.000000E+00
+ 41 651 NC3OO + NO2   = PROPN + NO3  + ... -1.000000E+00
+ 42 656 NC4OO + NO2   = MVKN  + NO3  + ... -1.000000E+00
 
-Family LANs  loss -- no of rxns is   28     coefficient
+Family LANs  loss -- no of rxns is   34     coefficient
   1  95 ISN1  + NO3   = ISNOO + ISNOO+ ... -1.000000E+00
   2 107 ISN1  + O3    = PROPN + GLYX + ... -7.000000E-01
   3 108 ISN1  + OH    = ISNOO + ISNOH      -1.000000E+00
   4 115 R4N2  + OH    = R4N1  + H2O        -1.000000E+00
-  5 411 ISOPN + O3    = MVKN  + CH2OO+ ... -5.000000E-01
-  6 412 ISOPN + O3    = HAC   + NC2OO+ ... -5.000000E-01
-  7 445 ISOPN +       = ONITA +            -1.000000E+00
-  8 446 ISOPN +       = ONITA +            -1.000000E+00
-  9 447 MACRN +       = ONITA +            -1.000000E+00
- 10 448 MVKN  +       = ONITA +            -1.000000E+00
- 11 449 ETHLN +       = ONITA +            -1.000000E+00
- 12 450 R4N2  +       = ONITA +            -1.000000E+00
- 13 451 ISN1  +       = ONITA +            -1.000000E+00
- 14 452 DHDN  +       = ONITA +            -1.000000E+00
- 15 512 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
- 16 513 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
- 17 521 MVKN  + OH    = HCOOH + NO3  + ... -1.000000E+00
- 18 522 MACRN + OH    = MACRN +            -1.000000E+00
- 19 550 ETHLN + OH    = CH2O  +      + ... -1.000000E+00
- 20 551 PROPN + OH    = NO2   + MGLY + ... -1.000000E+00
- 21 707 R4N2  +  hv   = NO2   + ACET + ... -1.000000E+00
- 22 709 MACRN +  hv   = NO2   + HAC  + ... -1.000000E+00
- 23 710 MVKN  +  hv   = GLYC  + NO2  + ... -1.000000E+00
- 24 711 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
- 25 722 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
- 26 723 PROPN +  hv   = CH2O  + NO2  + ... -1.000000E+00
- 27 725 ETHLN +  hv   = CH2O  + NO2  + ... -1.000000E+00
- 28 727 ISN1  +  hv   = NO2   + HO2  + ... -1.000000E+00
+  5 352 HONIT + OH    = NO3   + HAC  + ... -1.000000E+00
+  6 411 ISOPN + O3    = MVKN  + CH2OO+ ... -5.000000E-01
+  7 412 ISOPN + O3    = HAC   + NC2OO+ ... -5.000000E-01
+  8 445 ISOPN +       = ONITA +            -1.000000E+00
+  9 446 ISOPN +       = ONITA +            -1.000000E+00
+ 10 447 MACRN +       = ONITA +            -1.000000E+00
+ 11 448 MVKN  +       = ONITA +            -1.000000E+00
+ 12 449 R4N2  +       = ONITA +            -1.000000E+00
+ 13 450 ISN1  +       = ONITA +            -1.000000E+00
+ 14 451 DHDN  +       = ONITA +            -1.000000E+00
+ 15 452 MONIT +       = ONITA +            -1.000000E+00
+ 16 453 MONIT +       = ONITA +            -1.000000E+00
+ 17 454 HONIT +       = ONITA +            -1.000000E+00
+ 18 511 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
+ 19 512 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
+ 20 520 MVKN  + OH    = HCOOH + NO3  + ... -1.000000E+00
+ 21 521 MACRN + OH    = MACRN +            -1.000000E+00
+ 22 549 ETHLN + OH    = CH2O  +      + ... -1.000000E+00
+ 23 550 PROPN + OH    = NO2   + MGLY + ... -1.000000E+00
+ 24 706 R4N2  +  hv   = NO2   + ACET + ... -1.000000E+00
+ 25 708 MACRN +  hv   = NO2   + HAC  + ... -1.000000E+00
+ 26 709 MVKN  +  hv   = GLYC  + NO2  + ... -1.000000E+00
+ 27 710 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
+ 28 721 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
+ 29 722 PROPN +  hv   = CH2O  + NO2  + ... -1.000000E+00
+ 30 724 ETHLN +  hv   = CH2O  + NO2  + ... -1.000000E+00
+ 31 726 ISN1  +  hv   = NO2   + HO2  + ... -1.000000E+00
+ 32 728 MONIT +  hv   = NO2   + MEK  + ... -1.000000E+00
+ 33 729 MONIT +  hv   = NO2   + RCHO + ... -1.000000E+00
+ 34 730 HONIT +  hv   = NO2   + HAC  + ... -1.000000E+00
 
-Family PANs  prod -- no of rxns is   53     coefficient
+Family PANs  prod -- no of rxns is   65     coefficient
   1  81 R4O2  + NO    = R4N2  + LNOx        1.000000E+00
   2  84 ATO2  + NO    = NO2   + CH2O + ...  4.000000E-02
   3  85 KO2   + NO    = NO2   + ALD2 + ...  7.000000E-02
@@ -1365,125 +1599,186 @@ Family PANs  prod -- no of rxns is   53     coefficient
  25 243 PRPN  + OH    = PRN1  + OH   + ...  7.910000E-01
  26 293 MAN2  + MCO3  = PROPN + CO   + ...  5.000000E-01
  27 294 INO2  + MCO3  = MO2   + ISN1 + ...  7.000000E-01
- 28 514 ISOPN + NO    = MACRN + HCOOH+ ...  8.740000E-01
- 29 515 ISOPN + HO2   = MACRN + HAC  + ...  5.000000E-01
- 30 516 ISOPN + HO2H2 = MACRN + HAC  + ...  5.000000E-01
- 31 517 ISOPN + NO    = GLYC  + HAC  + ...  9.100000E-01
- 32 518 ISOPN + HO2   = GLYC  + HAC  + ...  4.400000E-01
- 33 519 ISOPN + HO2H2 = GLYC  + HAC  + ...  4.400000E-01
- 34 622 MACRN + CO    = MACRN +             1.000000E+00
- 35 623 MACRN + NO    = MACRN + NO2         1.000000E+00
- 36 624 MACRN + NO2   = MACRN + NO3  + ...  1.000000E+00
- 37 625 MACRN + SO2   = MACRN + SO4         1.000000E+00
- 38 627 MACRN +       = MACRN + H2O2        1.000000E+00
- 39 644 NC2OO + CO    = ETHLN +             1.000000E+00
- 40 645 NC2OO + NO    = ETHLN + NO2         1.000000E+00
- 41 646 NC2OO + NO2   = ETHLN + NO3  + ...  1.000000E+00
- 42 647 NC2OO + SO2   = ETHLN + SO4         1.000000E+00
- 43 648 NC2OO +       = ETHLN + H2O2        1.000000E+00
- 44 650 NC3OO + CO    = PROPN +             1.000000E+00
- 45 651 NC3OO + NO    = PROPN + NO2         1.000000E+00
- 46 652 NC3OO + NO2   = PROPN + NO3  + ...  1.000000E+00
- 47 653 NC3OO + SO2   = PROPN + SO4         1.000000E+00
- 48 654 NC3OO +       = PROPN + H2O2        1.000000E+00
- 49 655 NC4OO + CO    = MVKN  +             1.000000E+00
- 50 656 NC4OO + NO    = MVKN  + NO2         1.000000E+00
- 51 657 NC4OO + NO2   = MVKN  + NO3  + ...  1.000000E+00
- 52 658 NC4OO + SO2   = MVKN  + SO4         1.000000E+00
- 53 659 NC4OO +       = MVKN  + H2O2        1.000000E+00
+ 28 318 APIO2 + NO    = HCOOH + MEK  + ...  1.800000E-01
+ 29 328 LIMO2 + NO    = HO2   + NO2  + ...  2.200000E-01
+ 30 334 OLNN  + NO    = HO2   + NO2  + ...  1.000000E+00
+ 31 336 OLNN  + HO2   = MONIT + MONIT       1.000000E+00
+ 32 337 OLND  + HO2   = MONIT + MONIT       1.000000E+00
+ 33 338 OLNN  + MO2   = HO2   + CH2O + ...  1.000000E+00
+ 34 339 OLND  + MO2   = HO2   + NO2  + ...  5.000000E-01
+ 35 340 OLNN  + MCO3  = HO2   + MO2  + ...  1.000000E+00
+ 36 342 OLNN  + NO3   = HO2   + NO2  + ...  1.000000E+00
+ 37 344 OLNN  + OLNN  = HO2   + MONIT+ ...  2.000000E+00
+ 38 345 OLNN  + OLND  = HO2   + NO2  + ...  1.500000E+00
+ 39 346 OLND  + OLND  = NO2   + CH2O + ...  1.000000E+00
+ 40 513 ISOPN + NO    = MACRN + HCOOH+ ...  8.740000E-01
+ 41 514 ISOPN + HO2   = MACRN + HAC  + ...  5.000000E-01
+ 42 515 ISOPN + HO2H2 = MACRN + HAC  + ...  5.000000E-01
+ 43 516 ISOPN + NO    = GLYC  + HAC  + ...  9.100000E-01
+ 44 517 ISOPN + HO2   = GLYC  + HAC  + ...  4.400000E-01
+ 45 518 ISOPN + HO2H2 = GLYC  + HAC  + ...  4.400000E-01
+ 46 621 MACRN + CO    = MACRN +             1.000000E+00
+ 47 622 MACRN + NO    = MACRN + NO2  + ...  1.000000E+00
+ 48 623 MACRN + NO2   = MACRN + NO3  + ...  1.000000E+00
+ 49 624 MACRN + SO2   = MACRN + SO4         1.000000E+00
+ 50 626 MACRN +       = MACRN + H2O2        1.000000E+00
+ 51 643 NC2OO + CO    = ETHLN +             1.000000E+00
+ 52 644 NC2OO + NO    = ETHLN + NO2  + ...  1.000000E+00
+ 53 645 NC2OO + NO2   = ETHLN + NO3  + ...  1.000000E+00
+ 54 646 NC2OO + SO2   = ETHLN + SO4         1.000000E+00
+ 55 647 NC2OO +       = ETHLN + H2O2        1.000000E+00
+ 56 649 NC3OO + CO    = PROPN +             1.000000E+00
+ 57 650 NC3OO + NO    = PROPN + NO2  + ...  1.000000E+00
+ 58 651 NC3OO + NO2   = PROPN + NO3  + ...  1.000000E+00
+ 59 652 NC3OO + SO2   = PROPN + SO4         1.000000E+00
+ 60 653 NC3OO +       = PROPN + H2O2        1.000000E+00
+ 61 654 NC4OO + CO    = MVKN  +             1.000000E+00
+ 62 655 NC4OO + NO    = MVKN  + NO2  + ...  1.000000E+00
+ 63 656 NC4OO + NO2   = MVKN  + NO3  + ...  1.000000E+00
+ 64 657 NC4OO + SO2   = MVKN  + SO4         1.000000E+00
+ 65 658 NC4OO +       = MVKN  + H2O2        1.000000E+00
 
-Family LAN1  loss -- no of rxns is    8     coefficient
-  1 411 ISOPN + O3    = MVKN  + CH2OO+ ... -1.000000E+00
-  2 412 ISOPN + O3    = HAC   + NC2OO+ ... -1.000000E+00
-  3 445 ISOPN +       = ONITA + LANs       -1.000000E+00
-  4 446 ISOPN +       = ONITA + LANs       -1.000000E+00
-  5 512 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
-  6 513 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
-  7 711 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
-  8 722 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
-
-Family PAN1  prod -- no of rxns is    3     coefficient
-  1  86 RIO2  + NO    = NO2   + HO2  + ...  9.000000E-02
-  2 112 INO2  + INO2  = NO2   + HO2  + ...  5.000000E-01
-  3 183 INO2  + MO2   = NO2   + HO2  + ...  2.500000E-01
-
-Family LAN2  loss -- no of rxns is   20     coefficient
+Family LIN1  loss -- no of rxns is   13     coefficient
   1  95 ISN1  + NO3   = ISNOO + ISNOO+ ... -1.000000E+00
-  2 107 ISN1  + O3    = PROPN + GLYX + ... -7.000000E-01
+  2 107 ISN1  + O3    = PROPN + GLYX + ... -1.000000E+00
   3 108 ISN1  + OH    = ISNOO + ISNOH+ ... -1.000000E+00
-  4 115 R4N2  + OH    = R4N1  + H2O  + ... -1.000000E+00
-  5 447 MACRN +       = ONITA + LANs       -1.000000E+00
-  6 448 MVKN  +       = ONITA + LANs       -1.000000E+00
-  7 449 ETHLN +       = ONITA + LANs       -1.000000E+00
-  8 450 R4N2  +       = ONITA + LANs       -1.000000E+00
-  9 451 ISN1  +       = ONITA + LANs       -1.000000E+00
- 10 452 DHDN  +       = ONITA + LANs       -1.000000E+00
- 11 521 MVKN  + OH    = HCOOH + NO3  + ... -1.000000E+00
- 12 522 MACRN + OH    = MACRN + LANs       -1.000000E+00
- 13 550 ETHLN + OH    = CH2O  +      + ... -1.000000E+00
- 14 551 PROPN + OH    = NO2   + MGLY + ... -1.000000E+00
- 15 707 R4N2  +  hv   = NO2   + ACET + ... -1.000000E+00
- 16 709 MACRN +  hv   = NO2   + HAC  + ... -1.000000E+00
- 17 710 MVKN  +  hv   = GLYC  + NO2  + ... -1.000000E+00
- 18 723 PROPN +  hv   = CH2O  + NO2  + ... -1.000000E+00
- 19 725 ETHLN +  hv   = CH2O  + NO2  + ... -1.000000E+00
- 20 727 ISN1  +  hv   = NO2   + HO2  + ... -1.000000E+00
+  4 411 ISOPN + O3    = MVKN  + CH2OO+ ... -1.000000E+00
+  5 412 ISOPN + O3    = HAC   + NC2OO+ ... -1.000000E+00
+  6 445 ISOPN +       = ONITA + LANs       -1.000000E+00
+  7 446 ISOPN +       = ONITA + LANs       -1.000000E+00
+  8 450 ISN1  +       = ONITA + LANs       -1.000000E+00
+  9 511 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
+ 10 512 ISOPN + OH    = ISOPN + IEPOX+ ... -1.000000E+00
+ 11 710 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
+ 12 721 ISOPN +  hv   = HC5   + NO2  + ... -1.000000E+00
+ 13 726 ISN1  +  hv   = NO2   + HO2  + ... -1.000000E+00
 
-Family PAN2  prod -- no of rxns is   54     coefficient
+Family PIN1  prod -- no of rxns is    6     coefficient
+  1  86 RIO2  + NO    = NO2   + HO2  + ...  9.000000E-02
+  2  93 INO2  + NO    = NO2   + HO2  + ...  7.000000E-01
+  3  94 INO2  + NO3   = NO2   + HO2  + ...  7.000000E-01
+  4 112 INO2  + INO2  = NO2   + HO2  + ...  1.700000E+00
+  5 183 INO2  + MO2   = NO2   + HO2  + ...  8.500000E-01
+  6 294 INO2  + MCO3  = MO2   + ISN1 + ...  7.000000E-01
+
+Family LIN2  loss -- no of rxns is   14     coefficient
+  1 115 R4N2  + OH    = R4N1  + H2O  + ... -1.000000E+00
+  2 447 MACRN +       = ONITA + LANs       -1.000000E+00
+  3 448 MVKN  +       = ONITA + LANs       -1.000000E+00
+  4 449 R4N2  +       = ONITA + LANs       -1.000000E+00
+  5 451 DHDN  +       = ONITA + LANs       -1.000000E+00
+  6 520 MVKN  + OH    = HCOOH + NO3  + ... -1.000000E+00
+  7 521 MACRN + OH    = MACRN + LANs       -1.000000E+00
+  8 549 ETHLN + OH    = CH2O  +      + ... -1.000000E+00
+  9 550 PROPN + OH    = NO2   + MGLY + ... -1.000000E+00
+ 10 706 R4N2  +  hv   = NO2   + ACET + ... -1.000000E+00
+ 11 708 MACRN +  hv   = NO2   + HAC  + ... -1.000000E+00
+ 12 709 MVKN  +  hv   = GLYC  + NO2  + ... -1.000000E+00
+ 13 722 PROPN +  hv   = CH2O  + NO2  + ... -1.000000E+00
+ 14 724 ETHLN +  hv   = CH2O  + NO2  + ... -1.000000E+00
+
+Family PIN2  prod -- no of rxns is   50     coefficient
   1  81 R4O2  + NO    = R4N2  + LNOx + ...  1.000000E+00
   2  84 ATO2  + NO    = NO2   + CH2O + ...  4.000000E-02
   3  85 KO2   + NO    = NO2   + ALD2 + ...  7.000000E-02
   4  88 VRO2  + NO    = NO2   + HO2  + ...  1.200000E-01
   5  89 MRO2  + NO    = NO2   + HO2  + ...  1.500000E-01
   6  91 MAN2  + NO    = NO2   + CH2O + ...  5.000000E-01
-  7  93 INO2  + NO    = NO2   + HO2  + ...  7.000000E-01
-  8  94 INO2  + NO3   = NO2   + HO2  + ...  7.000000E-01
-  9  96 ISNOO + NO3   = NO2   + PROPN+ ...  1.000000E+00
- 10  97 ISNOO + NO    = NO2   + PROPN+ ...  1.000000E+00
- 11 102 ISNOO + NO3   = PROPN + GLYX + ...  1.000000E+00
- 12 103 ISNOO + NO    = PROPN + GLYX + ...  9.400000E-01
- 13 106 ISNOO + MO2   = PROPN + GLYX + ...  7.000000E-01
- 14 109 ISNOH + NO    = PROPN + HO2  + ...  9.340000E-01
- 15 111 ISNOH + MO2   = PROPN + GLYX + ...  7.000000E-01
- 16 112 INO2  + INO2  = NO2   + HO2  + ...  1.200000E+00
- 17 133 R4N1  + HO2   = R4N2  + PANs        1.000000E+00
- 18 134 R4N1  + HO2H2 = R4N2  + PANs        1.000000E+00
- 19 153 MAN2  + HO2   = PROPN + CO   + ...  7.500000E-02
- 20 155 MAN2  + HO2H2 = PROPN + CO   + ...  7.500000E-02
- 21 181 MAN2  + MO2   = PROPN + CO   + ...  6.250000E-01
- 22 183 INO2  + MO2   = NO2   + HO2  + ...  6.000000E-01
- 23 242 INPN  + OH    = INO2  + R4N2 + ...  6.400000E-01
- 24 243 PRPN  + OH    = PRN1  + OH   + ...  7.910000E-01
- 25 293 MAN2  + MCO3  = PROPN + CO   + ...  5.000000E-01
- 26 294 INO2  + MCO3  = MO2   + ISN1 + ...  7.000000E-01
- 27 411 ISOPN + O3    = MVKN  + CH2OO+ ...  5.000000E-01
- 28 412 ISOPN + O3    = HAC   + NC2OO+ ...  5.000000E-01
- 29 514 ISOPN + NO    = MACRN + HCOOH+ ...  8.740000E-01
- 30 515 ISOPN + HO2   = MACRN + HAC  + ...  5.000000E-01
- 31 516 ISOPN + HO2H2 = MACRN + HAC  + ...  5.000000E-01
- 32 517 ISOPN + NO    = GLYC  + HAC  + ...  9.100000E-01
- 33 518 ISOPN + HO2   = GLYC  + HAC  + ...  4.400000E-01
- 34 519 ISOPN + HO2H2 = GLYC  + HAC  + ...  4.400000E-01
- 35 622 MACRN + CO    = MACRN + PANs        1.000000E+00
- 36 623 MACRN + NO    = MACRN + NO2  + ...  1.000000E+00
- 37 624 MACRN + NO2   = MACRN + NO3  + ...  1.000000E+00
- 38 625 MACRN + SO2   = MACRN + SO4  + ...  1.000000E+00
- 39 627 MACRN +       = MACRN + H2O2 + ...  1.000000E+00
- 40 644 NC2OO + CO    = ETHLN + PANs        1.000000E+00
- 41 645 NC2OO + NO    = ETHLN + NO2  + ...  1.000000E+00
- 42 646 NC2OO + NO2   = ETHLN + NO3  + ...  1.000000E+00
- 43 647 NC2OO + SO2   = ETHLN + SO4  + ...  1.000000E+00
- 44 648 NC2OO +       = ETHLN + H2O2 + ...  1.000000E+00
- 45 650 NC3OO + CO    = PROPN + PANs        1.000000E+00
- 46 651 NC3OO + NO    = PROPN + NO2  + ...  1.000000E+00
- 47 652 NC3OO + NO2   = PROPN + NO3  + ...  1.000000E+00
- 48 653 NC3OO + SO2   = PROPN + SO4  + ...  1.000000E+00
- 49 654 NC3OO +       = PROPN + H2O2 + ...  1.000000E+00
- 50 655 NC4OO + CO    = MVKN  + PANs        1.000000E+00
- 51 656 NC4OO + NO    = MVKN  + NO2  + ...  1.000000E+00
- 52 657 NC4OO + NO2   = MVKN  + NO3  + ...  1.000000E+00
- 53 658 NC4OO + SO2   = MVKN  + SO4  + ...  1.000000E+00
- 54 659 NC4OO +       = MVKN  + H2O2 + ...  1.000000E+00
+  7  96 ISNOO + NO3   = NO2   + PROPN+ ...  1.000000E+00
+  8  97 ISNOO + NO    = NO2   + PROPN+ ...  1.000000E+00
+  9 102 ISNOO + NO3   = PROPN + GLYX + ...  1.000000E+00
+ 10 103 ISNOO + NO    = PROPN + GLYX + ...  9.400000E-01
+ 11 106 ISNOO + MO2   = PROPN + GLYX + ...  7.000000E-01
+ 12 107 ISN1  + O3    = PROPN + GLYX + ...  3.000000E-01
+ 13 109 ISNOH + NO    = PROPN + HO2  + ...  9.340000E-01
+ 14 111 ISNOH + MO2   = PROPN + GLYX + ...  7.000000E-01
+ 15 133 R4N1  + HO2   = R4N2  + PANs        1.000000E+00
+ 16 134 R4N1  + HO2H2 = R4N2  + PANs        1.000000E+00
+ 17 153 MAN2  + HO2   = PROPN + CO   + ...  7.500000E-02
+ 18 155 MAN2  + HO2H2 = PROPN + CO   + ...  7.500000E-02
+ 19 181 MAN2  + MO2   = PROPN + CO   + ...  6.250000E-01
+ 20 242 INPN  + OH    = INO2  + R4N2 + ...  6.400000E-01
+ 21 243 PRPN  + OH    = PRN1  + OH   + ...  7.910000E-01
+ 22 293 MAN2  + MCO3  = PROPN + CO   + ...  5.000000E-01
+ 23 411 ISOPN + O3    = MVKN  + CH2OO+ ...  5.000000E-01
+ 24 412 ISOPN + O3    = HAC   + NC2OO+ ...  5.000000E-01
+ 25 513 ISOPN + NO    = MACRN + HCOOH+ ...  8.740000E-01
+ 26 514 ISOPN + HO2   = MACRN + HAC  + ...  5.000000E-01
+ 27 515 ISOPN + HO2H2 = MACRN + HAC  + ...  5.000000E-01
+ 28 516 ISOPN + NO    = GLYC  + HAC  + ...  9.100000E-01
+ 29 517 ISOPN + HO2   = GLYC  + HAC  + ...  4.400000E-01
+ 30 518 ISOPN + HO2H2 = GLYC  + HAC  + ...  4.400000E-01
+ 31 621 MACRN + CO    = MACRN + PANs        1.000000E+00
+ 32 622 MACRN + NO    = MACRN + NO2  + ...  1.000000E+00
+ 33 623 MACRN + NO2   = MACRN + NO3  + ...  1.000000E+00
+ 34 624 MACRN + SO2   = MACRN + SO4  + ...  1.000000E+00
+ 35 626 MACRN +       = MACRN + H2O2 + ...  1.000000E+00
+ 36 643 NC2OO + CO    = ETHLN + PANs        1.000000E+00
+ 37 644 NC2OO + NO    = ETHLN + NO2  + ...  1.000000E+00
+ 38 645 NC2OO + NO2   = ETHLN + NO3  + ...  1.000000E+00
+ 39 646 NC2OO + SO2   = ETHLN + SO4  + ...  1.000000E+00
+ 40 647 NC2OO +       = ETHLN + H2O2 + ...  1.000000E+00
+ 41 649 NC3OO + CO    = PROPN + PANs        1.000000E+00
+ 42 650 NC3OO + NO    = PROPN + NO2  + ...  1.000000E+00
+ 43 651 NC3OO + NO2   = PROPN + NO3  + ...  1.000000E+00
+ 44 652 NC3OO + SO2   = PROPN + SO4  + ...  1.000000E+00
+ 45 653 NC3OO +       = PROPN + H2O2 + ...  1.000000E+00
+ 46 654 NC4OO + CO    = MVKN  + PANs        1.000000E+00
+ 47 655 NC4OO + NO    = MVKN  + NO2  + ...  1.000000E+00
+ 48 656 NC4OO + NO2   = MVKN  + NO3  + ...  1.000000E+00
+ 49 657 NC4OO + SO2   = MVKN  + SO4  + ...  1.000000E+00
+ 50 658 NC4OO +       = MVKN  + H2O2 + ...  1.000000E+00
+
+Family LMTN1 loss -- no of rxns is    9     coefficient
+  1 347 MONIT + OH    = HONIT +            -1.000000E+00
+  2 348 MONIT + OH    = HONIT +            -1.000000E+00
+  3 349 MONIT + O3    = HONIT + LOX        -1.000000E+00
+  4 350 MONIT + NO3   = HONIT + LOX        -1.000000E+00
+  5 351 MONIT + NO3   = HONIT + LOX        -1.000000E+00
+  6 452 MONIT +       = ONITA + LANs       -1.000000E+00
+  7 453 MONIT +       = ONITA + LANs       -1.000000E+00
+  8 728 MONIT +  hv   = NO2   + MEK  + ... -1.000000E+00
+  9 729 MONIT +  hv   = NO2   + RCHO + ... -1.000000E+00
+
+Family PMTN1 prod -- no of rxns is   12     coefficient
+  1 318 APIO2 + NO    = HCOOH + MEK  + ...  1.800000E-01
+  2 328 LIMO2 + NO    = HO2   + NO2  + ...  2.200000E-01
+  3 334 OLNN  + NO    = HO2   + NO2  + ...  1.000000E+00
+  4 336 OLNN  + HO2   = MONIT + MONIT+ ...  1.000000E+00
+  5 337 OLND  + HO2   = MONIT + MONIT+ ...  1.000000E+00
+  6 338 OLNN  + MO2   = HO2   + CH2O + ...  1.000000E+00
+  7 339 OLND  + MO2   = HO2   + NO2  + ...  5.000000E-01
+  8 340 OLNN  + MCO3  = HO2   + MO2  + ...  1.000000E+00
+  9 342 OLNN  + NO3   = HO2   + NO2  + ...  1.000000E+00
+ 10 344 OLNN  + OLNN  = HO2   + MONIT+ ...  2.000000E+00
+ 11 345 OLNN  + OLND  = HO2   + NO2  + ...  1.500000E+00
+ 12 346 OLND  + OLND  = NO2   + CH2O + ...  1.000000E+00
+
+Family LMTN2 loss -- no of rxns is    3     coefficient
+  1 352 HONIT + OH    = NO3   + HAC  + ... -1.000000E+00
+  2 454 HONIT +       = ONITA + LANs       -1.000000E+00
+  3 730 HONIT +  hv   = NO2   + HAC  + ... -1.000000E+00
+
+Family PMTN2 prod -- no of rxns is    5     coefficient
+  1 347 MONIT + OH    = HONIT + LMTN1       1.000000E+00
+  2 348 MONIT + OH    = HONIT + LMTN1       1.000000E+00
+  3 349 MONIT + O3    = HONIT + LOX  + ...  1.000000E+00
+  4 350 MONIT + NO3   = HONIT + LOX  + ...  1.000000E+00
+  5 351 MONIT + NO3   = HONIT + LOX  + ...  1.000000E+00
+
+Family PXRIO prod -- no of rxns is    1     coefficient
+  1  86 RIO2  + NO    = NO2   + HO2  + ...  1.000000E+00
+
+Family PXRIO prod -- no of rxns is    1     coefficient
+  1 141 RIO2  + HO2   = RIP   + OH   + ...  1.000000E+00
+
+Family PXRIO prod -- no of rxns is    6     coefficient
+  1  87 RIO2  +       = HO2   + HPALD+ ...  1.000000E+00
+  2 143 RIO2  + HO2H2 = RIP   + OH   + ...  1.000000E+00
+  3 176 RIO2  + MO2   = HO2   + CH2O + ...  1.000000E+00
+  4 177 RIO2  + RIO2  = HO2   + CH2O + ...  1.000000E+00
+  5 287 RIO2  + MCO3  = HO2   + CH2O + ...  1.000000E+00
+  6 299 RIO2  + MCO3  = MEK   + ACTA + ...  1.000000E+00
 REPEAT REACTANTS:     1    7 OH             OH                           
 REPEAT REACTANTS:     2   17 HO2H2O         HO2                          
 REPEAT REACTANTS:     3   33 MO2            MO2                          
@@ -1509,48 +1804,48 @@ REPEAT REACTANTS:    22  275 MAOPO2         NO
 REPEAT REACTANTS:    23  280 HC5            O3                           
 REPEAT REACTANTS:    24  283 MCO3           MO2                          
 REPEAT REACTANTS:    25  309 MCO3           ETO2                         
-REPEAT REACTANTS:    26  459 DMS            OH                           
-REPEAT REACTANTS:    27  471 BrO            BrO                          
-REPEAT REACTANTS:    28  506 HC5OO          NO                           
-REPEAT REACTANTS:    29  534 DIBOO          NO                           
-REPEAT REACTANTS:    30  543 MOBAOO         NO                           
-REPEAT REACTANTS:    31  553 ACLOOA                                      
-REPEAT REACTANTS:    32  555 CH2OOA                                      
-REPEAT REACTANTS:    33  558 CH2OOB                                      
-REPEAT REACTANTS:    34  561 CH2OOC                                      
-REPEAT REACTANTS:    35  563 CH3CHOOA                                    
-REPEAT REACTANTS:    36  565 CH3CHOOA                                    
-REPEAT REACTANTS:    37  567 GAOOB                                       
-REPEAT REACTANTS:    38  569 MACROOA                                     
-REPEAT REACTANTS:    39  571 MACROOA                                     
-REPEAT REACTANTS:    40  573 MACRNOOA                                    
-REPEAT REACTANTS:    41  575 MACRNOOA                                    
-REPEAT REACTANTS:    42  577 MVKOOA                                      
-REPEAT REACTANTS:    43  579 MVKOOA                                      
-REPEAT REACTANTS:    44  581 MGLYOOA                                     
-REPEAT REACTANTS:    45  583 MGLYOOB                                     
-REPEAT REACTANTS:    46  585 MGLOOA                                      
-REPEAT REACTANTS:    47  587 MGLOOA                                      
-REPEAT REACTANTS:    48  589 NC2OOA                                      
-REPEAT REACTANTS:    49  591 NC3OOA                                      
-REPEAT REACTANTS:    50  593 NC4OOA                                      
-REPEAT REACTANTS:    51  609 CH3CHOO                                     
-REPEAT REACTANTS:    52  615 GAOO                                        
-REPEAT REACTANTS:    53  621 MACROO                                      
-REPEAT REACTANTS:    54  627 MACRNOO                                     
-REPEAT REACTANTS:    55  638 MGLOO                                       
-REPEAT REACTANTS:    56  649 NC2OO                                       
-REPEAT REACTANTS:    57  662 O3                                          
-REPEAT REACTANTS:    58  667 CH2O                                        
-REPEAT REACTANTS:    59  672 NO3                                         
-REPEAT REACTANTS:    60  674 N2O5                                        
-REPEAT REACTANTS:    61  677 ALD2                                        
-REPEAT REACTANTS:    62  681 ACET                                        
-REPEAT REACTANTS:    63  685 GLYX                                        
-REPEAT REACTANTS:    64  687 MGLY                                        
-REPEAT REACTANTS:    65  689 MVK                                         
-REPEAT REACTANTS:    66  717 BrNO3                                       
-REPEAT REACTANTS:    67  721 MPN                                         
+REPEAT REACTANTS:    26  458 DMS            OH                           
+REPEAT REACTANTS:    27  470 BrO            BrO                          
+REPEAT REACTANTS:    28  505 HC5OO          NO                           
+REPEAT REACTANTS:    29  533 DIBOO          NO                           
+REPEAT REACTANTS:    30  542 MOBAOO         NO                           
+REPEAT REACTANTS:    31  552 ACLOOA                                      
+REPEAT REACTANTS:    32  554 CH2OOA                                      
+REPEAT REACTANTS:    33  557 CH2OOB                                      
+REPEAT REACTANTS:    34  560 CH2OOC                                      
+REPEAT REACTANTS:    35  562 CH3CHOOA                                    
+REPEAT REACTANTS:    36  564 CH3CHOOA                                    
+REPEAT REACTANTS:    37  566 GAOOB                                       
+REPEAT REACTANTS:    38  568 MACROOA                                     
+REPEAT REACTANTS:    39  570 MACROOA                                     
+REPEAT REACTANTS:    40  572 MACRNOOA                                    
+REPEAT REACTANTS:    41  574 MACRNOOA                                    
+REPEAT REACTANTS:    42  576 MVKOOA                                      
+REPEAT REACTANTS:    43  578 MVKOOA                                      
+REPEAT REACTANTS:    44  580 MGLYOOA                                     
+REPEAT REACTANTS:    45  582 MGLYOOB                                     
+REPEAT REACTANTS:    46  584 MGLOOA                                      
+REPEAT REACTANTS:    47  586 MGLOOA                                      
+REPEAT REACTANTS:    48  588 NC2OOA                                      
+REPEAT REACTANTS:    49  590 NC3OOA                                      
+REPEAT REACTANTS:    50  592 NC4OOA                                      
+REPEAT REACTANTS:    51  608 CH3CHOO                                     
+REPEAT REACTANTS:    52  614 GAOO                                        
+REPEAT REACTANTS:    53  620 MACROO                                      
+REPEAT REACTANTS:    54  626 MACRNOO                                     
+REPEAT REACTANTS:    55  637 MGLOO                                       
+REPEAT REACTANTS:    56  648 NC2OO                                       
+REPEAT REACTANTS:    57  661 O3                                          
+REPEAT REACTANTS:    58  666 CH2O                                        
+REPEAT REACTANTS:    59  671 NO3                                         
+REPEAT REACTANTS:    60  673 N2O5                                        
+REPEAT REACTANTS:    61  676 ALD2                                        
+REPEAT REACTANTS:    62  680 ACET                                        
+REPEAT REACTANTS:    63  684 GLYX                                        
+REPEAT REACTANTS:    64  686 MGLY                                        
+REPEAT REACTANTS:    65  688 MVK                                         
+REPEAT REACTANTS:    66  716 BrNO3                                       
+REPEAT REACTANTS:    67  720 MPN                                         
  
 SPEC           NUMGT  NUMG  NUMLT NUML   NGT-NLT-NG+NL FRACGN NUMGFT
 DRYACET            1     1     0     0          0      0.000    0
@@ -1619,6 +1914,9 @@ CH3Br              0     0     1     1          0      0.000    0
 PYAC               0     0     0     0          0      0.350    1
 XRIO2NO            1     1     0     0          0      0.000    0
 XRIO2HO2           1     1     0     0          0      0.000    0
+LMTN2              3     3     0     0          0      0.000    0
+PXRIO2NO           1     1     0     0          0      0.000    0
+PXRIO2HO2          1     1     0     0          0      0.000    0
 N2O5               1     1     5     5          0      0.000    0
 PPN                1     1     2     2          0      0.000    0
 HPALD              1     1     2     2          0      0.000    0
@@ -1650,24 +1948,25 @@ XRIO2OTHER         6     6     0     0          0      0.000    0
 ONITApm            3     3     1     1          0      0.000    0
 API                1     1     4     4          0      0.000    0
 LIM                1     1     4     4          0      0.000    0
-LAN1               8     8     0     0          0      0.000    0
-PAN1               0     0     0     0          0      0.840    3
-VRP                0     0     3     3          0      0.200    2
+PXRIO2OTHER        6     6     0     0          0      0.000    0
 MAP                0     0     3     3          0      0.820    2
 ISOPNB             0     0     5     5          0      0.081    1
 ETP                2     2     3     3          0      0.000    0
 IEPOX              1     1     3     3          0      0.200    2
-RA3P               2     2     3     3          0      0.000    0
 HNO2               3     3     3     3          0      0.500    1
 RB3P               2     2     3     3          0      0.000    0
 IAP                0     0     3     3          0      0.200    2
 PAN                2     2     3     3          0      0.190    1
 PP                 2     2     3     3          0      0.000    0
-MP                 2     2     4     4          0      0.000    0
-PRPN               2     2     3     3          0      0.000    0
 RIP                0     0     4     4          0      1.874    2
+PRPN               2     2     3     3          0      0.000    0
+RA3P               2     2     3     3          0      0.000    0
 PIP                2     2     2     2          0      0.000    0
-MRP                3     3     4     4          0      0.000    0
+PIN1               0     0     0     0          0      3.890    5
+LMTN1              9     9     0     0          0      0.000    0
+PMTN2              5     5     0     0          0      0.000    0
+MP                 2     2     4     4          0      0.000    0
+VRP                0     0     3     3          0      0.200    2
 HC187              0     0     1     1          0      1.353    3
 DIBOO              0     0     4     4          0      0.233    3
 DHMOB              0     0     1     1          0      1.234    3
@@ -1676,8 +1975,8 @@ MOBAOO             1     1     4     4          0      0.000    0
 IEPOXOO            1     1     3     3          0      0.000    0
 ATOOH              0     0     4     4          0      3.400    4
 ISNOHOO            0     0     3     3          0      0.655    1
-CH2OOB             4     4     3     3          0      0.195    1
 PMN                2     2     5     5          0      0.000    0
+CH2OOB             4     4     3     3          0      0.195    1
 ACLOO              1     1     5     5          0      0.000    0
 CH3CHOO            1     1     6     6          0      0.000    0
 GAOO               1     1     6     6          0      0.000    0
@@ -1688,83 +1987,85 @@ MGLOO              1     1     6     6          0      0.000    0
 NC2OO              1     1     6     6          0      0.000    0
 NC3OO              1     1     5     5          0      0.000    0
 NC4OO              1     1     5     5          0      0.000    0
+MRP                3     3     4     4          0      0.000    0
 RP                 0     0     3     3          0      2.320    4
-ISOPND             0     0     5     5          0      0.759    3
+HONIT              5     5     4     4          0      0.000    0
+LIN1              13    13     0     0          0      0.000    0
 Br2                3     3     3     3          0      2.000    4
 INPN               5     5     4     4          0      0.000    0
 ISNOOB             0     0     5     5          0      0.400    1
 ISNP               0     0     3     3          0      3.700    6
+ISOPND             0     0     5     5          0      0.759    3
 HOBr               4     4     4     4          0      0.000    0
+R4P                2     2     3     3          0      2.700    4
 ISOPNBO2           0     0     3     3          0      1.093    2
 ISOPNDO2           0     0     3     3          0      1.150    3
 MGLYOO             2     2     5     5          0      0.000    0
-R4P                2     2     3     3          0      2.700    4
 MAOP               0     0     4     4          0      1.320    3
-MAOPO2             1     1     9     9          0      0.000    0
+LIN2              14    14     0     0          0      0.000    0
 ISN1               0     0     6     6          0      3.900    7
 ISNOOA             0     0     5     5          0      0.945    2
 MACRNO2            2     2     4     4          0      0.000    0
+MAOPO2             1     1     9     9          0      0.000    0
 CH2OO              3     3     5     5          0      0.000    0
+ONITAam            7     7     1     1          0      0.000    0
 APIO2              1     1     5     5          0      0.000    0
 LIMO2              1     1     5     5          0      0.000    0
-HONIT              7     7     4     4          0      0.000    0
 MAN2               1     1     6     6          0      0.000    0
 PO2                1     1     6     6          0      0.209    1
+RIO2               1     1     9     9          0      0.387    1
 R4N1               1     1     6     6          0      0.612    1
 HC5OO              1     1     7     7          0      0.346    1
-ONITAam            8     8     1     1          0      0.000    0
-RIO2               1     1     9     9          0      0.387    1
-OLNN               0     0     8     8          0      0.810    2
-OLND               0     0     8     8          0      1.190    2
-BrO                3     3    10    10          0      0.000    0
+OLNN               0     0     8     8          0      0.600    2
+OLND               0     0     8     8          0      1.400    2
+PMTN1              9     9     0     0          0      2.400    4
 HBr                7     7     4     4          0      0.000    0
 PRN1               1     1     6     6          0      0.209    1
 ATO2               4     4     6     6          0      0.000    0
-MRO2               1     1     7     7          0      0.970    2
+BrO                3     3    10    10          0      0.000    0
 VRO2               2     2     6     6          0      0.209    1
-MONITS             0     0     5     5          0      6.420    9
+MONITS             1     1     5     5          0      7.120   10
 INO2               1     1     9     9          0      0.360    1
-LAN2              19    19     0     0          0      0.700    1
+MRO2               1     1     7     7          0      0.970    2
 B3O2               1     1     6     6          0      0.839    5
 ACET               5     5     6     6          0      2.771    8
-PO3                6     6     0     0          0      1.400    8
-PRPE               4     4     3     3          0      1.518    5
-R4N2               3     3     4     4          0      1.000    4
-ETHLN              5     5     4     4          0      0.860    4
-R4O2               2     2     7     7          0      1.399    5
-A3O2               2     2     6     6          0      0.540    5
 HC5                2     2     3     3          0      3.546   11
-MONITU             0     0     6     6          0      2.980   10
+ETHLN              5     5     3     3          0      0.860    4
+PRPE               4     4     3     3          0      1.518    5
+MONITU             0     0     6     6          0      3.280   11
 KO2                2     2     6     6          0      1.040    2
 MAO3               2     2     7     7          0      1.630    3
-LANs              25    25     0     0          0      1.700    3
-SO4               14    14     0     0          0      0.000    0
-MVKN               5     5     4     4          0      1.200    8
+A3O2               2     2     6     6          0      0.540    5
+R4N2               3     3     4     4          0      1.000    4
+R4O2               2     2     7     7          0      1.399    5
 MACRN              5     5     4     4          0      1.384    8
+MVKN               5     5     4     4          0      1.200    8
 RCO3               5     5     7     7          0      0.150    1
-HCOOH              2     2     2     2          0      2.477   13
+SO4               14    14     0     0          0      0.000    0
+LANs              31    31     0     0          0      1.700    3
 SO2                3     3    13    13          0      0.750    1
+HCOOH              2     2     2     2          0      2.477   13
 MVK                6     6     7     7          0      2.318   12
-ETO2               7     7    10    10          0      3.370    9
-GLYX               2     2     6     6          0      5.907   16
-H2O2              15    15     3     3          0      0.540    3
 ROH                0     0     1     1          0      3.690   15
+H2O2              15    15     3     3          0      0.540    3
+GLYX               2     2     6     6          0      5.907   16
+ETO2               7     7    10    10          0      3.370    9
 MACR               6     6     7     7          0      3.622   16
-LO3               28    28     0     0          0      0.000    0
 PROPNN             8     8     3     3          0      6.900   15
 Br                21    21    11    11          0      0.000    0
 HNO3              21    21     3     3          0      1.900    4
 GLYC              10    10     5     5          0      9.038   27
-ACTA              18    18     2     2          0      1.136    7
 O3                 7     7    29    29          0      1.400    8
+ACTA              18    18     2     2          0      1.136    7
 ALD2              24    24     6     6          0      7.520   16
 MEK               14    14     3     3          0      7.928   23
-PANs              26    26     0     0          0     15.264   27
-PAN2              26    26     0     0          0     14.824   27
+PIN2              26    26     0     0          0     11.824   24
 RCHO              20    20     3     3          0     15.158   31
+PANs              35    35     0     0          0     17.664   31
 HAC               23    23     4     4          0     11.832   33
 HO2H2O             1     1    40    40          0      0.000    0
 MGLY              20    20     6     6          0      9.871   34
+LOX               72    72     0     0          0      4.400    5
 LNOx              33    33     0     0          0      1.200    9
 MO2               41    40    38    37          0      5.940   15
 MCO3              25    22    46    43          0     10.656   21
@@ -1773,6 +2074,7 @@ NO3               23    23    37    37          0      1.960    6
 NO                 6     6    56    56          0      0.000    0
 CO                48    48    13    13          0     14.998   33
 CH2O              54    54     6     6          0     40.117   95
+POX              101   101     0     0          0     23.635   40
 NO2              108   107    29    28          0     22.825   35
 HO2              102   102    46    46          0     39.794   75
 OH                68    60    96    88          0     24.886   49
@@ -1797,28 +2099,28 @@ H                  0     0     0     0          0      0.000    0
 EOH                2     2     1     1          0      0.250    1
 EMISSION           0     0    32    32          0      0.000    0
 CH4                3     3     1     1          0      0.000    0
-OVERALL         1288  1275  1066  1053          0      0.000  928
+OVERALL         1474  1461  1065  1052          0      0.000  973
 
 CHANGE IN MOLES DUE TO URBAN          CHEMISTRY
 
-# KINETIC REACTIONS:   590 PHOTORATES:    71 TOTAL:   661
+# KINETIC REACTIONS:   589 PHOTORATES:    71 TOTAL:   660
 
 PARAM    POSS MATRIX POINTS -- NONZEROS -- NCSP=   1
-INITMAT         49729             2282
-FINMAT          49729             2943
-DECOMP1       3671695            11942
-DECOMP2         24753             1567
-BACKSB1         24753             1567
-BACKSB2         24753             1153
+INITMAT         52900             2406
+FINMAT          52900             3067
+DECOMP1       4029255            12711
+DECOMP2         26335             1671
+BACKSB1         26335             1671
+BACKSB2         26335             1166
 
 
 PARAM    POSS MATRIX POINTS -- NONZEROS -- NCSP=   4
-INITMAT         49729             2145
-FINMAT          49729             2807
-DECOMP1       3671695            10974
-DECOMP2         24753             1445
-BACKSB1         24753             1445
-BACKSB2         24753             1139
+INITMAT         52900             2263
+FINMAT          52900             2930
+DECOMP1       4029255            11709
+DECOMP2         26335             1548
+BACKSB1         26335             1548
+BACKSB2         26335             1152
 
 
 ===============================================================================
@@ -1849,8 +2151,8 @@ Tracer #  58 (HAC  ) has an emission rxn defined in "globchem.dat"
 Tracer #  59 (GLYC ) has an emission rxn defined in "globchem.dat"
 Tracer #  64 (NO2  ) has an emission rxn defined in "globchem.dat"
 Tracer #  66 (HNO2 ) has an emission rxn defined in "globchem.dat"
-Tracer #  87 (API  ) has an emission rxn defined in "globchem.dat"
-Tracer #  88 (LIM  ) has an emission rxn defined in "globchem.dat"
+Tracer #  82 (API  ) has an emission rxn defined in "globchem.dat"
+Tracer #  83 (LIM  ) has an emission rxn defined in "globchem.dat"
 Drydep species #   1 (O3   ) has a drydep rxn defined in "globchem.dat"
 Drydep species #   2 (PAN  ) has a drydep rxn defined in "globchem.dat"
 Drydep species #   3 (HNO3 ) has a drydep rxn defined in "globchem.dat"
@@ -1882,14 +2184,14 @@ Drydep species #  46 (MAP  ) has a drydep rxn defined in "globchem.dat"
 Drydep species #  47 (NO2  ) has a drydep rxn defined in "globchem.dat"
 Drydep species #  48 (HNO2 ) has a drydep rxn defined in "globchem.dat"
 Drydep species #  49 (ETHLN) has a drydep rxn defined in "globchem.dat"
-Drydep species #  58 (ISN1 ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  59 (MGLY ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  60 (GLYX ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  61 (HCOOH) has a drydep rxn defined in "globchem.dat"
-Drydep species #  62 (ACTA ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  63 (DHDN ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  67 (API  ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  68 (LIM  ) has a drydep rxn defined in "globchem.dat"
-Drydep species #  69 (MONIT) has a drydep rxn defined in "globchem.dat"
-Drydep species #  70 (MONIT) has a drydep rxn defined in "globchem.dat"
-Drydep species #  71 (HONIT) has a drydep rxn defined in "globchem.dat"
+Drydep species #  53 (ISN1 ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  54 (MGLY ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  55 (GLYX ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  56 (HCOOH) has a drydep rxn defined in "globchem.dat"
+Drydep species #  57 (ACTA ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  58 (DHDN ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  62 (API  ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  63 (LIM  ) has a drydep rxn defined in "globchem.dat"
+Drydep species #  64 (MONIT) has a drydep rxn defined in "globchem.dat"
+Drydep species #  65 (MONIT) has a drydep rxn defined in "globchem.dat"
+Drydep species #  66 (HONIT) has a drydep rxn defined in "globchem.dat"
