@@ -1,6 +1,6 @@
 Planeflight.dat -- Input file for ND40 diagnostic (GEOS-FP/NRT-SEAC4RS runs)
 Lei Zhu
-30 Mar 2015
+13 Aug 2015
 -------------------------------------------------------------------------------
  210       <-- # of variables to be output (list them below, one per line)
 -------------------------------------------------------------------------------
